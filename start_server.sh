@@ -25,7 +25,6 @@ function echo_var(){
 
 [ -z "$BACKEND" ] && echo "BACKEND must be set!" && exit 1
 [ -z "$MODEL_LOG" ] && echo "MODEL_LOG must be set!" && exit 1
-[ -z "$HF_TOKEN" ] && echo "HF_TOKEN must be set!" && exit 1
 [ "$BACKEND" = "comfyui" ] && [ -z "$COMFY_MODEL" ] && echo "For comfyui backends, COMFY_MODEL must be set!" && exit 1
 
 
