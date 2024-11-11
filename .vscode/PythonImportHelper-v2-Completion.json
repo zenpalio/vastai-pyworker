@@ -1,0 +1,1906 @@
+[
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "sleep",
+        "importPath": "time",
+        "description": "time",
+        "isExtraImport": true,
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "base64",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "base64",
+        "description": "base64",
+        "detail": "base64",
+        "documentation": {}
+    },
+    {
+        "label": "subprocess",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "subprocess",
+        "description": "subprocess",
+        "detail": "subprocess",
+        "documentation": {}
+    },
+    {
+        "label": "dataclasses",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "dataclass",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "field",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "dataclass",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "asdict",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "field",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "dataclass",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "field",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "asdict",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "logging",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "logging",
+        "description": "logging",
+        "detail": "logging",
+        "documentation": {}
+    },
+    {
+        "label": "wait",
+        "importPath": "asyncio",
+        "description": "asyncio",
+        "isExtraImport": true,
+        "detail": "asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "sleep",
+        "importPath": "asyncio",
+        "description": "asyncio",
+        "isExtraImport": true,
+        "detail": "asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "gather",
+        "importPath": "asyncio",
+        "description": "asyncio",
+        "isExtraImport": true,
+        "detail": "asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "Semaphore",
+        "importPath": "asyncio",
+        "description": "asyncio",
+        "isExtraImport": true,
+        "detail": "asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "FIRST_COMPLETED",
+        "importPath": "asyncio",
+        "description": "asyncio",
+        "isExtraImport": true,
+        "detail": "asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "create_task",
+        "importPath": "asyncio",
+        "description": "asyncio",
+        "isExtraImport": true,
+        "detail": "asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "sleep",
+        "importPath": "asyncio",
+        "description": "asyncio",
+        "isExtraImport": true,
+        "detail": "asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "run",
+        "importPath": "asyncio",
+        "description": "asyncio",
+        "isExtraImport": true,
+        "detail": "asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "gather",
+        "importPath": "asyncio",
+        "description": "asyncio",
+        "isExtraImport": true,
+        "detail": "asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "Tuple",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Awaitable",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "NoReturn",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Union",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Callable",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Union",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Tuple",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Set",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "TypeVar",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Generic",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Type",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Awaitable",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "NoReturn",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Callable",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Tuple",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Type",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Union",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Type",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Union",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Type",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Union",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Type",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "cached_property",
+        "importPath": "functools",
+        "description": "functools",
+        "isExtraImport": true,
+        "detail": "functools",
+        "documentation": {}
+    },
+    {
+        "label": "cache",
+        "importPath": "functools",
+        "description": "functools",
+        "isExtraImport": true,
+        "detail": "functools",
+        "documentation": {}
+    },
+    {
+        "label": "cache",
+        "importPath": "functools",
+        "description": "functools",
+        "isExtraImport": true,
+        "detail": "functools",
+        "documentation": {}
+    },
+    {
+        "label": "open_file",
+        "importPath": "anyio",
+        "description": "anyio",
+        "isExtraImport": true,
+        "detail": "anyio",
+        "documentation": {}
+    },
+    {
+        "label": "open_file",
+        "importPath": "anyio",
+        "description": "anyio",
+        "isExtraImport": true,
+        "detail": "anyio",
+        "documentation": {}
+    },
+    {
+        "label": "web",
+        "importPath": "aiohttp",
+        "description": "aiohttp",
+        "isExtraImport": true,
+        "detail": "aiohttp",
+        "documentation": {}
+    },
+    {
+        "label": "ClientResponse",
+        "importPath": "aiohttp",
+        "description": "aiohttp",
+        "isExtraImport": true,
+        "detail": "aiohttp",
+        "documentation": {}
+    },
+    {
+        "label": "ClientSession",
+        "importPath": "aiohttp",
+        "description": "aiohttp",
+        "isExtraImport": true,
+        "detail": "aiohttp",
+        "documentation": {}
+    },
+    {
+        "label": "ClientConnectorError",
+        "importPath": "aiohttp",
+        "description": "aiohttp",
+        "isExtraImport": true,
+        "detail": "aiohttp",
+        "documentation": {}
+    },
+    {
+        "label": "web",
+        "importPath": "aiohttp",
+        "description": "aiohttp",
+        "isExtraImport": true,
+        "detail": "aiohttp",
+        "documentation": {}
+    },
+    {
+        "label": "ClientResponse",
+        "importPath": "aiohttp",
+        "description": "aiohttp",
+        "isExtraImport": true,
+        "detail": "aiohttp",
+        "documentation": {}
+    },
+    {
+        "label": "web",
+        "importPath": "aiohttp",
+        "description": "aiohttp",
+        "isExtraImport": true,
+        "detail": "aiohttp",
+        "documentation": {}
+    },
+    {
+        "label": "web",
+        "importPath": "aiohttp",
+        "description": "aiohttp",
+        "isExtraImport": true,
+        "detail": "aiohttp",
+        "documentation": {}
+    },
+    {
+        "label": "ClientResponse",
+        "importPath": "aiohttp",
+        "description": "aiohttp",
+        "isExtraImport": true,
+        "detail": "aiohttp",
+        "documentation": {}
+    },
+    {
+        "label": "web",
+        "importPath": "aiohttp",
+        "description": "aiohttp",
+        "isExtraImport": true,
+        "detail": "aiohttp",
+        "documentation": {}
+    },
+    {
+        "label": "ClientResponse",
+        "importPath": "aiohttp",
+        "description": "aiohttp",
+        "isExtraImport": true,
+        "detail": "aiohttp",
+        "documentation": {}
+    },
+    {
+        "label": "web",
+        "importPath": "aiohttp",
+        "description": "aiohttp",
+        "isExtraImport": true,
+        "detail": "aiohttp",
+        "documentation": {}
+    },
+    {
+        "label": "ClientResponse",
+        "importPath": "aiohttp",
+        "description": "aiohttp",
+        "isExtraImport": true,
+        "detail": "aiohttp",
+        "documentation": {}
+    },
+    {
+        "label": "requests",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "requests",
+        "description": "requests",
+        "detail": "requests",
+        "documentation": {}
+    },
+    {
+        "label": "pkcs1_15",
+        "importPath": "Crypto.Signature",
+        "description": "Crypto.Signature",
+        "isExtraImport": true,
+        "detail": "Crypto.Signature",
+        "documentation": {}
+    },
+    {
+        "label": "SHA256",
+        "importPath": "Crypto.Hash",
+        "description": "Crypto.Hash",
+        "isExtraImport": true,
+        "detail": "Crypto.Hash",
+        "documentation": {}
+    },
+    {
+        "label": "RSA",
+        "importPath": "Crypto.PublicKey",
+        "description": "Crypto.PublicKey",
+        "isExtraImport": true,
+        "detail": "Crypto.PublicKey",
+        "documentation": {}
+    },
+    {
+        "label": "Metrics",
+        "importPath": "lib.metrics",
+        "description": "lib.metrics",
+        "isExtraImport": true,
+        "detail": "lib.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "get_url",
+        "importPath": "lib.metrics",
+        "description": "lib.metrics",
+        "isExtraImport": true,
+        "detail": "lib.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "AuthData",
+        "importPath": "lib.data_types",
+        "description": "lib.data_types",
+        "isExtraImport": true,
+        "detail": "lib.data_types",
+        "documentation": {}
+    },
+    {
+        "label": "EndpointHandler",
+        "importPath": "lib.data_types",
+        "description": "lib.data_types",
+        "isExtraImport": true,
+        "detail": "lib.data_types",
+        "documentation": {}
+    },
+    {
+        "label": "LogAction",
+        "importPath": "lib.data_types",
+        "description": "lib.data_types",
+        "isExtraImport": true,
+        "detail": "lib.data_types",
+        "documentation": {}
+    },
+    {
+        "label": "ApiPayload_T",
+        "importPath": "lib.data_types",
+        "description": "lib.data_types",
+        "isExtraImport": true,
+        "detail": "lib.data_types",
+        "documentation": {}
+    },
+    {
+        "label": "JsonDataException",
+        "importPath": "lib.data_types",
+        "description": "lib.data_types",
+        "isExtraImport": true,
+        "detail": "lib.data_types",
+        "documentation": {}
+    },
+    {
+        "label": "AutoScalaerData",
+        "importPath": "lib.data_types",
+        "description": "lib.data_types",
+        "isExtraImport": true,
+        "detail": "lib.data_types",
+        "documentation": {}
+    },
+    {
+        "label": "SystemMetrics",
+        "importPath": "lib.data_types",
+        "description": "lib.data_types",
+        "isExtraImport": true,
+        "detail": "lib.data_types",
+        "documentation": {}
+    },
+    {
+        "label": "ModelMetrics",
+        "importPath": "lib.data_types",
+        "description": "lib.data_types",
+        "isExtraImport": true,
+        "detail": "lib.data_types",
+        "documentation": {}
+    },
+    {
+        "label": "AuthData",
+        "importPath": "lib.data_types",
+        "description": "lib.data_types",
+        "isExtraImport": true,
+        "detail": "lib.data_types",
+        "documentation": {}
+    },
+    {
+        "label": "ApiPayload",
+        "importPath": "lib.data_types",
+        "description": "lib.data_types",
+        "isExtraImport": true,
+        "detail": "lib.data_types",
+        "documentation": {}
+    },
+    {
+        "label": "ApiPayload",
+        "importPath": "lib.data_types",
+        "description": "lib.data_types",
+        "isExtraImport": true,
+        "detail": "lib.data_types",
+        "documentation": {}
+    },
+    {
+        "label": "JsonDataException",
+        "importPath": "lib.data_types",
+        "description": "lib.data_types",
+        "isExtraImport": true,
+        "detail": "lib.data_types",
+        "documentation": {}
+    },
+    {
+        "label": "EndpointHandler",
+        "importPath": "lib.data_types",
+        "description": "lib.data_types",
+        "isExtraImport": true,
+        "detail": "lib.data_types",
+        "documentation": {}
+    },
+    {
+        "label": "ApiPayload",
+        "importPath": "lib.data_types",
+        "description": "lib.data_types",
+        "isExtraImport": true,
+        "detail": "lib.data_types",
+        "documentation": {}
+    },
+    {
+        "label": "JsonDataException",
+        "importPath": "lib.data_types",
+        "description": "lib.data_types",
+        "isExtraImport": true,
+        "detail": "lib.data_types",
+        "documentation": {}
+    },
+    {
+        "label": "EndpointHandler",
+        "importPath": "lib.data_types",
+        "description": "lib.data_types",
+        "isExtraImport": true,
+        "detail": "lib.data_types",
+        "documentation": {}
+    },
+    {
+        "label": "ApiPayload",
+        "importPath": "lib.data_types",
+        "description": "lib.data_types",
+        "isExtraImport": true,
+        "detail": "lib.data_types",
+        "documentation": {}
+    },
+    {
+        "label": "JsonDataException",
+        "importPath": "lib.data_types",
+        "description": "lib.data_types",
+        "isExtraImport": true,
+        "detail": "lib.data_types",
+        "documentation": {}
+    },
+    {
+        "label": "EndpointHandler",
+        "importPath": "lib.data_types",
+        "description": "lib.data_types",
+        "isExtraImport": true,
+        "detail": "lib.data_types",
+        "documentation": {}
+    },
+    {
+        "label": "Enum",
+        "importPath": "enum",
+        "description": "enum",
+        "isExtraImport": true,
+        "detail": "enum",
+        "documentation": {}
+    },
+    {
+        "label": "Enum",
+        "importPath": "enum",
+        "description": "enum",
+        "isExtraImport": true,
+        "detail": "enum",
+        "documentation": {}
+    },
+    {
+        "label": "Enum",
+        "importPath": "enum",
+        "description": "enum",
+        "isExtraImport": true,
+        "detail": "enum",
+        "documentation": {}
+    },
+    {
+        "label": "ABC",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "abstractmethod",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "inspect",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "inspect",
+        "description": "inspect",
+        "detail": "inspect",
+        "documentation": {}
+    },
+    {
+        "label": "psutil",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "psutil",
+        "description": "psutil",
+        "detail": "psutil",
+        "documentation": {}
+    },
+    {
+        "label": "urljoin",
+        "importPath": "urllib.parse",
+        "description": "urllib.parse",
+        "isExtraImport": true,
+        "detail": "urllib.parse",
+        "documentation": {}
+    },
+    {
+        "label": "urljoin",
+        "importPath": "urllib.parse",
+        "description": "urllib.parse",
+        "isExtraImport": true,
+        "detail": "urllib.parse",
+        "documentation": {}
+    },
+    {
+        "label": "urljoin",
+        "importPath": "urllib.parse",
+        "description": "urllib.parse",
+        "isExtraImport": true,
+        "detail": "urllib.parse",
+        "documentation": {}
+    },
+    {
+        "label": "urljoin",
+        "importPath": "urllib.parse",
+        "description": "urllib.parse",
+        "isExtraImport": true,
+        "detail": "urllib.parse",
+        "documentation": {}
+    },
+    {
+        "label": "ssl",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "ssl",
+        "description": "ssl",
+        "detail": "ssl",
+        "documentation": {}
+    },
+    {
+        "label": "Backend",
+        "importPath": "lib.backend",
+        "description": "lib.backend",
+        "isExtraImport": true,
+        "detail": "lib.backend",
+        "documentation": {}
+    },
+    {
+        "label": "Backend",
+        "importPath": "lib.backend",
+        "description": "lib.backend",
+        "isExtraImport": true,
+        "detail": "lib.backend",
+        "documentation": {}
+    },
+    {
+        "label": "LogAction",
+        "importPath": "lib.backend",
+        "description": "lib.backend",
+        "isExtraImport": true,
+        "detail": "lib.backend",
+        "documentation": {}
+    },
+    {
+        "label": "Backend",
+        "importPath": "lib.backend",
+        "description": "lib.backend",
+        "isExtraImport": true,
+        "detail": "lib.backend",
+        "documentation": {}
+    },
+    {
+        "label": "LogAction",
+        "importPath": "lib.backend",
+        "description": "lib.backend",
+        "isExtraImport": true,
+        "detail": "lib.backend",
+        "documentation": {}
+    },
+    {
+        "label": "Backend",
+        "importPath": "lib.backend",
+        "description": "lib.backend",
+        "isExtraImport": true,
+        "detail": "lib.backend",
+        "documentation": {}
+    },
+    {
+        "label": "LogAction",
+        "importPath": "lib.backend",
+        "description": "lib.backend",
+        "isExtraImport": true,
+        "detail": "lib.backend",
+        "documentation": {}
+    },
+    {
+        "label": "argparse",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "argparse",
+        "description": "argparse",
+        "detail": "argparse",
+        "documentation": {}
+    },
+    {
+        "label": "threading",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "threading",
+        "description": "threading",
+        "detail": "threading",
+        "documentation": {}
+    },
+    {
+        "label": "Counter",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "print_truncate_res",
+        "importPath": "lib.test_utils",
+        "description": "lib.test_utils",
+        "isExtraImport": true,
+        "detail": "lib.test_utils",
+        "documentation": {}
+    },
+    {
+        "label": "test_load_cmd",
+        "importPath": "lib.test_utils",
+        "description": "lib.test_utils",
+        "isExtraImport": true,
+        "detail": "lib.test_utils",
+        "documentation": {}
+    },
+    {
+        "label": "test_args",
+        "importPath": "lib.test_utils",
+        "description": "lib.test_utils",
+        "isExtraImport": true,
+        "detail": "lib.test_utils",
+        "documentation": {}
+    },
+    {
+        "label": "test_load_cmd",
+        "importPath": "lib.test_utils",
+        "description": "lib.test_utils",
+        "isExtraImport": true,
+        "detail": "lib.test_utils",
+        "documentation": {}
+    },
+    {
+        "label": "test_args",
+        "importPath": "lib.test_utils",
+        "description": "lib.test_utils",
+        "isExtraImport": true,
+        "detail": "lib.test_utils",
+        "documentation": {}
+    },
+    {
+        "label": "test_load_cmd",
+        "importPath": "lib.test_utils",
+        "description": "lib.test_utils",
+        "isExtraImport": true,
+        "detail": "lib.test_utils",
+        "documentation": {}
+    },
+    {
+        "label": "test_args",
+        "importPath": "lib.test_utils",
+        "description": "lib.test_utils",
+        "isExtraImport": true,
+        "detail": "lib.test_utils",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "random",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "ceil",
+        "importPath": "math",
+        "description": "math",
+        "isExtraImport": true,
+        "detail": "math",
+        "documentation": {}
+    },
+    {
+        "label": "start_server",
+        "importPath": "lib.server",
+        "description": "lib.server",
+        "isExtraImport": true,
+        "detail": "lib.server",
+        "documentation": {}
+    },
+    {
+        "label": "start_server",
+        "importPath": "lib.server",
+        "description": "lib.server",
+        "isExtraImport": true,
+        "detail": "lib.server",
+        "documentation": {}
+    },
+    {
+        "label": "start_server",
+        "importPath": "lib.server",
+        "description": "lib.server",
+        "isExtraImport": true,
+        "detail": "lib.server",
+        "documentation": {}
+    },
+    {
+        "label": "AutoTokenizer",
+        "importPath": "transformers",
+        "description": "transformers",
+        "isExtraImport": true,
+        "detail": "transformers",
+        "documentation": {}
+    },
+    {
+        "label": "AutoTokenizer",
+        "importPath": "transformers",
+        "description": "transformers",
+        "isExtraImport": true,
+        "detail": "transformers",
+        "documentation": {}
+    },
+    {
+        "label": "nltk",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "nltk",
+        "description": "nltk",
+        "detail": "nltk",
+        "documentation": {}
+    },
+    {
+        "label": "Backend",
+        "kind": 6,
+        "importPath": "lib.backend",
+        "description": "lib.backend",
+        "peekOfCode": "class Backend:\n    \"\"\"\n    This class is responsible for:\n    1. Tailing logs and updating load time metrics\n    2. Taking an EndpointHandler alongside incoming payload, preparing a json to be sent to the model, and\n    sending the request. It also updates metrics as it makes those requests.\n    3. Running a benchmark from an EndpointHandler\n    \"\"\"\n    model_server_url: str\n    model_log_file: str",
+        "detail": "lib.backend",
+        "documentation": {}
+    },
+    {
+        "label": "MSG_HISTORY_LEN",
+        "kind": 5,
+        "importPath": "lib.backend",
+        "description": "lib.backend",
+        "peekOfCode": "MSG_HISTORY_LEN = 100\nlog = logging.getLogger(__file__)\n# defines the minimum wait time between sending updates to autoscaler\nLOG_POLL_INTERVAL = 0.1\nBENCHMARK_INDICATOR_FILE = \".has_benchmark\"\n@dataclasses.dataclass\nclass Backend:\n    \"\"\"\n    This class is responsible for:\n    1. Tailing logs and updating load time metrics",
+        "detail": "lib.backend",
+        "documentation": {}
+    },
+    {
+        "label": "log",
+        "kind": 5,
+        "importPath": "lib.backend",
+        "description": "lib.backend",
+        "peekOfCode": "log = logging.getLogger(__file__)\n# defines the minimum wait time between sending updates to autoscaler\nLOG_POLL_INTERVAL = 0.1\nBENCHMARK_INDICATOR_FILE = \".has_benchmark\"\n@dataclasses.dataclass\nclass Backend:\n    \"\"\"\n    This class is responsible for:\n    1. Tailing logs and updating load time metrics\n    2. Taking an EndpointHandler alongside incoming payload, preparing a json to be sent to the model, and",
+        "detail": "lib.backend",
+        "documentation": {}
+    },
+    {
+        "label": "LOG_POLL_INTERVAL",
+        "kind": 5,
+        "importPath": "lib.backend",
+        "description": "lib.backend",
+        "peekOfCode": "LOG_POLL_INTERVAL = 0.1\nBENCHMARK_INDICATOR_FILE = \".has_benchmark\"\n@dataclasses.dataclass\nclass Backend:\n    \"\"\"\n    This class is responsible for:\n    1. Tailing logs and updating load time metrics\n    2. Taking an EndpointHandler alongside incoming payload, preparing a json to be sent to the model, and\n    sending the request. It also updates metrics as it makes those requests.\n    3. Running a benchmark from an EndpointHandler",
+        "detail": "lib.backend",
+        "documentation": {}
+    },
+    {
+        "label": "BENCHMARK_INDICATOR_FILE",
+        "kind": 5,
+        "importPath": "lib.backend",
+        "description": "lib.backend",
+        "peekOfCode": "BENCHMARK_INDICATOR_FILE = \".has_benchmark\"\n@dataclasses.dataclass\nclass Backend:\n    \"\"\"\n    This class is responsible for:\n    1. Tailing logs and updating load time metrics\n    2. Taking an EndpointHandler alongside incoming payload, preparing a json to be sent to the model, and\n    sending the request. It also updates metrics as it makes those requests.\n    3. Running a benchmark from an EndpointHandler\n    \"\"\"",
+        "detail": "lib.backend",
+        "documentation": {}
+    },
+    {
+        "label": "JsonDataException",
+        "kind": 6,
+        "importPath": "lib.data_types",
+        "description": "lib.data_types",
+        "peekOfCode": "class JsonDataException(Exception):\n    def __init__(self, json_msg: Dict[str, Any]):\n        self.message = json_msg\n@dataclass\nclass ApiPayload(ABC):\n    @classmethod\n    @abstractmethod\n    def for_test(cls) -> \"ApiPayload\":\n        \"\"\"defines how create a payload for load testing\"\"\"\n        pass",
+        "detail": "lib.data_types",
+        "documentation": {}
+    },
+    {
+        "label": "ApiPayload",
+        "kind": 6,
+        "importPath": "lib.data_types",
+        "description": "lib.data_types",
+        "peekOfCode": "class ApiPayload(ABC):\n    @classmethod\n    @abstractmethod\n    def for_test(cls) -> \"ApiPayload\":\n        \"\"\"defines how create a payload for load testing\"\"\"\n        pass\n    @abstractmethod\n    def generate_payload_json(self) -> Dict[str, Any]:\n        \"\"\"defines how to convert an ApiPayload to JSON that will be sent to model API\"\"\"\n        pass",
+        "detail": "lib.data_types",
+        "documentation": {}
+    },
+    {
+        "label": "AuthData",
+        "kind": 6,
+        "importPath": "lib.data_types",
+        "description": "lib.data_types",
+        "peekOfCode": "class AuthData:\n    \"\"\"data used to authenticate requester\"\"\"\n    signature: str\n    cost: str\n    endpoint: str\n    reqnum: int\n    url: str\n    @classmethod\n    def from_json_msg(cls, json_msg: Dict[str, Any]):\n        errors = {}",
+        "detail": "lib.data_types",
+        "documentation": {}
+    },
+    {
+        "label": "EndpointHandler",
+        "kind": 6,
+        "importPath": "lib.data_types",
+        "description": "lib.data_types",
+        "peekOfCode": "class EndpointHandler(ABC, Generic[ApiPayload_T]):\n    \"\"\"\n    Each model endpoint will have a handler responsible for counting workload from the incoming ApiPayload\n    and converting it to json to be forwarded to model API\n    \"\"\"\n    benchmark_runs: int = 8\n    benchmark_words: int = 100\n    @property\n    @abstractmethod\n    def endpoint(self) -> str:",
+        "detail": "lib.data_types",
+        "documentation": {}
+    },
+    {
+        "label": "SystemMetrics",
+        "kind": 6,
+        "importPath": "lib.data_types",
+        "description": "lib.data_types",
+        "peekOfCode": "class SystemMetrics:\n    \"\"\"General system metrics\"\"\"\n    model_loading_start: float\n    model_loading_time: Union[float, None]\n    last_disk_usage: float\n    additional_disk_usage: float\n    model_is_loaded: bool\n    @staticmethod\n    def get_disk_usage_GB():\n        return psutil.disk_usage(\"/\").used / (2**30)  # want units of GB",
+        "detail": "lib.data_types",
+        "documentation": {}
+    },
+    {
+        "label": "ModelMetrics",
+        "kind": 6,
+        "importPath": "lib.data_types",
+        "description": "lib.data_types",
+        "peekOfCode": "class ModelMetrics:\n    \"\"\"Model specific metrics\"\"\"\n    # these are reset after being sent to autoscaler\n    workload_served: float\n    workload_received: float\n    workload_cancelled: float\n    workload_errored: float\n    workload_pending: float\n    # these are not\n    cur_perf: float",
+        "detail": "lib.data_types",
+        "documentation": {}
+    },
+    {
+        "label": "AutoScalaerData",
+        "kind": 6,
+        "importPath": "lib.data_types",
+        "description": "lib.data_types",
+        "peekOfCode": "class AutoScalaerData:\n    \"\"\"Data that is reported to autoscaler\"\"\"\n    id: int\n    loadtime: float\n    cur_load: float\n    error_msg: str\n    max_perf: float\n    cur_perf: float\n    cur_capacity: float\n    max_capacity: float",
+        "detail": "lib.data_types",
+        "documentation": {}
+    },
+    {
+        "label": "LogAction",
+        "kind": 6,
+        "importPath": "lib.data_types",
+        "description": "lib.data_types",
+        "peekOfCode": "class LogAction(Enum):\n    \"\"\"\n    These actions tell the backend what a log value means, for example:\n    actions [\n        # this marks the model server as loaded\n        (LogAction.ModelLoaded, \"Starting server\"),\n        # these mark the model server as errored\n        (LogAction.ModelError, \"Exception loading model\"),\n        (LogAction.ModelError, \"Server failed to bind to port\"),\n        # this tells the backend to print any logs containing the string into its own logs",
+        "detail": "lib.data_types",
+        "documentation": {}
+    },
+    {
+        "label": "log",
+        "kind": 5,
+        "importPath": "lib.data_types",
+        "description": "lib.data_types",
+        "peekOfCode": "log = logging.getLogger(__file__)\nclass JsonDataException(Exception):\n    def __init__(self, json_msg: Dict[str, Any]):\n        self.message = json_msg\n@dataclass\nclass ApiPayload(ABC):\n    @classmethod\n    @abstractmethod\n    def for_test(cls) -> \"ApiPayload\":\n        \"\"\"defines how create a payload for load testing\"\"\"",
+        "detail": "lib.data_types",
+        "documentation": {}
+    },
+    {
+        "label": "ApiPayload_T",
+        "kind": 5,
+        "importPath": "lib.data_types",
+        "description": "lib.data_types",
+        "peekOfCode": "ApiPayload_T = TypeVar(\"ApiPayload_T\", bound=ApiPayload)\n@dataclass\nclass EndpointHandler(ABC, Generic[ApiPayload_T]):\n    \"\"\"\n    Each model endpoint will have a handler responsible for counting workload from the incoming ApiPayload\n    and converting it to json to be forwarded to model API\n    \"\"\"\n    benchmark_runs: int = 8\n    benchmark_words: int = 100\n    @property",
+        "detail": "lib.data_types",
+        "documentation": {}
+    },
+    {
+        "label": "Metrics",
+        "kind": 6,
+        "importPath": "lib.metrics",
+        "description": "lib.metrics",
+        "peekOfCode": "class Metrics:\n    last_metric_update: float = 0.0\n    update_pending: bool = False\n    id: int = field(default_factory=lambda: int(os.environ[\"CONTAINER_ID\"]))\n    report_addr: List[str] = field(\n        default_factory=lambda: os.environ[\"REPORT_ADDR\"].split(\",\")\n    )\n    url: str = field(default_factory=get_url)\n    system_metrics: SystemMetrics = field(default_factory=SystemMetrics.empty)\n    model_metrics: ModelMetrics = field(default_factory=ModelMetrics.empty)",
+        "detail": "lib.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "get_url",
+        "kind": 2,
+        "importPath": "lib.metrics",
+        "description": "lib.metrics",
+        "peekOfCode": "def get_url() -> str:\n    use_ssl = os.environ.get(\"USE_SSL\", \"false\") == \"true\"\n    worker_port = os.environ[f\"VAST_TCP_PORT_{os.environ['WORKER_PORT']}\"]\n    public_ip = os.environ[\"PUBLIC_IPADDR\"]\n    return f\"http{'s' if use_ssl else ''}://{public_ip}:{worker_port}\"\n@dataclass\nclass Metrics:\n    last_metric_update: float = 0.0\n    update_pending: bool = False\n    id: int = field(default_factory=lambda: int(os.environ[\"CONTAINER_ID\"]))",
+        "detail": "lib.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "METRICS_UPDATE_INTERVAL",
+        "kind": 5,
+        "importPath": "lib.metrics",
+        "description": "lib.metrics",
+        "peekOfCode": "METRICS_UPDATE_INTERVAL = 1\nlog = logging.getLogger(__file__)\n@cache\ndef get_url() -> str:\n    use_ssl = os.environ.get(\"USE_SSL\", \"false\") == \"true\"\n    worker_port = os.environ[f\"VAST_TCP_PORT_{os.environ['WORKER_PORT']}\"]\n    public_ip = os.environ[\"PUBLIC_IPADDR\"]\n    return f\"http{'s' if use_ssl else ''}://{public_ip}:{worker_port}\"\n@dataclass\nclass Metrics:",
+        "detail": "lib.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "log",
+        "kind": 5,
+        "importPath": "lib.metrics",
+        "description": "lib.metrics",
+        "peekOfCode": "log = logging.getLogger(__file__)\n@cache\ndef get_url() -> str:\n    use_ssl = os.environ.get(\"USE_SSL\", \"false\") == \"true\"\n    worker_port = os.environ[f\"VAST_TCP_PORT_{os.environ['WORKER_PORT']}\"]\n    public_ip = os.environ[\"PUBLIC_IPADDR\"]\n    return f\"http{'s' if use_ssl else ''}://{public_ip}:{worker_port}\"\n@dataclass\nclass Metrics:\n    last_metric_update: float = 0.0",
+        "detail": "lib.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "start_server",
+        "kind": 2,
+        "importPath": "lib.server",
+        "description": "lib.server",
+        "peekOfCode": "def start_server(backend: Backend, routes: List[web.RouteDef], **kwargs):\n    log.debug(\"getting certificate...\")\n    use_ssl = os.environ.get(\"USE_SSL\", \"false\") == \"true\"\n    if use_ssl is True:\n        ssl_context = ssl.create_default_context(ssl.Purpose.CLIENT_AUTH)\n        ssl_context.load_cert_chain(\n            certfile=\"/etc/instance.crt\",\n            keyfile=\"/etc/instance.key\",\n        )\n    else:",
+        "detail": "lib.server",
+        "documentation": {}
+    },
+    {
+        "label": "log",
+        "kind": 5,
+        "importPath": "lib.server",
+        "description": "lib.server",
+        "peekOfCode": "log = logging.getLogger(__file__)\ndef start_server(backend: Backend, routes: List[web.RouteDef], **kwargs):\n    log.debug(\"getting certificate...\")\n    use_ssl = os.environ.get(\"USE_SSL\", \"false\") == \"true\"\n    if use_ssl is True:\n        ssl_context = ssl.create_default_context(ssl.Purpose.CLIENT_AUTH)\n        ssl_context.load_cert_chain(\n            certfile=\"/etc/instance.crt\",\n            keyfile=\"/etc/instance.key\",\n        )",
+        "detail": "lib.server",
+        "documentation": {}
+    },
+    {
+        "label": "ClientStatus",
+        "kind": 6,
+        "importPath": "lib.test_utils",
+        "description": "lib.test_utils",
+        "peekOfCode": "class ClientStatus(Enum):\n    FetchEndpoint = 1\n    Generating = 2\n    Done = 3\n    Error = 4\ntotal_success = 0\nlast_res = []\nstop_event = threading.Event()\nstart_time = time.time()\ntest_args = argparse.ArgumentParser(description=\"Test inference endpoint\")",
+        "detail": "lib.test_utils",
+        "documentation": {}
+    },
+    {
+        "label": "ClientState",
+        "kind": 6,
+        "importPath": "lib.test_utils",
+        "description": "lib.test_utils",
+        "peekOfCode": "class ClientState:\n    endpoint_group_name: str\n    api_key: str\n    server_url: str\n    worker_endpoint: str\n    payload: ApiPayload\n    url: str = \"\"\n    status: ClientStatus = ClientStatus.FetchEndpoint\n    as_error: List[str] = field(default_factory=list)\n    infer_error: List[str] = field(default_factory=list)",
+        "detail": "lib.test_utils",
+        "documentation": {}
+    },
+    {
+        "label": "print_truncate_res",
+        "kind": 2,
+        "importPath": "lib.test_utils",
+        "description": "lib.test_utils",
+        "peekOfCode": "def print_truncate_res(res: str):\n    if len(res) > 150:\n        print(f\"{res[:50]}....{res[-100:]}\")\n    else:\n        print(res)\n@dataclass\nclass ClientState:\n    endpoint_group_name: str\n    api_key: str\n    server_url: str",
+        "detail": "lib.test_utils",
+        "documentation": {}
+    },
+    {
+        "label": "print_state",
+        "kind": 2,
+        "importPath": "lib.test_utils",
+        "description": "lib.test_utils",
+        "peekOfCode": "def print_state(clients: List[ClientState], num_clients: int) -> None:\n    print(\"starting up...\")\n    sleep(2)\n    center_size = 14\n    global start_time\n    while len(clients) < num_clients or (\n        any(\n            map(\n                lambda client: client.status\n                in [ClientStatus.FetchEndpoint, ClientStatus.Generating],",
+        "detail": "lib.test_utils",
+        "documentation": {}
+    },
+    {
+        "label": "run_test",
+        "kind": 2,
+        "importPath": "lib.test_utils",
+        "description": "lib.test_utils",
+        "peekOfCode": "def run_test(\n    num_requests: int,\n    requests_per_second: int,\n    endpoint_group_name: str,\n    api_key: str,\n    server_url: str,\n    worker_endpoint: str,\n    payload_cls: Type[ApiPayload],\n):\n    threads = []",
+        "detail": "lib.test_utils",
+        "documentation": {}
+    },
+    {
+        "label": "test_load_cmd",
+        "kind": 2,
+        "importPath": "lib.test_utils",
+        "description": "lib.test_utils",
+        "peekOfCode": "def test_load_cmd(\n    payload_cls: Type[ApiPayload], endpoint: str, arg_parser: argparse.ArgumentParser\n):\n    arg_parser.add_argument(\n        \"-n\",\n        dest=\"num_requests\",\n        type=int,\n        required=True,\n        help=\"total number of requests\",\n    )",
+        "detail": "lib.test_utils",
+        "documentation": {}
+    },
+    {
+        "label": "total_success",
+        "kind": 5,
+        "importPath": "lib.test_utils",
+        "description": "lib.test_utils",
+        "peekOfCode": "total_success = 0\nlast_res = []\nstop_event = threading.Event()\nstart_time = time.time()\ntest_args = argparse.ArgumentParser(description=\"Test inference endpoint\")\ntest_args.add_argument(\n    \"-k\", dest=\"api_key\", type=str, required=True, help=\"Your vast account API key\"\n)\ntest_args.add_argument(\n    \"-e\",",
+        "detail": "lib.test_utils",
+        "documentation": {}
+    },
+    {
+        "label": "last_res",
+        "kind": 5,
+        "importPath": "lib.test_utils",
+        "description": "lib.test_utils",
+        "peekOfCode": "last_res = []\nstop_event = threading.Event()\nstart_time = time.time()\ntest_args = argparse.ArgumentParser(description=\"Test inference endpoint\")\ntest_args.add_argument(\n    \"-k\", dest=\"api_key\", type=str, required=True, help=\"Your vast account API key\"\n)\ntest_args.add_argument(\n    \"-e\",\n    dest=\"endpoint_group_name\",",
+        "detail": "lib.test_utils",
+        "documentation": {}
+    },
+    {
+        "label": "stop_event",
+        "kind": 5,
+        "importPath": "lib.test_utils",
+        "description": "lib.test_utils",
+        "peekOfCode": "stop_event = threading.Event()\nstart_time = time.time()\ntest_args = argparse.ArgumentParser(description=\"Test inference endpoint\")\ntest_args.add_argument(\n    \"-k\", dest=\"api_key\", type=str, required=True, help=\"Your vast account API key\"\n)\ntest_args.add_argument(\n    \"-e\",\n    dest=\"endpoint_group_name\",\n    type=str,",
+        "detail": "lib.test_utils",
+        "documentation": {}
+    },
+    {
+        "label": "start_time",
+        "kind": 5,
+        "importPath": "lib.test_utils",
+        "description": "lib.test_utils",
+        "peekOfCode": "start_time = time.time()\ntest_args = argparse.ArgumentParser(description=\"Test inference endpoint\")\ntest_args.add_argument(\n    \"-k\", dest=\"api_key\", type=str, required=True, help=\"Your vast account API key\"\n)\ntest_args.add_argument(\n    \"-e\",\n    dest=\"endpoint_group_name\",\n    type=str,\n    required=True,",
+        "detail": "lib.test_utils",
+        "documentation": {}
+    },
+    {
+        "label": "test_args",
+        "kind": 5,
+        "importPath": "lib.test_utils",
+        "description": "lib.test_utils",
+        "peekOfCode": "test_args = argparse.ArgumentParser(description=\"Test inference endpoint\")\ntest_args.add_argument(\n    \"-k\", dest=\"api_key\", type=str, required=True, help=\"Your vast account API key\"\n)\ntest_args.add_argument(\n    \"-e\",\n    dest=\"endpoint_group_name\",\n    type=str,\n    required=True,\n    help=\"Endpoint group name\",",
+        "detail": "lib.test_utils",
+        "documentation": {}
+    },
+    {
+        "label": "GetPayloadAndWorkload",
+        "kind": 5,
+        "importPath": "lib.test_utils",
+        "description": "lib.test_utils",
+        "peekOfCode": "GetPayloadAndWorkload = Callable[[], Tuple[Dict[str, Any], float]]\ndef print_truncate_res(res: str):\n    if len(res) > 150:\n        print(f\"{res[:50]}....{res[-100:]}\")\n    else:\n        print(res)\n@dataclass\nclass ClientState:\n    endpoint_group_name: str\n    api_key: str",
+        "detail": "lib.test_utils",
+        "documentation": {}
+    },
+    {
+        "label": "call_default_workflow",
+        "kind": 2,
+        "importPath": "workers.comfyui.client",
+        "description": "workers.comfyui.client",
+        "peekOfCode": "def call_default_workflow(\n    endpoint_group_name: str, api_key: str, server_url: str\n) -> None:\n    WORKER_ENDPOINT = \"/prompt\"\n    COST = 100\n    route_payload = {\n        \"endpoint\": endpoint_group_name,\n        \"api_key\": api_key,\n        \"cost\": COST,\n    }",
+        "detail": "workers.comfyui.client",
+        "documentation": {}
+    },
+    {
+        "label": "call_custom_workflow_for_sd3",
+        "kind": 2,
+        "importPath": "workers.comfyui.client",
+        "description": "workers.comfyui.client",
+        "peekOfCode": "def call_custom_workflow_for_sd3(\n    endpoint_group_name: str, api_key: str, server_url: str\n) -> None:\n    WORKER_ENDPOINT = \"/custom-workflow\"\n    COST = 100\n    route_payload = {\n        \"endpoint\": endpoint_group_name,\n        \"api_key\": api_key,\n        \"cost\": COST,\n    }",
+        "detail": "workers.comfyui.client",
+        "documentation": {}
+    },
+    {
+        "label": "Model",
+        "kind": 6,
+        "importPath": "workers.comfyui.data_types",
+        "description": "workers.comfyui.data_types",
+        "peekOfCode": "class Model(Enum):\n    Flux = \"flux\"\n    Sd3 = \"sd3\"\n    def get_request_time(self) -> int:\n        match self:\n            case Model.Flux:\n                return 23\n            case Model.Sd3:\n                return 6\n@cache",
+        "detail": "workers.comfyui.data_types",
+        "documentation": {}
+    },
+    {
+        "label": "DefaultComfyWorkflowData",
+        "kind": 6,
+        "importPath": "workers.comfyui.data_types",
+        "description": "workers.comfyui.data_types",
+        "peekOfCode": "class DefaultComfyWorkflowData(ApiPayload):\n    prompt: str\n    width: int\n    height: int\n    steps: int\n    seed: int\n    @classmethod\n    def for_test(cls):\n        test_prompt = random.choice(test_prompts).rstrip()\n        return cls(",
+        "detail": "workers.comfyui.data_types",
+        "documentation": {}
+    },
+    {
+        "label": "CustomComfyWorkflowData",
+        "kind": 6,
+        "importPath": "workers.comfyui.data_types",
+        "description": "workers.comfyui.data_types",
+        "peekOfCode": "class CustomComfyWorkflowData(ApiPayload):\n    custom_fields: Dict[str, int]\n    workflow: Dict[str, Any]\n    @classmethod\n    def for_test(cls):\n        raise NotImplemented(\"Custom comfy workflow is not used for testing\")\n    def count_workload(self) -> float:\n        return count_workload(\n            width=int(self.custom_fields.get(\"width\", 1024)),\n            height=int(self.custom_fields.get(\"height\", 1024)),",
+        "detail": "workers.comfyui.data_types",
+        "documentation": {}
+    },
+    {
+        "label": "get_model",
+        "kind": 2,
+        "importPath": "workers.comfyui.data_types",
+        "description": "workers.comfyui.data_types",
+        "peekOfCode": "def get_model() -> Model:\n    match os.environ.get(\"COMFY_MODEL\"):\n        case \"flux\":\n            return Model.Flux\n        case \"sd3\":\n            return Model.Sd3\n        case None:\n            raise Exception(\n                \"For comfyui pyworker, $COMFY_MODEL must be set in the vast template\"\n            )",
+        "detail": "workers.comfyui.data_types",
+        "documentation": {}
+    },
+    {
+        "label": "get_request_template",
+        "kind": 2,
+        "importPath": "workers.comfyui.data_types",
+        "description": "workers.comfyui.data_types",
+        "peekOfCode": "def get_request_template() -> str:\n    with open(f\"workers/comfyui/misc/default_workflows/{get_model().value}.json\") as f:\n        return f.read()\ndef count_workload(width: int, height: int, steps: int) -> float:\n    \"\"\"\n    we want to normalize the workload is a number such that cur_perf(tokens/second) for 1024x1024 image with\n    28 steps is 200 tokens on a 4090.\n    in order get that we calculate the\n    A = ( absolute workload based on given data )\n    B = ( absolute workload for a 1024x1024 image with 28 steps )",
+        "detail": "workers.comfyui.data_types",
+        "documentation": {}
+    },
+    {
+        "label": "count_workload",
+        "kind": 2,
+        "importPath": "workers.comfyui.data_types",
+        "description": "workers.comfyui.data_types",
+        "peekOfCode": "def count_workload(width: int, height: int, steps: int) -> float:\n    \"\"\"\n    we want to normalize the workload is a number such that cur_perf(tokens/second) for 1024x1024 image with\n    28 steps is 200 tokens on a 4090.\n    in order get that we calculate the\n    A = ( absolute workload based on given data )\n    B = ( absolute workload for a 1024x1024 image with 28 steps )\n    and adjust the workload to 200 tokens by A/B.\n    we then adjust for difference between Flux and SD3 by multiplying this value by expected request time for a\n    standard image(23s for Flux, 6s for SD3).",
+        "detail": "workers.comfyui.data_types",
+        "documentation": {}
+    },
+    {
+        "label": "DefaultComfyWorkflowHandler",
+        "kind": 6,
+        "importPath": "workers.comfyui.server",
+        "description": "workers.comfyui.server",
+        "peekOfCode": "class DefaultComfyWorkflowHandler(EndpointHandler[DefaultComfyWorkflowData]):\n    @property\n    def endpoint(self) -> str:\n        return \"/runsync\"\n    @classmethod\n    def payload_cls(cls) -> Type[DefaultComfyWorkflowData]:\n        return DefaultComfyWorkflowData\n    def make_benchmark_payload(self) -> DefaultComfyWorkflowData:\n        return DefaultComfyWorkflowData.for_test()\n    async def generate_client_response(",
+        "detail": "workers.comfyui.server",
+        "documentation": {}
+    },
+    {
+        "label": "CustomComfyWorkflowHandler",
+        "kind": 6,
+        "importPath": "workers.comfyui.server",
+        "description": "workers.comfyui.server",
+        "peekOfCode": "class CustomComfyWorkflowHandler(EndpointHandler[CustomComfyWorkflowData]):\n    @property\n    def endpoint(self) -> str:\n        return \"/runsync\"\n    @classmethod\n    def payload_cls(cls) -> Type[CustomComfyWorkflowData]:\n        return CustomComfyWorkflowData\n    def make_benchmark_payload(self) -> CustomComfyWorkflowData:\n        return CustomComfyWorkflowData.for_test()\n    async def generate_client_response(",
+        "detail": "workers.comfyui.server",
+        "documentation": {}
+    },
+    {
+        "label": "MODEL_SERVER_URL",
+        "kind": 5,
+        "importPath": "workers.comfyui.server",
+        "description": "workers.comfyui.server",
+        "peekOfCode": "MODEL_SERVER_URL = \"http://0.0.0.0:38188\"\n# This is the last log line that gets emitted once comfyui+extensions have been fully loaded\nMODEL_SERVER_START_LOG_MSG = \"To see the GUI go to: http://127.0.0.1:18188\"\nMODEL_SERVER_ERROR_LOG_MSGS = [\n    \"MetadataIncompleteBuffer\",  # This error is emitted when the downloaded model is corrupted\n    \"Value not in list: unet_name\",  # This error is emitted when the model file is not there at all\n]\nlogging.basicConfig(\n    level=logging.DEBUG,\n    format=\"%(asctime)s[%(levelname)-5s] %(message)s\",",
+        "detail": "workers.comfyui.server",
+        "documentation": {}
+    },
+    {
+        "label": "MODEL_SERVER_START_LOG_MSG",
+        "kind": 5,
+        "importPath": "workers.comfyui.server",
+        "description": "workers.comfyui.server",
+        "peekOfCode": "MODEL_SERVER_START_LOG_MSG = \"To see the GUI go to: http://127.0.0.1:18188\"\nMODEL_SERVER_ERROR_LOG_MSGS = [\n    \"MetadataIncompleteBuffer\",  # This error is emitted when the downloaded model is corrupted\n    \"Value not in list: unet_name\",  # This error is emitted when the model file is not there at all\n]\nlogging.basicConfig(\n    level=logging.DEBUG,\n    format=\"%(asctime)s[%(levelname)-5s] %(message)s\",\n    datefmt=\"%Y-%m-%d %H:%M:%S\",\n)",
+        "detail": "workers.comfyui.server",
+        "documentation": {}
+    },
+    {
+        "label": "MODEL_SERVER_ERROR_LOG_MSGS",
+        "kind": 5,
+        "importPath": "workers.comfyui.server",
+        "description": "workers.comfyui.server",
+        "peekOfCode": "MODEL_SERVER_ERROR_LOG_MSGS = [\n    \"MetadataIncompleteBuffer\",  # This error is emitted when the downloaded model is corrupted\n    \"Value not in list: unet_name\",  # This error is emitted when the model file is not there at all\n]\nlogging.basicConfig(\n    level=logging.DEBUG,\n    format=\"%(asctime)s[%(levelname)-5s] %(message)s\",\n    datefmt=\"%Y-%m-%d %H:%M:%S\",\n)\nlog = logging.getLogger(__file__)",
+        "detail": "workers.comfyui.server",
+        "documentation": {}
+    },
+    {
+        "label": "log",
+        "kind": 5,
+        "importPath": "workers.comfyui.server",
+        "description": "workers.comfyui.server",
+        "peekOfCode": "log = logging.getLogger(__file__)\nasync def generate_client_response(\n    request: web.Request, response: ClientResponse\n) -> Union[web.Response, web.StreamResponse]:\n    _ = request\n    match response.status:\n        case 200:\n            log.debug(\"SUCCESS\")\n            res = await response.json()\n            if \"output\" not in res:",
+        "detail": "workers.comfyui.server",
+        "documentation": {}
+    },
+    {
+        "label": "backend",
+        "kind": 5,
+        "importPath": "workers.comfyui.server",
+        "description": "workers.comfyui.server",
+        "peekOfCode": "backend = Backend(\n    model_server_url=MODEL_SERVER_URL,\n    model_log_file=os.environ[\"MODEL_LOG\"],\n    allow_parallel_requests=False,\n    benchmark_handler=DefaultComfyWorkflowHandler(\n        benchmark_runs=3, benchmark_words=100\n    ),\n    log_actions=[\n        (LogAction.ModelLoaded, MODEL_SERVER_START_LOG_MSG),\n        (LogAction.Info, \"Downloading:\"),",
+        "detail": "workers.comfyui.server",
+        "documentation": {}
+    },
+    {
+        "label": "routes",
+        "kind": 5,
+        "importPath": "workers.comfyui.server",
+        "description": "workers.comfyui.server",
+        "peekOfCode": "routes = [\n    web.post(\"/prompt\", backend.create_handler(DefaultComfyWorkflowHandler())),\n    web.post(\"/custom-workflow\", backend.create_handler(CustomComfyWorkflowHandler())),\n    web.get(\"/ping\", handle_ping),\n]\nif __name__ == \"__main__\":\n    start_server(backend, routes)",
+        "detail": "workers.comfyui.server",
+        "documentation": {}
+    },
+    {
+        "label": "WORKER_ENDPOINT",
+        "kind": 5,
+        "importPath": "workers.comfyui.test_load",
+        "description": "workers.comfyui.test_load",
+        "peekOfCode": "WORKER_ENDPOINT = \"/prompt\"\nif __name__ == \"__main__\":\n    test_args.add_argument(\n        \"-m\",\n        dest=\"comfy_model\",\n        choices=list(map(lambda x: x.value, Model)),\n        required=True,\n        help=\"Image generation model name\",\n    )\n    test_load_cmd(DefaultComfyWorkflowData, WORKER_ENDPOINT, arg_parser=test_args)",
+        "detail": "workers.comfyui.test_load",
+        "documentation": {}
+    },
+    {
+        "label": "InputData",
+        "kind": 6,
+        "importPath": "workers.hello_world.data_types",
+        "description": "workers.hello_world.data_types",
+        "peekOfCode": "class InputData(ApiPayload):\n    prompt: str\n    max_response_tokens: int\n    @classmethod\n    def for_test(cls) -> \"InputData\":\n        prompt = \" \".join(random.choices(WORD_LIST, k=int(250)))\n        return cls(prompt=prompt, max_response_tokens=300)\n    def generate_payload_json(self) -> Dict[str, Any]:\n        return dataclasses.asdict(self)\n    def count_workload(self) -> int:",
+        "detail": "workers.hello_world.data_types",
+        "documentation": {}
+    },
+    {
+        "label": "WORD_LIST",
+        "kind": 5,
+        "importPath": "workers.hello_world.data_types",
+        "description": "workers.hello_world.data_types",
+        "peekOfCode": "WORD_LIST = nltk.corpus.words.words()\n# used to count to count tokens and workload for LLM\ntokenizer = AutoTokenizer.from_pretrained(\"openai-community/openai-gpt\")\n@dataclasses.dataclass\nclass InputData(ApiPayload):\n    prompt: str\n    max_response_tokens: int\n    @classmethod\n    def for_test(cls) -> \"InputData\":\n        prompt = \" \".join(random.choices(WORD_LIST, k=int(250)))",
+        "detail": "workers.hello_world.data_types",
+        "documentation": {}
+    },
+    {
+        "label": "tokenizer",
+        "kind": 5,
+        "importPath": "workers.hello_world.data_types",
+        "description": "workers.hello_world.data_types",
+        "peekOfCode": "tokenizer = AutoTokenizer.from_pretrained(\"openai-community/openai-gpt\")\n@dataclasses.dataclass\nclass InputData(ApiPayload):\n    prompt: str\n    max_response_tokens: int\n    @classmethod\n    def for_test(cls) -> \"InputData\":\n        prompt = \" \".join(random.choices(WORD_LIST, k=int(250)))\n        return cls(prompt=prompt, max_response_tokens=300)\n    def generate_payload_json(self) -> Dict[str, Any]:",
+        "detail": "workers.hello_world.data_types",
+        "documentation": {}
+    },
+    {
+        "label": "GenerateHandler",
+        "kind": 6,
+        "importPath": "workers.hello_world.server",
+        "description": "workers.hello_world.server",
+        "peekOfCode": "class GenerateHandler(EndpointHandler[InputData]):\n    @property\n    def endpoint(self) -> str:\n        # the API endpoint\n        return \"/generate\"\n    @classmethod\n    def payload_cls(cls) -> Type[InputData]:\n        return InputData\n    def generate_payload_json(self, payload: InputData) -> Dict[str, Any]:\n        \"\"\"",
+        "detail": "workers.hello_world.server",
+        "documentation": {}
+    },
+    {
+        "label": "GenerateStreamHandler",
+        "kind": 6,
+        "importPath": "workers.hello_world.server",
+        "description": "workers.hello_world.server",
+        "peekOfCode": "class GenerateStreamHandler(EndpointHandler[InputData]):\n    @property\n    def endpoint(self) -> str:\n        return \"/generate_stream\"\n    @classmethod\n    def payload_cls(cls) -> Type[InputData]:\n        return InputData\n    def generate_payload_json(self, payload: InputData) -> Dict[str, Any]:\n        return dataclasses.asdict(payload)\n    def make_benchmark_payload(self) -> InputData:",
+        "detail": "workers.hello_world.server",
+        "documentation": {}
+    },
+    {
+        "label": "MODEL_SERVER_URL",
+        "kind": 5,
+        "importPath": "workers.hello_world.server",
+        "description": "workers.hello_world.server",
+        "peekOfCode": "MODEL_SERVER_URL = \"http://0.0.0.0:5001\"\n# This is the log line that is emitted once the server has started\nMODEL_SERVER_START_LOG_MSG = \"infer server has started\"\nMODEL_SERVER_ERROR_LOG_MSGS = [\n    \"Exception: corrupted model file\"  # message in the logs indicating the unrecoverable error\n]\nlogging.basicConfig(\n    level=logging.DEBUG,\n    format=\"%(asctime)s[%(levelname)-5s] %(message)s\",\n    datefmt=\"%Y-%m-%d %H:%M:%S\",",
+        "detail": "workers.hello_world.server",
+        "documentation": {}
+    },
+    {
+        "label": "MODEL_SERVER_START_LOG_MSG",
+        "kind": 5,
+        "importPath": "workers.hello_world.server",
+        "description": "workers.hello_world.server",
+        "peekOfCode": "MODEL_SERVER_START_LOG_MSG = \"infer server has started\"\nMODEL_SERVER_ERROR_LOG_MSGS = [\n    \"Exception: corrupted model file\"  # message in the logs indicating the unrecoverable error\n]\nlogging.basicConfig(\n    level=logging.DEBUG,\n    format=\"%(asctime)s[%(levelname)-5s] %(message)s\",\n    datefmt=\"%Y-%m-%d %H:%M:%S\",\n)\nlog = logging.getLogger(__file__)",
+        "detail": "workers.hello_world.server",
+        "documentation": {}
+    },
+    {
+        "label": "MODEL_SERVER_ERROR_LOG_MSGS",
+        "kind": 5,
+        "importPath": "workers.hello_world.server",
+        "description": "workers.hello_world.server",
+        "peekOfCode": "MODEL_SERVER_ERROR_LOG_MSGS = [\n    \"Exception: corrupted model file\"  # message in the logs indicating the unrecoverable error\n]\nlogging.basicConfig(\n    level=logging.DEBUG,\n    format=\"%(asctime)s[%(levelname)-5s] %(message)s\",\n    datefmt=\"%Y-%m-%d %H:%M:%S\",\n)\nlog = logging.getLogger(__file__)\n# This class is the implementer for the '/generate' endpoint of model API",
+        "detail": "workers.hello_world.server",
+        "documentation": {}
+    },
+    {
+        "label": "log",
+        "kind": 5,
+        "importPath": "workers.hello_world.server",
+        "description": "workers.hello_world.server",
+        "peekOfCode": "log = logging.getLogger(__file__)\n# This class is the implementer for the '/generate' endpoint of model API\n@dataclasses.dataclass\nclass GenerateHandler(EndpointHandler[InputData]):\n    @property\n    def endpoint(self) -> str:\n        # the API endpoint\n        return \"/generate\"\n    @classmethod\n    def payload_cls(cls) -> Type[InputData]:",
+        "detail": "workers.hello_world.server",
+        "documentation": {}
+    },
+    {
+        "label": "backend",
+        "kind": 5,
+        "importPath": "workers.hello_world.server",
+        "description": "workers.hello_world.server",
+        "peekOfCode": "backend = Backend(\n    model_server_url=MODEL_SERVER_URL,\n    model_log_file=os.environ[\"MODEL_LOG\"],\n    allow_parallel_requests=True,\n    # give the backend a handler instance that is used for benchmarking\n    # number of benchmark run and number of words for a random benchmark run are given\n    benchmark_handler=GenerateHandler(benchmark_runs=3, benchmark_words=256),\n    # defines how to handle specific log messages. See docstring of LogAction for details\n    log_actions=[\n        (LogAction.ModelLoaded, MODEL_SERVER_START_LOG_MSG),",
+        "detail": "workers.hello_world.server",
+        "documentation": {}
+    },
+    {
+        "label": "routes",
+        "kind": 5,
+        "importPath": "workers.hello_world.server",
+        "description": "workers.hello_world.server",
+        "peekOfCode": "routes = [\n    web.post(\"/generate\", backend.create_handler(GenerateHandler())),\n    web.post(\"/generate_stream\", backend.create_handler(GenerateStreamHandler())),\n    web.get(\"/ping\", handle_ping),\n    web.get(\"/healthcheck\", handle_healthcheck),\n]\nif __name__ == \"__main__\":\n    # start the PyWorker server\n    start_server(backend, routes)",
+        "detail": "workers.hello_world.server",
+        "documentation": {}
+    },
+    {
+        "label": "WORKER_ENDPOINT",
+        "kind": 5,
+        "importPath": "workers.hello_world.test_load",
+        "description": "workers.hello_world.test_load",
+        "peekOfCode": "WORKER_ENDPOINT = \"/generate\"\nif __name__ == \"__main__\":\n    test_load_cmd(InputData, WORKER_ENDPOINT, arg_parser=test_args)",
+        "detail": "workers.hello_world.test_load",
+        "documentation": {}
+    },
+    {
+        "label": "call_generate",
+        "kind": 2,
+        "importPath": "workers.tgi.client",
+        "description": "workers.tgi.client",
+        "peekOfCode": "def call_generate(endpoint_group_name: str, api_key: str, server_url: str) -> None:\n    WORKER_ENDPOINT = \"/generate\"\n    message = discover(endpoint_group_name, api_key, server_url)\n    url = message[\"url\"]\n    auth_data = dict(\n        signature=message[\"signature\"],\n        cost=message[\"cost\"],\n        endpoint=message[\"endpoint\"],\n        reqnum=message[\"reqnum\"],\n        url=message[\"url\"],",
+        "detail": "workers.tgi.client",
+        "documentation": {}
+    },
+    {
+        "label": "discover",
+        "kind": 2,
+        "importPath": "workers.tgi.client",
+        "description": "workers.tgi.client",
+        "peekOfCode": "def discover(endpoint_group_name, api_key, server_url):\n    COST = 100\n    route_payload = {\n        \"endpoint\": endpoint_group_name,\n        \"api_key\": api_key,\n        \"cost\": COST,\n    }\n    response = requests.post(\n        urljoin(server_url, \"/route/\"),\n        json=route_payload,",
+        "detail": "workers.tgi.client",
+        "documentation": {}
+    },
+    {
+        "label": "endpoint_stats",
+        "kind": 2,
+        "importPath": "workers.tgi.client",
+        "description": "workers.tgi.client",
+        "peekOfCode": "def endpoint_stats(\n    endpoint_group_name: str, endpoint_id: str, api_key: str, server_url: str\n):\n    route_payload = {\n        \"endpoint\": endpoint_group_name,\n        \"api_key\": api_key,\n    }\n    response = requests.post(\n        urljoin(server_url, \"/get_endpoint_stats/\"),\n        json=route_payload,",
+        "detail": "workers.tgi.client",
+        "documentation": {}
+    },
+    {
+        "label": "autogroup_stats",
+        "kind": 2,
+        "importPath": "workers.tgi.client",
+        "description": "workers.tgi.client",
+        "peekOfCode": "def autogroup_stats(autogroup_id: str, api_key: str, server_url: str):\n    route_payload = {\n        \"api_key\": api_key,\n        \"id\": autogroup_id,\n    }\n    response = requests.post(\n        urljoin(server_url, \"/get_endpoint_stats/\"),\n        json=route_payload,\n        timeout=4,\n    )",
+        "detail": "workers.tgi.client",
+        "documentation": {}
+    },
+    {
+        "label": "call_generate_stream",
+        "kind": 2,
+        "importPath": "workers.tgi.client",
+        "description": "workers.tgi.client",
+        "peekOfCode": "def call_generate_stream(endpoint_group_name: str, api_key: str, server_url: str):\n    WORKER_ENDPOINT = \"/generate_stream\"\n    COST = 100\n    route_payload = {\n        \"endpoint\": endpoint_group_name,\n        \"api_key\": api_key,\n        \"cost\": COST,\n    }\n    response = requests.post(\n        urljoin(server_url, \"/route/\"),",
+        "detail": "workers.tgi.client",
+        "documentation": {}
+    },
+    {
+        "label": "InputParameters",
+        "kind": 6,
+        "importPath": "workers.tgi.data_types",
+        "description": "workers.tgi.data_types",
+        "peekOfCode": "class InputParameters:\n    max_new_tokens: int = 256\n    @classmethod\n    def from_json_msg(cls, json_msg: Dict[str, Any]) -> \"InputParameters\":\n        errors = {}\n        for param in inspect.signature(cls).parameters:\n            if param not in json_msg:\n                errors[param] = \"missing parameter\"\n        if errors:\n            raise JsonDataException(errors)",
+        "detail": "workers.tgi.data_types",
+        "documentation": {}
+    },
+    {
+        "label": "InputData",
+        "kind": 6,
+        "importPath": "workers.tgi.data_types",
+        "description": "workers.tgi.data_types",
+        "peekOfCode": "class InputData(ApiPayload):\n    inputs: str\n    parameters: InputParameters\n    @classmethod\n    def from_dict(cls, data: Dict[str, Any]) -> \"InputData\":\n        return cls(\n            inputs=data[\"inputs\"], parameters=InputParameters(**data[\"parameters\"])\n        )\n    @classmethod\n    def for_test(cls) -> \"InputData\":",
+        "detail": "workers.tgi.data_types",
+        "documentation": {}
+    },
+    {
+        "label": "WORD_LIST",
+        "kind": 5,
+        "importPath": "workers.tgi.data_types",
+        "description": "workers.tgi.data_types",
+        "peekOfCode": "WORD_LIST = nltk.corpus.words.words()\ntokenizer = AutoTokenizer.from_pretrained(\"openai-community/openai-gpt\")\n@dataclasses.dataclass\nclass InputParameters:\n    max_new_tokens: int = 256\n    @classmethod\n    def from_json_msg(cls, json_msg: Dict[str, Any]) -> \"InputParameters\":\n        errors = {}\n        for param in inspect.signature(cls).parameters:\n            if param not in json_msg:",
+        "detail": "workers.tgi.data_types",
+        "documentation": {}
+    },
+    {
+        "label": "tokenizer",
+        "kind": 5,
+        "importPath": "workers.tgi.data_types",
+        "description": "workers.tgi.data_types",
+        "peekOfCode": "tokenizer = AutoTokenizer.from_pretrained(\"openai-community/openai-gpt\")\n@dataclasses.dataclass\nclass InputParameters:\n    max_new_tokens: int = 256\n    @classmethod\n    def from_json_msg(cls, json_msg: Dict[str, Any]) -> \"InputParameters\":\n        errors = {}\n        for param in inspect.signature(cls).parameters:\n            if param not in json_msg:\n                errors[param] = \"missing parameter\"",
+        "detail": "workers.tgi.data_types",
+        "documentation": {}
+    },
+    {
+        "label": "GenerateHandler",
+        "kind": 6,
+        "importPath": "workers.tgi.server",
+        "description": "workers.tgi.server",
+        "peekOfCode": "class GenerateHandler(EndpointHandler[InputData]):\n    @property\n    def endpoint(self) -> str:\n        return \"/generate\"\n    @classmethod\n    def payload_cls(cls) -> Type[InputData]:\n        return InputData\n    def make_benchmark_payload(self) -> InputData:\n        return InputData.for_test()\n    async def generate_client_response(",
+        "detail": "workers.tgi.server",
+        "documentation": {}
+    },
+    {
+        "label": "GenerateStreamHandler",
+        "kind": 6,
+        "importPath": "workers.tgi.server",
+        "description": "workers.tgi.server",
+        "peekOfCode": "class GenerateStreamHandler(EndpointHandler[InputData]):\n    @property\n    def endpoint(self) -> str:\n        return \"/generate_stream\"\n    @classmethod\n    def payload_cls(cls) -> Type[InputData]:\n        return InputData\n    def make_benchmark_payload(self) -> InputData:\n        return InputData.for_test()\n    async def generate_client_response(",
+        "detail": "workers.tgi.server",
+        "documentation": {}
+    },
+    {
+        "label": "MODEL_SERVER_URL",
+        "kind": 5,
+        "importPath": "workers.tgi.server",
+        "description": "workers.tgi.server",
+        "peekOfCode": "MODEL_SERVER_URL = \"http://0.0.0.0:3000\"\n# This is the last log line that gets emitted once comfyui+extensions have been fully loaded\nMODEL_SERVER_START_LOG_MSG = '\"message\":\"Connected\",\"target\":\"text_generation_router\"'\nMODEL_SERVER_ERROR_LOG_MSGS = [\"Error: WebserverFailed\", \"Error: DownloadError\"]\nlogging.basicConfig(\n    level=logging.DEBUG,\n    format=\"%(asctime)s[%(levelname)-5s] %(message)s\",\n    datefmt=\"%Y-%m-%d %H:%M:%S\",\n)\nlog = logging.getLogger(__file__)",
+        "detail": "workers.tgi.server",
+        "documentation": {}
+    },
+    {
+        "label": "MODEL_SERVER_START_LOG_MSG",
+        "kind": 5,
+        "importPath": "workers.tgi.server",
+        "description": "workers.tgi.server",
+        "peekOfCode": "MODEL_SERVER_START_LOG_MSG = '\"message\":\"Connected\",\"target\":\"text_generation_router\"'\nMODEL_SERVER_ERROR_LOG_MSGS = [\"Error: WebserverFailed\", \"Error: DownloadError\"]\nlogging.basicConfig(\n    level=logging.DEBUG,\n    format=\"%(asctime)s[%(levelname)-5s] %(message)s\",\n    datefmt=\"%Y-%m-%d %H:%M:%S\",\n)\nlog = logging.getLogger(__file__)\n@dataclasses.dataclass\nclass GenerateHandler(EndpointHandler[InputData]):",
+        "detail": "workers.tgi.server",
+        "documentation": {}
+    },
+    {
+        "label": "MODEL_SERVER_ERROR_LOG_MSGS",
+        "kind": 5,
+        "importPath": "workers.tgi.server",
+        "description": "workers.tgi.server",
+        "peekOfCode": "MODEL_SERVER_ERROR_LOG_MSGS = [\"Error: WebserverFailed\", \"Error: DownloadError\"]\nlogging.basicConfig(\n    level=logging.DEBUG,\n    format=\"%(asctime)s[%(levelname)-5s] %(message)s\",\n    datefmt=\"%Y-%m-%d %H:%M:%S\",\n)\nlog = logging.getLogger(__file__)\n@dataclasses.dataclass\nclass GenerateHandler(EndpointHandler[InputData]):\n    @property",
+        "detail": "workers.tgi.server",
+        "documentation": {}
+    },
+    {
+        "label": "log",
+        "kind": 5,
+        "importPath": "workers.tgi.server",
+        "description": "workers.tgi.server",
+        "peekOfCode": "log = logging.getLogger(__file__)\n@dataclasses.dataclass\nclass GenerateHandler(EndpointHandler[InputData]):\n    @property\n    def endpoint(self) -> str:\n        return \"/generate\"\n    @classmethod\n    def payload_cls(cls) -> Type[InputData]:\n        return InputData\n    def make_benchmark_payload(self) -> InputData:",
+        "detail": "workers.tgi.server",
+        "documentation": {}
+    },
+    {
+        "label": "backend",
+        "kind": 5,
+        "importPath": "workers.tgi.server",
+        "description": "workers.tgi.server",
+        "peekOfCode": "backend = Backend(\n    model_server_url=MODEL_SERVER_URL,\n    model_log_file=os.environ[\"MODEL_LOG\"],\n    allow_parallel_requests=True,\n    benchmark_handler=GenerateHandler(benchmark_runs=3, benchmark_words=256),\n    log_actions=[\n        (LogAction.ModelLoaded, MODEL_SERVER_START_LOG_MSG),\n        (LogAction.Info, '\"message\":\"Download'),\n        *[\n            (LogAction.ModelError, error_msg)",
+        "detail": "workers.tgi.server",
+        "documentation": {}
+    },
+    {
+        "label": "routes",
+        "kind": 5,
+        "importPath": "workers.tgi.server",
+        "description": "workers.tgi.server",
+        "peekOfCode": "routes = [\n    web.post(\"/generate\", backend.create_handler(GenerateHandler())),\n    web.post(\"/generate_stream\", backend.create_handler(GenerateStreamHandler())),\n    web.get(\"/ping\", handle_ping),\n    web.get(\"/public_url\", get_public_url),\n]\nif __name__ == \"__main__\":\n    start_server(backend, routes)",
+        "detail": "workers.tgi.server",
+        "documentation": {}
+    },
+    {
+        "label": "WORKER_ENDPOINT",
+        "kind": 5,
+        "importPath": "workers.tgi.test_load",
+        "description": "workers.tgi.test_load",
+        "peekOfCode": "WORKER_ENDPOINT = \"/generate\"\nif __name__ == \"__main__\":\n    test_load_cmd(InputData, WORKER_ENDPOINT, arg_parser=test_args)",
+        "detail": "workers.tgi.test_load",
+        "documentation": {}
+    }
+]

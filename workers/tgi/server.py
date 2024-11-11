@@ -7,6 +7,7 @@ from aiohttp import web, ClientResponse
 
 from lib.backend import Backend, LogAction
 from lib.data_types import EndpointHandler
+from lib.metrics import get_url
 from lib.server import start_server
 from .data_types import InputData
 
@@ -105,10 +106,15 @@ async def handle_ping(_):
     return web.Response(body="pong")
 
 
+async def get_public_url():
+    return web.Response(body=get_url())
+
+
 routes = [
     web.post("/generate", backend.create_handler(GenerateHandler())),
     web.post("/generate_stream", backend.create_handler(GenerateStreamHandler())),
     web.get("/ping", handle_ping),
+    web.get("/public_url", get_public_url),
 ]
 
 if __name__ == "__main__":
