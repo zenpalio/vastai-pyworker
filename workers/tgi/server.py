@@ -115,6 +115,7 @@ routes = [
     web.post("/generate_stream", backend.create_handler(GenerateStreamHandler())),
     web.get("/ping", handle_ping),
     web.get("/public_url", get_public_url),
+    web.get("/healthz", handle_ping),
 ]
 
 if __name__ == "__main__":
