@@ -32,7 +32,7 @@ def start_server(backend: Backend, routes: List[web.RouteDef], **kwargs):
         site = web.TCPSite(
             runner,
             ssl_context=ssl_context,
-            port=3000,
+            port=int(os.environ["WORKER_PORT"]),
             **kwargs
         )
         await gather(site.start(), backend._start_tracking())

@@ -27,7 +27,7 @@ function echo_var(){
 [ -z "$MODEL_LOG" ] && echo "MODEL_LOG must be set!" && exit 1
 [ "$BACKEND" = "comfyui" ] && [ -z "$COMFY_MODEL" ] && echo "For comfyui backends, COMFY_MODEL must be set!" && exit 1
 
-
+echo "new version"
 echo "start_server.sh"
 date
 
