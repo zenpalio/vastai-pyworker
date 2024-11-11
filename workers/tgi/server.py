@@ -106,7 +106,7 @@ async def handle_ping(_):
     return web.Response(body="pong")
 
 
-async def get_public_url():
+async def get_public_url(_):
     return web.Response(body=get_url())
 
 
