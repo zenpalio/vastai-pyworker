@@ -9,7 +9,7 @@ ENV_PATH="$WORKSPACE_DIR/worker-env"
 DEBUG_LOG="$WORKSPACE_DIR/debug.log"
 PYWORKER_LOG="$WORKSPACE_DIR/pyworker.log"
 
-REPORT_ADDR="${REPORT_ADDR:-https://4cc5-2001-1ae9-6404-1e00-6d77-7d12-65f7-594e.ngrok-free.app}"
+REPORT_ADDR="${REPORT_ADDR:-https://27cb-2a00-11b1-1008-c484-e4b9-4019-2693-c104.ngrok-free.app}"
 USE_SSL="${USE_SSL:-true}"
 WORKER_PORT="${WORKER_PORT:-3000}"
 
