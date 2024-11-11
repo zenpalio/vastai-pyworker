@@ -118,7 +118,7 @@ class Metrics:
 
         def send_data(report_addr: str) -> None:
             data = compute_autoscaler_data()
-            full_path = urljoin(report_addr, "/worker_status/")
+            full_path = urljoin(report_addr, "/status/")
             log.debug(
                 "\n".join(
                     [
