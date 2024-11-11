@@ -48,7 +48,8 @@ if [ ! -d "$ENV_PATH" ]
 then
     apt install -y python3.10-venv
     echo "setting up venv"
-    rm -rf vast-pyworker/
+    rm -rf /workspace/vast-pyworker/
+    rm -rf /workspace/worker-env/
     git clone https://github.com/zenpalio/vastai-pyworker "$SERVER_DIR"
 
     python3 -m venv "$WORKSPACE_DIR/worker-env"
