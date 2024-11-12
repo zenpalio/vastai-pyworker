@@ -1,12 +1,9 @@
-import json
 import os
 import logging
 from typing import Union, Type
 import dataclasses
-from urllib.parse import urljoin
 
 from aiohttp import web, ClientResponse
-import requests
 
 from lib.backend import Backend, LogAction
 from lib.data_types import EndpointHandler
@@ -112,18 +109,6 @@ async def handle_ping(_):
 async def get_public_url(_):
     return web.Response(body=get_url())
 
-def send_public_ip():
-    report_addr = os.environ["REPORT_ADDR"]
-    full_path = urljoin(report_addr, "/public/v1/webhook/vastai/register/")
-    data = {
-        "url":get_url()
-    }
-    try:
-        requests.post(full_path, json=json.dumps(data), timeout=1)
-    except Exception as e:
-        log.debug(f"autoscaler status update failed with error: {e}")
-
-
 routes = [
     web.post("/generate", backend.create_handler(GenerateHandler())),
     web.post("/generate_stream", backend.create_handler(GenerateStreamHandler())),
@@ -134,4 +119,3 @@ routes = [
 
 if __name__ == "__main__":
     start_server(backend, routes)
-    send_public_ip()

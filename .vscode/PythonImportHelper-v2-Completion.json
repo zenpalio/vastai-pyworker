@@ -720,6 +720,14 @@
         "documentation": {}
     },
     {
+        "label": "get_url",
+        "importPath": "lib.metrics",
+        "description": "lib.metrics",
+        "isExtraImport": true,
+        "detail": "lib.metrics",
+        "documentation": {}
+    },
+    {
         "label": "AuthData",
         "importPath": "lib.data_types",
         "description": "lib.data_types",
@@ -1363,6 +1371,15 @@
         "documentation": {}
     },
     {
+        "label": "register_public_ip",
+        "kind": 2,
+        "importPath": "lib.server",
+        "description": "lib.server",
+        "peekOfCode": "def register_public_ip():\n    report_addr = os.environ[\"REPORT_ADDR\"]\n    full_path = urljoin(report_addr, \"/public/v1/webhook/vastai/register/\")\n    data = {\"url\": get_url(), \"id\": int(os.environ[\"CONTAINER_ID\"])}\n    try:\n        requests.post(full_path, json=json.dumps(data), timeout=1)\n    except Exception as e:\n        log.debug(f\"autoscaler status update failed with error: {e}\")\ndef start_server(backend: Backend, routes: List[web.RouteDef], **kwargs):\n    log.debug(\"getting certificate...\")",
+        "detail": "lib.server",
+        "documentation": {}
+    },
+    {
         "label": "start_server",
         "kind": 2,
         "importPath": "lib.server",
@@ -1376,7 +1393,7 @@
         "kind": 5,
         "importPath": "lib.server",
         "description": "lib.server",
-        "peekOfCode": "log = logging.getLogger(__file__)\ndef start_server(backend: Backend, routes: List[web.RouteDef], **kwargs):\n    log.debug(\"getting certificate...\")\n    use_ssl = os.environ.get(\"USE_SSL\", \"false\") == \"true\"\n    if use_ssl is True:\n        ssl_context = ssl.create_default_context(ssl.Purpose.CLIENT_AUTH)\n        ssl_context.load_cert_chain(\n            certfile=\"/etc/instance.crt\",\n            keyfile=\"/etc/instance.key\",\n        )",
+        "peekOfCode": "log = logging.getLogger(__file__)\ndef register_public_ip():\n    report_addr = os.environ[\"REPORT_ADDR\"]\n    full_path = urljoin(report_addr, \"/public/v1/webhook/vastai/register/\")\n    data = {\"url\": get_url(), \"id\": int(os.environ[\"CONTAINER_ID\"])}\n    try:\n        requests.post(full_path, json=json.dumps(data), timeout=1)\n    except Exception as e:\n        log.debug(f\"autoscaler status update failed with error: {e}\")\ndef start_server(backend: Backend, routes: List[web.RouteDef], **kwargs):",
         "detail": "lib.server",
         "documentation": {}
     },
@@ -1849,15 +1866,6 @@
         "documentation": {}
     },
     {
-        "label": "send_public_ip",
-        "kind": 2,
-        "importPath": "workers.tgi.server",
-        "description": "workers.tgi.server",
-        "peekOfCode": "def send_public_ip():\n    report_addr = os.environ[\"REPORT_ADDR\"]\n    full_path = urljoin(report_addr, \"/public/v1/webhook/vastai/register/\")\n    data = {\n        \"url\":get_url()\n    }\n    try:\n        requests.post(full_path, json=json.dumps(data), timeout=1)\n    except Exception as e:\n        log.debug(f\"autoscaler status update failed with error: {e}\")",
-        "detail": "workers.tgi.server",
-        "documentation": {}
-    },
-    {
         "label": "MODEL_SERVER_URL",
         "kind": 5,
         "importPath": "workers.tgi.server",
@@ -1907,7 +1915,7 @@
         "kind": 5,
         "importPath": "workers.tgi.server",
         "description": "workers.tgi.server",
-        "peekOfCode": "routes = [\n    web.post(\"/generate\", backend.create_handler(GenerateHandler())),\n    web.post(\"/generate_stream\", backend.create_handler(GenerateStreamHandler())),\n    web.get(\"/ping\", handle_ping),\n    web.get(\"/public_url\", get_public_url),\n    web.get(\"/healthz\", handle_ping),\n]\nif __name__ == \"__main__\":\n    start_server(backend, routes)\n    send_public_ip()",
+        "peekOfCode": "routes = [\n    web.post(\"/generate\", backend.create_handler(GenerateHandler())),\n    web.post(\"/generate_stream\", backend.create_handler(GenerateStreamHandler())),\n    web.get(\"/ping\", handle_ping),\n    web.get(\"/public_url\", get_public_url),\n    web.get(\"/healthz\", handle_ping),\n]\nif __name__ == \"__main__\":\n    start_server(backend, routes)",
         "detail": "workers.tgi.server",
         "documentation": {}
     },
