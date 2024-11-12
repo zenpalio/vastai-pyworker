@@ -463,6 +463,38 @@
         "documentation": {}
     },
     {
+        "label": "Union",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Type",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
         "label": "Dict",
         "importPath": "typing",
         "description": "typing",
@@ -671,6 +703,22 @@
         "documentation": {}
     },
     {
+        "label": "web",
+        "importPath": "aiohttp",
+        "description": "aiohttp",
+        "isExtraImport": true,
+        "detail": "aiohttp",
+        "documentation": {}
+    },
+    {
+        "label": "ClientResponse",
+        "importPath": "aiohttp",
+        "description": "aiohttp",
+        "isExtraImport": true,
+        "detail": "aiohttp",
+        "documentation": {}
+    },
+    {
         "label": "requests",
         "kind": 6,
         "isExtraImport": true,
@@ -705,6 +753,14 @@
     },
     {
         "label": "Metrics",
+        "importPath": "lib.metrics",
+        "description": "lib.metrics",
+        "isExtraImport": true,
+        "detail": "lib.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "get_url",
         "importPath": "lib.metrics",
         "description": "lib.metrics",
         "isExtraImport": true,
@@ -801,6 +857,30 @@
     },
     {
         "label": "ApiPayload",
+        "importPath": "lib.data_types",
+        "description": "lib.data_types",
+        "isExtraImport": true,
+        "detail": "lib.data_types",
+        "documentation": {}
+    },
+    {
+        "label": "ApiPayload",
+        "importPath": "lib.data_types",
+        "description": "lib.data_types",
+        "isExtraImport": true,
+        "detail": "lib.data_types",
+        "documentation": {}
+    },
+    {
+        "label": "JsonDataException",
+        "importPath": "lib.data_types",
+        "description": "lib.data_types",
+        "isExtraImport": true,
+        "detail": "lib.data_types",
+        "documentation": {}
+    },
+    {
+        "label": "EndpointHandler",
         "importPath": "lib.data_types",
         "description": "lib.data_types",
         "isExtraImport": true,
@@ -978,6 +1058,14 @@
         "documentation": {}
     },
     {
+        "label": "urljoin",
+        "importPath": "urllib.parse",
+        "description": "urllib.parse",
+        "isExtraImport": true,
+        "detail": "urllib.parse",
+        "documentation": {}
+    },
+    {
         "label": "ssl",
         "kind": 6,
         "isExtraImport": true,
@@ -988,6 +1076,22 @@
     },
     {
         "label": "Backend",
+        "importPath": "lib.backend",
+        "description": "lib.backend",
+        "isExtraImport": true,
+        "detail": "lib.backend",
+        "documentation": {}
+    },
+    {
+        "label": "Backend",
+        "importPath": "lib.backend",
+        "description": "lib.backend",
+        "isExtraImport": true,
+        "detail": "lib.backend",
+        "documentation": {}
+    },
+    {
+        "label": "LogAction",
         "importPath": "lib.backend",
         "description": "lib.backend",
         "isExtraImport": true,
@@ -1069,6 +1173,105 @@
         "documentation": {}
     },
     {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "random",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "AutoTokenizer",
+        "importPath": "transformers",
+        "description": "transformers",
+        "isExtraImport": true,
+        "detail": "transformers",
+        "documentation": {}
+    },
+    {
+        "label": "AutoTokenizer",
+        "importPath": "transformers",
+        "description": "transformers",
+        "isExtraImport": true,
+        "detail": "transformers",
+        "documentation": {}
+    },
+    {
+        "label": "AutoTokenizer",
+        "importPath": "transformers",
+        "description": "transformers",
+        "isExtraImport": true,
+        "detail": "transformers",
+        "documentation": {}
+    },
+    {
+        "label": "nltk",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "nltk",
+        "description": "nltk",
+        "detail": "nltk",
+        "documentation": {}
+    },
+    {
+        "label": "start_server",
+        "importPath": "lib.server",
+        "description": "lib.server",
+        "isExtraImport": true,
+        "detail": "lib.server",
+        "documentation": {}
+    },
+    {
+        "label": "start_server",
+        "importPath": "lib.server",
+        "description": "lib.server",
+        "isExtraImport": true,
+        "detail": "lib.server",
+        "documentation": {}
+    },
+    {
+        "label": "start_server",
+        "importPath": "lib.server",
+        "description": "lib.server",
+        "isExtraImport": true,
+        "detail": "lib.server",
+        "documentation": {}
+    },
+    {
+        "label": "start_server",
+        "importPath": "lib.server",
+        "description": "lib.server",
+        "isExtraImport": true,
+        "detail": "lib.server",
+        "documentation": {}
+    },
+    {
+        "label": "test_load_cmd",
+        "importPath": "lib.test_utils",
+        "description": "lib.test_utils",
+        "isExtraImport": true,
+        "detail": "lib.test_utils",
+        "documentation": {}
+    },
+    {
+        "label": "test_args",
+        "importPath": "lib.test_utils",
+        "description": "lib.test_utils",
+        "isExtraImport": true,
+        "detail": "lib.test_utils",
+        "documentation": {}
+    },
+    {
         "label": "print_truncate_res",
         "importPath": "lib.test_utils",
         "description": "lib.test_utils",
@@ -1125,78 +1328,11 @@
         "documentation": {}
     },
     {
-        "label": "sys",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "sys",
-        "description": "sys",
-        "detail": "sys",
-        "documentation": {}
-    },
-    {
-        "label": "random",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "random",
-        "description": "random",
-        "detail": "random",
-        "documentation": {}
-    },
-    {
         "label": "ceil",
         "importPath": "math",
         "description": "math",
         "isExtraImport": true,
         "detail": "math",
-        "documentation": {}
-    },
-    {
-        "label": "start_server",
-        "importPath": "lib.server",
-        "description": "lib.server",
-        "isExtraImport": true,
-        "detail": "lib.server",
-        "documentation": {}
-    },
-    {
-        "label": "start_server",
-        "importPath": "lib.server",
-        "description": "lib.server",
-        "isExtraImport": true,
-        "detail": "lib.server",
-        "documentation": {}
-    },
-    {
-        "label": "start_server",
-        "importPath": "lib.server",
-        "description": "lib.server",
-        "isExtraImport": true,
-        "detail": "lib.server",
-        "documentation": {}
-    },
-    {
-        "label": "AutoTokenizer",
-        "importPath": "transformers",
-        "description": "transformers",
-        "isExtraImport": true,
-        "detail": "transformers",
-        "documentation": {}
-    },
-    {
-        "label": "AutoTokenizer",
-        "importPath": "transformers",
-        "description": "transformers",
-        "isExtraImport": true,
-        "detail": "transformers",
-        "documentation": {}
-    },
-    {
-        "label": "nltk",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "nltk",
-        "description": "nltk",
-        "detail": "nltk",
         "documentation": {}
     },
     {
@@ -1503,6 +1639,159 @@
         "description": "lib.test_utils",
         "peekOfCode": "GetPayloadAndWorkload = Callable[[], Tuple[Dict[str, Any], float]]\ndef print_truncate_res(res: str):\n    if len(res) > 150:\n        print(f\"{res[:50]}....{res[-100:]}\")\n    else:\n        print(res)\n@dataclass\nclass ClientState:\n    endpoint_group_name: str\n    api_key: str",
         "detail": "lib.test_utils",
+        "documentation": {}
+    },
+    {
+        "label": "call_generate",
+        "kind": 2,
+        "importPath": "workers.automatic1111.client",
+        "description": "workers.automatic1111.client",
+        "peekOfCode": "def call_generate(endpoint_group_name: str, api_key: str, server_url: str) -> None:\n    WORKER_ENDPOINT = \"/generate\"\n    message = discover(endpoint_group_name, api_key, server_url)\n    url = message[\"url\"]\n    auth_data = dict(\n        signature=message[\"signature\"],\n        cost=message[\"cost\"],\n        endpoint=message[\"endpoint\"],\n        reqnum=message[\"reqnum\"],\n        url=message[\"url\"],",
+        "detail": "workers.automatic1111.client",
+        "documentation": {}
+    },
+    {
+        "label": "discover",
+        "kind": 2,
+        "importPath": "workers.automatic1111.client",
+        "description": "workers.automatic1111.client",
+        "peekOfCode": "def discover(endpoint_group_name, api_key, server_url):\n    COST = 100\n    route_payload = {\n        \"endpoint\": endpoint_group_name,\n        \"api_key\": api_key,\n        \"cost\": COST,\n    }\n    response = requests.post(\n        urljoin(server_url, \"/route/\"),\n        json=route_payload,",
+        "detail": "workers.automatic1111.client",
+        "documentation": {}
+    },
+    {
+        "label": "endpoint_stats",
+        "kind": 2,
+        "importPath": "workers.automatic1111.client",
+        "description": "workers.automatic1111.client",
+        "peekOfCode": "def endpoint_stats(\n    endpoint_group_name: str, endpoint_id: str, api_key: str, server_url: str\n):\n    route_payload = {\n        \"endpoint\": endpoint_group_name,\n        \"api_key\": api_key,\n    }\n    response = requests.post(\n        urljoin(server_url, \"/get_endpoint_stats/\"),\n        json=route_payload,",
+        "detail": "workers.automatic1111.client",
+        "documentation": {}
+    },
+    {
+        "label": "autogroup_stats",
+        "kind": 2,
+        "importPath": "workers.automatic1111.client",
+        "description": "workers.automatic1111.client",
+        "peekOfCode": "def autogroup_stats(autogroup_id: str, api_key: str, server_url: str):\n    route_payload = {\n        \"api_key\": api_key,\n        \"id\": autogroup_id,\n    }\n    response = requests.post(\n        urljoin(server_url, \"/get_endpoint_stats/\"),\n        json=route_payload,\n        timeout=4,\n    )",
+        "detail": "workers.automatic1111.client",
+        "documentation": {}
+    },
+    {
+        "label": "call_generate_stream",
+        "kind": 2,
+        "importPath": "workers.automatic1111.client",
+        "description": "workers.automatic1111.client",
+        "peekOfCode": "def call_generate_stream(endpoint_group_name: str, api_key: str, server_url: str):\n    WORKER_ENDPOINT = \"/generate_stream\"\n    COST = 100\n    route_payload = {\n        \"endpoint\": endpoint_group_name,\n        \"api_key\": api_key,\n        \"cost\": COST,\n    }\n    response = requests.post(\n        urljoin(server_url, \"/route/\"),",
+        "detail": "workers.automatic1111.client",
+        "documentation": {}
+    },
+    {
+        "label": "InputParameters",
+        "kind": 6,
+        "importPath": "workers.automatic1111.data_types",
+        "description": "workers.automatic1111.data_types",
+        "peekOfCode": "class InputParameters:\n    max_new_tokens: int = 256\n    @classmethod\n    def from_json_msg(cls, json_msg: Dict[str, Any]) -> \"InputParameters\":\n        errors = {}\n        for param in inspect.signature(cls).parameters:\n            if param not in json_msg:\n                errors[param] = \"missing parameter\"\n        if errors:\n            raise JsonDataException(errors)",
+        "detail": "workers.automatic1111.data_types",
+        "documentation": {}
+    },
+    {
+        "label": "InputData",
+        "kind": 6,
+        "importPath": "workers.automatic1111.data_types",
+        "description": "workers.automatic1111.data_types",
+        "peekOfCode": "class InputData(ApiPayload):\n    inputs: str\n    parameters: InputParameters\n    @classmethod\n    def from_dict(cls, data: Dict[str, Any]) -> \"InputData\":\n        return cls(\n            inputs=data[\"inputs\"], parameters=InputParameters(**data[\"parameters\"])\n        )\n    @classmethod\n    def for_test(cls) -> \"InputData\":",
+        "detail": "workers.automatic1111.data_types",
+        "documentation": {}
+    },
+    {
+        "label": "WORD_LIST",
+        "kind": 5,
+        "importPath": "workers.automatic1111.data_types",
+        "description": "workers.automatic1111.data_types",
+        "peekOfCode": "WORD_LIST = nltk.corpus.words.words()\ntokenizer = AutoTokenizer.from_pretrained(\"openai-community/openai-gpt\")\n@dataclasses.dataclass\nclass InputParameters:\n    max_new_tokens: int = 256\n    @classmethod\n    def from_json_msg(cls, json_msg: Dict[str, Any]) -> \"InputParameters\":\n        errors = {}\n        for param in inspect.signature(cls).parameters:\n            if param not in json_msg:",
+        "detail": "workers.automatic1111.data_types",
+        "documentation": {}
+    },
+    {
+        "label": "tokenizer",
+        "kind": 5,
+        "importPath": "workers.automatic1111.data_types",
+        "description": "workers.automatic1111.data_types",
+        "peekOfCode": "tokenizer = AutoTokenizer.from_pretrained(\"openai-community/openai-gpt\")\n@dataclasses.dataclass\nclass InputParameters:\n    max_new_tokens: int = 256\n    @classmethod\n    def from_json_msg(cls, json_msg: Dict[str, Any]) -> \"InputParameters\":\n        errors = {}\n        for param in inspect.signature(cls).parameters:\n            if param not in json_msg:\n                errors[param] = \"missing parameter\"",
+        "detail": "workers.automatic1111.data_types",
+        "documentation": {}
+    },
+    {
+        "label": "GenerateHandler",
+        "kind": 6,
+        "importPath": "workers.automatic1111.server",
+        "description": "workers.automatic1111.server",
+        "peekOfCode": "class GenerateHandler(EndpointHandler[InputData]):\n    @property\n    def endpoint(self) -> str:\n        return \"/sdapi/v1/txt2img\"\n    @classmethod\n    def payload_cls(cls) -> Type[InputData]:\n        return InputData\n    def make_benchmark_payload(self) -> InputData:\n        return InputData.for_test()\n    async def generate_client_response(",
+        "detail": "workers.automatic1111.server",
+        "documentation": {}
+    },
+    {
+        "label": "MODEL_SERVER_URL",
+        "kind": 5,
+        "importPath": "workers.automatic1111.server",
+        "description": "workers.automatic1111.server",
+        "peekOfCode": "MODEL_SERVER_URL = \"http://127.0.0.1:7860\"\n# This is the last log line that gets emitted once comfyui+extensions have been fully loaded\nMODEL_SERVER_START_LOG_MSG = '\"message\":\"Connected\",\"target\":\"text_generation_router\"'\nMODEL_SERVER_ERROR_LOG_MSGS = [\"Error: WebserverFailed\", \"Error: DownloadError\"]\nlogging.basicConfig(\n    level=logging.DEBUG,\n    format=\"%(asctime)s[%(levelname)-5s] %(message)s\",\n    datefmt=\"%Y-%m-%d %H:%M:%S\",\n)\nlog = logging.getLogger(__file__)",
+        "detail": "workers.automatic1111.server",
+        "documentation": {}
+    },
+    {
+        "label": "MODEL_SERVER_START_LOG_MSG",
+        "kind": 5,
+        "importPath": "workers.automatic1111.server",
+        "description": "workers.automatic1111.server",
+        "peekOfCode": "MODEL_SERVER_START_LOG_MSG = '\"message\":\"Connected\",\"target\":\"text_generation_router\"'\nMODEL_SERVER_ERROR_LOG_MSGS = [\"Error: WebserverFailed\", \"Error: DownloadError\"]\nlogging.basicConfig(\n    level=logging.DEBUG,\n    format=\"%(asctime)s[%(levelname)-5s] %(message)s\",\n    datefmt=\"%Y-%m-%d %H:%M:%S\",\n)\nlog = logging.getLogger(__file__)\n@dataclasses.dataclass\nclass GenerateHandler(EndpointHandler[InputData]):",
+        "detail": "workers.automatic1111.server",
+        "documentation": {}
+    },
+    {
+        "label": "MODEL_SERVER_ERROR_LOG_MSGS",
+        "kind": 5,
+        "importPath": "workers.automatic1111.server",
+        "description": "workers.automatic1111.server",
+        "peekOfCode": "MODEL_SERVER_ERROR_LOG_MSGS = [\"Error: WebserverFailed\", \"Error: DownloadError\"]\nlogging.basicConfig(\n    level=logging.DEBUG,\n    format=\"%(asctime)s[%(levelname)-5s] %(message)s\",\n    datefmt=\"%Y-%m-%d %H:%M:%S\",\n)\nlog = logging.getLogger(__file__)\n@dataclasses.dataclass\nclass GenerateHandler(EndpointHandler[InputData]):\n    @property",
+        "detail": "workers.automatic1111.server",
+        "documentation": {}
+    },
+    {
+        "label": "log",
+        "kind": 5,
+        "importPath": "workers.automatic1111.server",
+        "description": "workers.automatic1111.server",
+        "peekOfCode": "log = logging.getLogger(__file__)\n@dataclasses.dataclass\nclass GenerateHandler(EndpointHandler[InputData]):\n    @property\n    def endpoint(self) -> str:\n        return \"/sdapi/v1/txt2img\"\n    @classmethod\n    def payload_cls(cls) -> Type[InputData]:\n        return InputData\n    def make_benchmark_payload(self) -> InputData:",
+        "detail": "workers.automatic1111.server",
+        "documentation": {}
+    },
+    {
+        "label": "backend",
+        "kind": 5,
+        "importPath": "workers.automatic1111.server",
+        "description": "workers.automatic1111.server",
+        "peekOfCode": "backend = Backend(\n    model_server_url=MODEL_SERVER_URL,\n    model_log_file=os.environ[\"MODEL_LOG\"],\n    allow_parallel_requests=True,\n    benchmark_handler=GenerateHandler(benchmark_runs=3, benchmark_words=256),\n    log_actions=[\n        (LogAction.ModelLoaded, MODEL_SERVER_START_LOG_MSG),\n        (LogAction.Info, '\"message\":\"Download'),\n        *[\n            (LogAction.ModelError, error_msg)",
+        "detail": "workers.automatic1111.server",
+        "documentation": {}
+    },
+    {
+        "label": "routes",
+        "kind": 5,
+        "importPath": "workers.automatic1111.server",
+        "description": "workers.automatic1111.server",
+        "peekOfCode": "routes = [\n    web.post(\"/txt2img\", backend.create_handler(GenerateHandler())),\n    web.get(\"/ping\", handle_ping),\n    web.get(\"/public_url\", get_public_url),\n    web.get(\"/healthz\", handle_ping),\n]\nif __name__ == \"__main__\":\n    start_server(backend, routes)",
+        "detail": "workers.automatic1111.server",
+        "documentation": {}
+    },
+    {
+        "label": "WORKER_ENDPOINT",
+        "kind": 5,
+        "importPath": "workers.automatic1111.test_load",
+        "description": "workers.automatic1111.test_load",
+        "peekOfCode": "WORKER_ENDPOINT = \"/generate\"\nif __name__ == \"__main__\":\n    test_load_cmd(InputData, WORKER_ENDPOINT, arg_parser=test_args)",
+        "detail": "workers.automatic1111.test_load",
         "documentation": {}
     },
     {
