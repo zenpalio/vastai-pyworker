@@ -17,6 +17,7 @@ METRICS_UPDATE_INTERVAL = 1
 log = logging.getLogger(__file__)
 
 
+@cache
 def get_url() -> str:
     use_ssl = os.environ.get("USE_SSL", "false") == "true"
     worker_port = os.environ[f"VAST_TCP_PORT_{os.environ['WORKER_PORT']}"]

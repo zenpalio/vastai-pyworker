@@ -962,6 +962,14 @@
         "documentation": {}
     },
     {
+        "label": "urljoin",
+        "importPath": "urllib.parse",
+        "description": "urllib.parse",
+        "isExtraImport": true,
+        "detail": "urllib.parse",
+        "documentation": {}
+    },
+    {
         "label": "ssl",
         "kind": 6,
         "isExtraImport": true,
@@ -1341,7 +1349,7 @@
         "kind": 5,
         "importPath": "lib.metrics",
         "description": "lib.metrics",
-        "peekOfCode": "METRICS_UPDATE_INTERVAL = 1\nlog = logging.getLogger(__file__)\ndef get_url() -> str:\n    use_ssl = os.environ.get(\"USE_SSL\", \"false\") == \"true\"\n    worker_port = os.environ[f\"VAST_TCP_PORT_{os.environ['WORKER_PORT']}\"]\n    public_ip = os.environ[\"PUBLIC_IPADDR\"]\n    return f\"http{'s' if use_ssl else ''}://{public_ip}:{worker_port}\"\n@dataclass\nclass Metrics:\n    last_metric_update: float = 0.0",
+        "peekOfCode": "METRICS_UPDATE_INTERVAL = 1\nlog = logging.getLogger(__file__)\n@cache\ndef get_url() -> str:\n    use_ssl = os.environ.get(\"USE_SSL\", \"false\") == \"true\"\n    worker_port = os.environ[f\"VAST_TCP_PORT_{os.environ['WORKER_PORT']}\"]\n    public_ip = os.environ[\"PUBLIC_IPADDR\"]\n    return f\"http{'s' if use_ssl else ''}://{public_ip}:{worker_port}\"\n@dataclass\nclass Metrics:",
         "detail": "lib.metrics",
         "documentation": {}
     },
@@ -1350,7 +1358,7 @@
         "kind": 5,
         "importPath": "lib.metrics",
         "description": "lib.metrics",
-        "peekOfCode": "log = logging.getLogger(__file__)\ndef get_url() -> str:\n    use_ssl = os.environ.get(\"USE_SSL\", \"false\") == \"true\"\n    worker_port = os.environ[f\"VAST_TCP_PORT_{os.environ['WORKER_PORT']}\"]\n    public_ip = os.environ[\"PUBLIC_IPADDR\"]\n    return f\"http{'s' if use_ssl else ''}://{public_ip}:{worker_port}\"\n@dataclass\nclass Metrics:\n    last_metric_update: float = 0.0\n    update_pending: bool = False",
+        "peekOfCode": "log = logging.getLogger(__file__)\n@cache\ndef get_url() -> str:\n    use_ssl = os.environ.get(\"USE_SSL\", \"false\") == \"true\"\n    worker_port = os.environ[f\"VAST_TCP_PORT_{os.environ['WORKER_PORT']}\"]\n    public_ip = os.environ[\"PUBLIC_IPADDR\"]\n    return f\"http{'s' if use_ssl else ''}://{public_ip}:{worker_port}\"\n@dataclass\nclass Metrics:\n    last_metric_update: float = 0.0",
         "detail": "lib.metrics",
         "documentation": {}
     },
@@ -1841,6 +1849,15 @@
         "documentation": {}
     },
     {
+        "label": "send_public_ip",
+        "kind": 2,
+        "importPath": "workers.tgi.server",
+        "description": "workers.tgi.server",
+        "peekOfCode": "def send_public_ip():\n    report_addr = os.environ[\"REPORT_ADDR\"]\n    full_path = urljoin(report_addr, \"/public/v1/webhook/vastai/register/\")\n    data = {\n        \"url\":get_url()\n    }\n    try:\n        requests.post(full_path, json=json.dumps(data), timeout=1)\n    except Exception as e:\n        log.debug(f\"autoscaler status update failed with error: {e}\")",
+        "detail": "workers.tgi.server",
+        "documentation": {}
+    },
+    {
         "label": "MODEL_SERVER_URL",
         "kind": 5,
         "importPath": "workers.tgi.server",
@@ -1890,7 +1907,7 @@
         "kind": 5,
         "importPath": "workers.tgi.server",
         "description": "workers.tgi.server",
-        "peekOfCode": "routes = [\n    web.post(\"/generate\", backend.create_handler(GenerateHandler())),\n    web.post(\"/generate_stream\", backend.create_handler(GenerateStreamHandler())),\n    web.get(\"/ping\", handle_ping),\n    web.get(\"/public_url\", get_public_url),\n    web.get(\"/healthz\", handle_ping),\n]\nif __name__ == \"__main__\":\n    start_server(backend, routes)",
+        "peekOfCode": "routes = [\n    web.post(\"/generate\", backend.create_handler(GenerateHandler())),\n    web.post(\"/generate_stream\", backend.create_handler(GenerateStreamHandler())),\n    web.get(\"/ping\", handle_ping),\n    web.get(\"/public_url\", get_public_url),\n    web.get(\"/healthz\", handle_ping),\n]\nif __name__ == \"__main__\":\n    start_server(backend, routes)\n    send_public_ip()",
         "detail": "workers.tgi.server",
         "documentation": {}
     },
