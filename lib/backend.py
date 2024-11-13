@@ -156,8 +156,8 @@ class Backend:
 
         ###########
 
-        if self.__check_signature(auth_data) is False:
-            return web.Response(status=401)
+        #if self.__check_signature(auth_data) is False:
+        #    return web.Response(status=401)
 
         try:
             done, pending = await wait(

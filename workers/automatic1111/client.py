@@ -6,23 +6,19 @@ import requests
 
 
 def call_generate(endpoint_group_name: str, api_key: str, server_url: str) -> None:
-    WORKER_ENDPOINT = "/generate"
-    message = discover(endpoint_group_name, api_key, server_url)
-    url = message["url"]
-    auth_data = dict(
-        signature=message["signature"],
-        cost=message["cost"],
-        endpoint=message["endpoint"],
-        reqnum=message["reqnum"],
-        url=message["url"],
-    )
+    WORKER_ENDPOINT = "/txt2img"
+    url = "https://142.214.185.14:62630"
     payload = dict(inputs="tell me about cats", parameters=dict(max_new_tokens=500))
+    auth_data = dict(
+        reqnum=int(1),
+    )
     req_data = dict(payload=payload, auth_data=auth_data)
     url = urljoin(url, WORKER_ENDPOINT)
     print(f"url: {url}")
     response = requests.post(
         url,
         json=req_data,
+        verify=False,
     )
     res = response.json()
     print(res)
@@ -50,7 +46,6 @@ def endpoint_stats(
     route_payload = {
         "endpoint": endpoint_group_name,
         "api_key": api_key,
-
     }
     response = requests.post(
         urljoin(server_url, "/get_endpoint_stats/"),
@@ -112,19 +107,12 @@ def call_generate_stream(endpoint_group_name: str, api_key: str, server_url: str
 
 
 if __name__ == "__main__":
-    key = "xxxxx"
-    discover(
-        endpoint_group_name="TGI-Llama3",
-        api_key=key,
-        server_url="https://run.vast.ai",
+
+    call_generate(
+        api_key="",
+        endpoint_group_name="",
+        server_url="",
     )
-    endpoint_stats(server_url="https://run.vast.ai",endpoint_group_name="TGI-Llama3", endpoint_id="339", api_key=key)
-   # autogroup_stats(server_url="https://run.vast.ai",autogroup_id="573", api_key=key)
-    # call_generate(
-    #    api_key=args.api_key,
-    #    endpoint_group_name=args.endpoint_group_name,
-    #    server_url=args.server_url,
-    # )
     # call_generate_stream(
     #    api_key=args.api_key,
     #    endpoint_group_name=args.endpoint_group_name,
