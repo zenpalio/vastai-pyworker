@@ -130,7 +130,8 @@ class Backend:
                 start_time = time.time()
                 response = await self.__call_api(handler=handler, payload=payload)
                 log.debug(response)
-                log.debug(response.text)
+                json = await response.json()
+                log.debug(json)
                 status_code = response.status
                 log.debug(
                     " ".join(
