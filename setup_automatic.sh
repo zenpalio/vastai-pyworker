@@ -23,6 +23,7 @@ fi
 cat << 'EOF' > script.py
 import requests
 import urllib3
+import os
 
 url = "http://127.0.0.1:7860"  # or your URL
 
