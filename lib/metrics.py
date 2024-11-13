@@ -114,7 +114,7 @@ class Metrics:
                 additional_disk_usage=self.system_metrics.additional_disk_usage,
                 cur_capacity=0,
                 max_capacity=0,
-                url=self.url
+                url=self.url,
             )
 
         def send_data(report_addr: str) -> None:

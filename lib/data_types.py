@@ -247,7 +247,6 @@ class AutoScalaerData:
     num_requests_recieved: int
     additional_disk_usage: float
     url: str
-    instance_id: int
 
 
 class LogAction(Enum):
