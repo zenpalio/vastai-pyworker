@@ -1723,7 +1723,7 @@
         "kind": 6,
         "importPath": "workers.automatic1111.data_types",
         "description": "workers.automatic1111.data_types",
-        "peekOfCode": "class ADetailerArgs:\n    ad_cfg_scale: int\n    ad_checkpoint: str\n    ad_clip_skip: int\n    ad_confidence: float\n    ad_controlnet_guidance_end: int\n    ad_controlnet_guidance_start: int\n    ad_controlnet_model: str\n    ad_controlnet_module: str\n    ad_controlnet_weight: int",
+        "peekOfCode": "class ADetailerArgs:\n    ad_cfg_scale: Optional[int] = None\n    ad_checkpoint: Optional[str] = None\n    ad_clip_skip: Optional[int] = None\n    ad_confidence: Optional[float] = None\n    ad_controlnet_guidance_end: Optional[int] = None\n    ad_controlnet_guidance_start: Optional[int] = None\n    ad_controlnet_model: Optional[str] = None\n    ad_controlnet_module: Optional[str] = None\n    ad_controlnet_weight: Optional[int] = None",
         "detail": "workers.automatic1111.data_types",
         "documentation": {}
     },
@@ -1732,7 +1732,7 @@
         "kind": 6,
         "importPath": "workers.automatic1111.data_types",
         "description": "workers.automatic1111.data_types",
-        "peekOfCode": "class ADetailer:\n    args: List[Union[bool, ADetailerArgs]]\n@dataclass\nclass ControlNetArgs:\n    advanced_weighting: Optional[Any]\n    animatediff_batch: bool\n    batch_image_files: List[str]\n    batch_images: str\n    batch_keyframe_idx: Optional[Any]\n    batch_mask_dir: Optional[Any]",
+        "peekOfCode": "class ADetailer:\n    args: Optional[List[Union[bool, ADetailerArgs]]] = None\n@dataclass\nclass ControlNetArgs:\n    advanced_weighting: Optional[Any] = None\n    animatediff_batch: Optional[bool] = None\n    batch_image_files: Optional[List[str]] = None\n    batch_images: Optional[str] = None\n    batch_keyframe_idx: Optional[Any] = None\n    batch_mask_dir: Optional[Any] = None",
         "detail": "workers.automatic1111.data_types",
         "documentation": {}
     },
@@ -1741,7 +1741,7 @@
         "kind": 6,
         "importPath": "workers.automatic1111.data_types",
         "description": "workers.automatic1111.data_types",
-        "peekOfCode": "class ControlNetArgs:\n    advanced_weighting: Optional[Any]\n    animatediff_batch: bool\n    batch_image_files: List[str]\n    batch_images: str\n    batch_keyframe_idx: Optional[Any]\n    batch_mask_dir: Optional[Any]\n    batch_modifiers: List[str]\n    control_mode: str\n    effective_region_mask: Optional[Any]",
+        "peekOfCode": "class ControlNetArgs:\n    advanced_weighting: Optional[Any] = None\n    animatediff_batch: Optional[bool] = None\n    batch_image_files: Optional[List[str]] = None\n    batch_images: Optional[str] = None\n    batch_keyframe_idx: Optional[Any] = None\n    batch_mask_dir: Optional[Any] = None\n    batch_modifiers: Optional[List[str]] = None\n    control_mode: Optional[str] = None\n    effective_region_mask: Optional[Any] = None",
         "detail": "workers.automatic1111.data_types",
         "documentation": {}
     },
@@ -1750,7 +1750,7 @@
         "kind": 6,
         "importPath": "workers.automatic1111.data_types",
         "description": "workers.automatic1111.data_types",
-        "peekOfCode": "class ControlNet:\n    args: List[ControlNetArgs]\n@dataclass\nclass DynamicPrompts:\n    args: List[Union[bool, int, float, str, List[bool]]]\n@dataclass\nclass FaceEditorEX:\n    args: List[Union[bool, float, int, str, List[str], Dict[str, Any]]]\n@dataclass\nclass ReActor:",
+        "peekOfCode": "class ControlNet:\n    args: Optional[List[ControlNetArgs]] = None\n@dataclass\nclass DynamicPrompts:\n    args: Optional[List[Union[bool, int, float, str, List[bool]]]] = None\n@dataclass\nclass FaceEditorEX:\n    args: Optional[List[Union[bool, float, int, str, List[str], Dict[str, Any]]]] = None\n@dataclass\nclass ReActor:",
         "detail": "workers.automatic1111.data_types",
         "documentation": {}
     },
@@ -1759,7 +1759,7 @@
         "kind": 6,
         "importPath": "workers.automatic1111.data_types",
         "description": "workers.automatic1111.data_types",
-        "peekOfCode": "class DynamicPrompts:\n    args: List[Union[bool, int, float, str, List[bool]]]\n@dataclass\nclass FaceEditorEX:\n    args: List[Union[bool, float, int, str, List[str], Dict[str, Any]]]\n@dataclass\nclass ReActor:\n    args: List[Union[None, bool, str, float, int, Dict[str, Any]]]\n@dataclass\nclass Refiner:",
+        "peekOfCode": "class DynamicPrompts:\n    args: Optional[List[Union[bool, int, float, str, List[bool]]]] = None\n@dataclass\nclass FaceEditorEX:\n    args: Optional[List[Union[bool, float, int, str, List[str], Dict[str, Any]]]] = None\n@dataclass\nclass ReActor:\n    args: Optional[List[Union[None, bool, str, float, int, Dict[str, Any]]]] = None\n@dataclass\nclass Refiner:",
         "detail": "workers.automatic1111.data_types",
         "documentation": {}
     },
@@ -1768,7 +1768,7 @@
         "kind": 6,
         "importPath": "workers.automatic1111.data_types",
         "description": "workers.automatic1111.data_types",
-        "peekOfCode": "class FaceEditorEX:\n    args: List[Union[bool, float, int, str, List[str], Dict[str, Any]]]\n@dataclass\nclass ReActor:\n    args: List[Union[None, bool, str, float, int, Dict[str, Any]]]\n@dataclass\nclass Refiner:\n    args: List[Union[bool, str, float]]\n@dataclass\nclass RegionalPrompter:",
+        "peekOfCode": "class FaceEditorEX:\n    args: Optional[List[Union[bool, float, int, str, List[str], Dict[str, Any]]]] = None\n@dataclass\nclass ReActor:\n    args: Optional[List[Union[None, bool, str, float, int, Dict[str, Any]]]] = None\n@dataclass\nclass Refiner:\n    args: Optional[List[Union[bool, str, float]]] = None\n@dataclass\nclass RegionalPrompter:",
         "detail": "workers.automatic1111.data_types",
         "documentation": {}
     },
@@ -1777,7 +1777,7 @@
         "kind": 6,
         "importPath": "workers.automatic1111.data_types",
         "description": "workers.automatic1111.data_types",
-        "peekOfCode": "class ReActor:\n    args: List[Union[None, bool, str, float, int, Dict[str, Any]]]\n@dataclass\nclass Refiner:\n    args: List[Union[bool, str, float]]\n@dataclass\nclass RegionalPrompter:\n    args: List[Union[bool, str, List[bool], float, None]]\n@dataclass\nclass Sampler:",
+        "peekOfCode": "class ReActor:\n    args: Optional[List[Union[None, bool, str, float, int, Dict[str, Any]]]] = None\n@dataclass\nclass Refiner:\n    args: Optional[List[Union[bool, str, float]]] = None\n@dataclass\nclass RegionalPrompter:\n    args: Optional[List[Union[bool, str, List[bool], float, None]]] = None\n@dataclass\nclass Sampler:",
         "detail": "workers.automatic1111.data_types",
         "documentation": {}
     },
@@ -1786,7 +1786,7 @@
         "kind": 6,
         "importPath": "workers.automatic1111.data_types",
         "description": "workers.automatic1111.data_types",
-        "peekOfCode": "class Refiner:\n    args: List[Union[bool, str, float]]\n@dataclass\nclass RegionalPrompter:\n    args: List[Union[bool, str, List[bool], float, None]]\n@dataclass\nclass Sampler:\n    args: List[Union[int, str]]\n@dataclass\nclass Seed:",
+        "peekOfCode": "class Refiner:\n    args: Optional[List[Union[bool, str, float]]] = None\n@dataclass\nclass RegionalPrompter:\n    args: Optional[List[Union[bool, str, List[bool], float, None]]] = None\n@dataclass\nclass Sampler:\n    args: Optional[List[Union[int, str]]] = None\n@dataclass\nclass Seed:",
         "detail": "workers.automatic1111.data_types",
         "documentation": {}
     },
@@ -1795,7 +1795,7 @@
         "kind": 6,
         "importPath": "workers.automatic1111.data_types",
         "description": "workers.automatic1111.data_types",
-        "peekOfCode": "class RegionalPrompter:\n    args: List[Union[bool, str, List[bool], float, None]]\n@dataclass\nclass Sampler:\n    args: List[Union[int, str]]\n@dataclass\nclass Seed:\n    args: List[Union[int, bool, float]]\n@dataclass\nclass AlwaysOnScripts:",
+        "peekOfCode": "class RegionalPrompter:\n    args: Optional[List[Union[bool, str, List[bool], float, None]]] = None\n@dataclass\nclass Sampler:\n    args: Optional[List[Union[int, str]]] = None\n@dataclass\nclass Seed:\n    args: Optional[List[Union[int, bool, float]]] = None\n@dataclass\nclass AlwaysOnScripts:",
         "detail": "workers.automatic1111.data_types",
         "documentation": {}
     },
@@ -1804,7 +1804,7 @@
         "kind": 6,
         "importPath": "workers.automatic1111.data_types",
         "description": "workers.automatic1111.data_types",
-        "peekOfCode": "class Sampler:\n    args: List[Union[int, str]]\n@dataclass\nclass Seed:\n    args: List[Union[int, bool, float]]\n@dataclass\nclass AlwaysOnScripts:\n    ADetailer: ADetailer\n    API_payload: Dict[str, List[Any]]\n    Comments: Dict[str, List[Any]]",
+        "peekOfCode": "class Sampler:\n    args: Optional[List[Union[int, str]]] = None\n@dataclass\nclass Seed:\n    args: Optional[List[Union[int, bool, float]]] = None\n@dataclass\nclass AlwaysOnScripts:\n    ADetailer: Optional[ADetailer] = None\n    API_payload: Optional[Dict[str, List[Any]]] = None\n    Comments: Optional[Dict[str, List[Any]]] = None",
         "detail": "workers.automatic1111.data_types",
         "documentation": {}
     },
@@ -1813,7 +1813,7 @@
         "kind": 6,
         "importPath": "workers.automatic1111.data_types",
         "description": "workers.automatic1111.data_types",
-        "peekOfCode": "class Seed:\n    args: List[Union[int, bool, float]]\n@dataclass\nclass AlwaysOnScripts:\n    ADetailer: ADetailer\n    API_payload: Dict[str, List[Any]]\n    Comments: Dict[str, List[Any]]\n    ControlNet: ControlNet\n    Dynamic_Prompts_v2_17_1: DynamicPrompts\n    Extra_options: Dict[str, List[Any]]",
+        "peekOfCode": "class Seed:\n    args: Optional[List[Union[int, bool, float]]] = None\n@dataclass\nclass AlwaysOnScripts:\n    ADetailer: Optional[ADetailer] = None\n    API_payload: Optional[Dict[str, List[Any]]] = None\n    Comments: Optional[Dict[str, List[Any]]] = None\n    ControlNet: Optional[ControlNet] = None\n    Dynamic_Prompts_v2_17_1: Optional[DynamicPrompts] = None\n    Extra_options: Optional[Dict[str, List[Any]]] = None",
         "detail": "workers.automatic1111.data_types",
         "documentation": {}
     },
@@ -1822,7 +1822,7 @@
         "kind": 6,
         "importPath": "workers.automatic1111.data_types",
         "description": "workers.automatic1111.data_types",
-        "peekOfCode": "class AlwaysOnScripts:\n    ADetailer: ADetailer\n    API_payload: Dict[str, List[Any]]\n    Comments: Dict[str, List[Any]]\n    ControlNet: ControlNet\n    Dynamic_Prompts_v2_17_1: DynamicPrompts\n    Extra_options: Dict[str, List[Any]]\n    Face_Editor_EX: FaceEditorEX\n    Hypertile: Dict[str, List[Any]]\n    ReActor: ReActor",
+        "peekOfCode": "class AlwaysOnScripts:\n    ADetailer: Optional[ADetailer] = None\n    API_payload: Optional[Dict[str, List[Any]]] = None\n    Comments: Optional[Dict[str, List[Any]]] = None\n    ControlNet: Optional[ControlNet] = None\n    Dynamic_Prompts_v2_17_1: Optional[DynamicPrompts] = None\n    Extra_options: Optional[Dict[str, List[Any]]] = None\n    Face_Editor_EX: Optional[FaceEditorEX] = None\n    Hypertile: Optional[Dict[str, List[Any]]] = None\n    ReActor: Optional[ReActor] = None",
         "detail": "workers.automatic1111.data_types",
         "documentation": {}
     },
@@ -1831,7 +1831,7 @@
         "kind": 6,
         "importPath": "workers.automatic1111.data_types",
         "description": "workers.automatic1111.data_types",
-        "peekOfCode": "class InputData:\n    alwayson_scripts: AlwaysOnScripts\n    batch_size: int\n    cfg_scale: int\n    comments: Dict[str, Any]\n    denoising_strength: float\n    disable_extra_networks: bool\n    do_not_save_grid: bool\n    do_not_save_samples: bool\n    enable_hr: bool",
+        "peekOfCode": "class InputData:\n    alwayson_scripts: Optional[AlwaysOnScripts] = None\n    batch_size: Optional[int] = None\n    cfg_scale: Optional[int] = None\n    comments: Optional[Dict[str, Any]] = None\n    denoising_strength: Optional[float] = None\n    disable_extra_networks: Optional[bool] = None\n    do_not_save_grid: Optional[bool] = None\n    do_not_save_samples: Optional[bool] = None\n    enable_hr: Optional[bool] = None",
         "detail": "workers.automatic1111.data_types",
         "documentation": {}
     },
@@ -1840,7 +1840,7 @@
         "kind": 6,
         "importPath": "workers.automatic1111.data_types",
         "description": "workers.automatic1111.data_types",
-        "peekOfCode": "class InputParameters:\n    max_new_tokens: int = 256\n    @classmethod\n    def from_json_msg(cls, json_msg: Dict[str, Any]) -> \"InputParameters\":\n        errors = {}\n        for param in inspect.signature(cls).parameters:\n            if param not in json_msg:\n                errors[param] = \"missing parameter\"\n        if errors:\n            raise JsonDataException(errors)",
+        "peekOfCode": "class InputParameters:\n    max_new_tokens: Optional[int] = 256\n    @classmethod\n    def from_json_msg(cls, json_msg: Dict[str, Any]) -> \"InputParameters\":\n        errors = {}\n        for param in inspect.signature(cls).parameters:\n            if param not in json_msg:\n                errors[param] = \"missing parameter\"\n        if errors:\n            raise JsonDataException(errors)",
         "detail": "workers.automatic1111.data_types",
         "documentation": {}
     },
@@ -1849,7 +1849,7 @@
         "kind": 5,
         "importPath": "workers.automatic1111.data_types",
         "description": "workers.automatic1111.data_types",
-        "peekOfCode": "WORD_LIST = nltk.corpus.words.words()\ntokenizer = AutoTokenizer.from_pretrained(\"openai-community/openai-gpt\")\n@dataclasses.dataclass\nclass InputParameters:\n    max_new_tokens: int = 256\n    @classmethod\n    def from_json_msg(cls, json_msg: Dict[str, Any]) -> \"InputParameters\":\n        errors = {}\n        for param in inspect.signature(cls).parameters:\n            if param not in json_msg:",
+        "peekOfCode": "WORD_LIST = nltk.corpus.words.words()\ntokenizer = AutoTokenizer.from_pretrained(\"openai-community/openai-gpt\")\n@dataclasses.dataclass\nclass InputParameters:\n    max_new_tokens: Optional[int] = 256\n    @classmethod\n    def from_json_msg(cls, json_msg: Dict[str, Any]) -> \"InputParameters\":\n        errors = {}\n        for param in inspect.signature(cls).parameters:\n            if param not in json_msg:",
         "detail": "workers.automatic1111.data_types",
         "documentation": {}
     },
@@ -1858,7 +1858,7 @@
         "kind": 5,
         "importPath": "workers.automatic1111.data_types",
         "description": "workers.automatic1111.data_types",
-        "peekOfCode": "tokenizer = AutoTokenizer.from_pretrained(\"openai-community/openai-gpt\")\n@dataclasses.dataclass\nclass InputParameters:\n    max_new_tokens: int = 256\n    @classmethod\n    def from_json_msg(cls, json_msg: Dict[str, Any]) -> \"InputParameters\":\n        errors = {}\n        for param in inspect.signature(cls).parameters:\n            if param not in json_msg:\n                errors[param] = \"missing parameter\"",
+        "peekOfCode": "tokenizer = AutoTokenizer.from_pretrained(\"openai-community/openai-gpt\")\n@dataclasses.dataclass\nclass InputParameters:\n    max_new_tokens: Optional[int] = 256\n    @classmethod\n    def from_json_msg(cls, json_msg: Dict[str, Any]) -> \"InputParameters\":\n        errors = {}\n        for param in inspect.signature(cls).parameters:\n            if param not in json_msg:\n                errors[param] = \"missing parameter\"",
         "detail": "workers.automatic1111.data_types",
         "documentation": {}
     },

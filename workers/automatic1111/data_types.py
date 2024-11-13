@@ -13,194 +13,194 @@ from typing import List, Optional, Union, Dict, Any
 
 @dataclass
 class ADetailerArgs:
-    ad_cfg_scale: int
-    ad_checkpoint: str
-    ad_clip_skip: int
-    ad_confidence: float
-    ad_controlnet_guidance_end: int
-    ad_controlnet_guidance_start: int
-    ad_controlnet_model: str
-    ad_controlnet_module: str
-    ad_controlnet_weight: int
-    ad_denoising_strength: float
-    ad_dilate_erode: int
-    ad_inpaint_height: int
-    ad_inpaint_only_masked: bool
-    ad_inpaint_only_masked_padding: int
-    ad_inpaint_width: int
-    ad_mask_blur: int
-    ad_mask_k_largest: int
-    ad_mask_max_ratio: int
-    ad_mask_merge_invert: str
-    ad_mask_min_ratio: int
-    ad_model: str
-    ad_model_classes: str
-    ad_negative_prompt: str
-    ad_noise_multiplier: int
-    ad_prompt: str
-    ad_restore_face: bool
-    ad_sampler: str
-    ad_scheduler: str
-    ad_steps: int
-    ad_tab_enable: bool
-    ad_use_cfg_scale: bool
-    ad_use_checkpoint: bool
-    ad_use_clip_skip: bool
-    ad_use_inpaint_width_height: bool
-    ad_use_noise_multiplier: bool
-    ad_use_sampler: bool
-    ad_use_steps: bool
-    ad_use_vae: bool
-    ad_vae: str
-    ad_x_offset: int
-    ad_y_offset: int
-    is_api: List[Any]
+    ad_cfg_scale: Optional[int] = None
+    ad_checkpoint: Optional[str] = None
+    ad_clip_skip: Optional[int] = None
+    ad_confidence: Optional[float] = None
+    ad_controlnet_guidance_end: Optional[int] = None
+    ad_controlnet_guidance_start: Optional[int] = None
+    ad_controlnet_model: Optional[str] = None
+    ad_controlnet_module: Optional[str] = None
+    ad_controlnet_weight: Optional[int] = None
+    ad_denoising_strength: Optional[float] = None
+    ad_dilate_erode: Optional[int] = None
+    ad_inpaint_height: Optional[int] = None
+    ad_inpaint_only_masked: Optional[bool] = None
+    ad_inpaint_only_masked_padding: Optional[int] = None
+    ad_inpaint_width: Optional[int] = None
+    ad_mask_blur: Optional[int] = None
+    ad_mask_k_largest: Optional[int] = None
+    ad_mask_max_ratio: Optional[int] = None
+    ad_mask_merge_invert: Optional[str] = None
+    ad_mask_min_ratio: Optional[int] = None
+    ad_model: Optional[str] = None
+    ad_model_classes: Optional[str] = None
+    ad_negative_prompt: Optional[str] = None
+    ad_noise_multiplier: Optional[int] = None
+    ad_prompt: Optional[str] = None
+    ad_restore_face: Optional[bool] = None
+    ad_sampler: Optional[str] = None
+    ad_scheduler: Optional[str] = None
+    ad_steps: Optional[int] = None
+    ad_tab_enable: Optional[bool] = None
+    ad_use_cfg_scale: Optional[bool] = None
+    ad_use_checkpoint: Optional[bool] = None
+    ad_use_clip_skip: Optional[bool] = None
+    ad_use_inpaint_width_height: Optional[bool] = None
+    ad_use_noise_multiplier: Optional[bool] = None
+    ad_use_sampler: Optional[bool] = None
+    ad_use_steps: Optional[bool] = None
+    ad_use_vae: Optional[bool] = None
+    ad_vae: Optional[str] = None
+    ad_x_offset: Optional[int] = None
+    ad_y_offset: Optional[int] = None
+    is_api: Optional[List[Any]] = None
 
 
 @dataclass
 class ADetailer:
-    args: List[Union[bool, ADetailerArgs]]
+    args: Optional[List[Union[bool, ADetailerArgs]]] = None
 
 
 @dataclass
 class ControlNetArgs:
-    advanced_weighting: Optional[Any]
-    animatediff_batch: bool
-    batch_image_files: List[str]
-    batch_images: str
-    batch_keyframe_idx: Optional[Any]
-    batch_mask_dir: Optional[Any]
-    batch_modifiers: List[str]
-    control_mode: str
-    effective_region_mask: Optional[Any]
-    enabled: bool
-    guidance_end: float
-    guidance_start: float
-    hr_option: str
-    image: Optional[Any]
-    inpaint_crop_input_image: bool
-    input_mode: str
-    ipadapter_input: Optional[Any]
-    is_ui: bool
-    loopback: bool
-    low_vram: bool
-    mask: Optional[Any]
-    model: str
-    module: str
-    output_dir: str
-    pixel_perfect: bool
-    processor_res: int
-    pulid_mode: str
-    resize_mode: str
-    save_detected_map: bool
-    threshold_a: float
-    threshold_b: float
-    union_control_type: str
-    weight: float
+    advanced_weighting: Optional[Any] = None
+    animatediff_batch: Optional[bool] = None
+    batch_image_files: Optional[List[str]] = None
+    batch_images: Optional[str] = None
+    batch_keyframe_idx: Optional[Any] = None
+    batch_mask_dir: Optional[Any] = None
+    batch_modifiers: Optional[List[str]] = None
+    control_mode: Optional[str] = None
+    effective_region_mask: Optional[Any] = None
+    enabled: Optional[bool] = None
+    guidance_end: Optional[float] = None
+    guidance_start: Optional[float] = None
+    hr_option: Optional[str] = None
+    image: Optional[Any] = None
+    inpaint_crop_input_image: Optional[bool] = None
+    input_mode: Optional[str] = None
+    ipadapter_input: Optional[Any] = None
+    is_ui: Optional[bool] = None
+    loopback: Optional[bool] = None
+    low_vram: Optional[bool] = None
+    mask: Optional[Any] = None
+    model: Optional[str] = None
+    module: Optional[str] = None
+    output_dir: Optional[str] = None
+    pixel_perfect: Optional[bool] = None
+    processor_res: Optional[int] = None
+    pulid_mode: Optional[str] = None
+    resize_mode: Optional[str] = None
+    save_detected_map: Optional[bool] = None
+    threshold_a: Optional[float] = None
+    threshold_b: Optional[float] = None
+    union_control_type: Optional[str] = None
+    weight: Optional[float] = None
 
 
 @dataclass
 class ControlNet:
-    args: List[ControlNetArgs]
+    args: Optional[List[ControlNetArgs]] = None
 
 
 @dataclass
 class DynamicPrompts:
-    args: List[Union[bool, int, float, str, List[bool]]]
+    args: Optional[List[Union[bool, int, float, str, List[bool]]]] = None
 
 
 @dataclass
 class FaceEditorEX:
-    args: List[Union[bool, float, int, str, List[str], Dict[str, Any]]]
+    args: Optional[List[Union[bool, float, int, str, List[str], Dict[str, Any]]]] = None
 
 
 @dataclass
 class ReActor:
-    args: List[Union[None, bool, str, float, int, Dict[str, Any]]]
+    args: Optional[List[Union[None, bool, str, float, int, Dict[str, Any]]]] = None
 
 
 @dataclass
 class Refiner:
-    args: List[Union[bool, str, float]]
+    args: Optional[List[Union[bool, str, float]]] = None
 
 
 @dataclass
 class RegionalPrompter:
-    args: List[Union[bool, str, List[bool], float, None]]
+    args: Optional[List[Union[bool, str, List[bool], float, None]]] = None
 
 
 @dataclass
 class Sampler:
-    args: List[Union[int, str]]
+    args: Optional[List[Union[int, str]]] = None
 
 
 @dataclass
 class Seed:
-    args: List[Union[int, bool, float]]
+    args: Optional[List[Union[int, bool, float]]] = None
 
 
 @dataclass
 class AlwaysOnScripts:
-    ADetailer: ADetailer
-    API_payload: Dict[str, List[Any]]
-    Comments: Dict[str, List[Any]]
-    ControlNet: ControlNet
-    Dynamic_Prompts_v2_17_1: DynamicPrompts
-    Extra_options: Dict[str, List[Any]]
-    Face_Editor_EX: FaceEditorEX
-    Hypertile: Dict[str, List[Any]]
-    ReActor: ReActor
-    Refiner: Refiner
-    Regional_Prompter: RegionalPrompter
-    Sampler: Sampler
-    Seed: Seed
+    ADetailer: Optional[ADetailer] = None
+    API_payload: Optional[Dict[str, List[Any]]] = None
+    Comments: Optional[Dict[str, List[Any]]] = None
+    ControlNet: Optional[ControlNet] = None
+    Dynamic_Prompts_v2_17_1: Optional[DynamicPrompts] = None
+    Extra_options: Optional[Dict[str, List[Any]]] = None
+    Face_Editor_EX: Optional[FaceEditorEX] = None
+    Hypertile: Optional[Dict[str, List[Any]]] = None
+    ReActor: Optional[ReActor] = None
+    Refiner: Optional[Refiner] = None
+    Regional_Prompter: Optional[RegionalPrompter] = None
+    Sampler: Optional[Sampler] = None
+    Seed: Optional[Seed] = None
 
 
 @dataclass
 class InputData:
-    alwayson_scripts: AlwaysOnScripts
-    batch_size: int
-    cfg_scale: int
-    comments: Dict[str, Any]
-    denoising_strength: float
-    disable_extra_networks: bool
-    do_not_save_grid: bool
-    do_not_save_samples: bool
-    enable_hr: bool
-    height: int
-    hr_negative_prompt: str
-    hr_prompt: str
-    hr_resize_x: int
-    hr_resize_y: int
-    hr_scale: int
-    hr_scheduler: str
-    hr_second_pass_steps: int
-    hr_upscaler: str
-    n_iter: int
-    negative_prompt: str
-    override_settings: Dict[str, int]
-    override_settings_restore_afterwards: bool
-    prompt: str
-    restore_faces: bool
-    s_churn: float
-    s_min_uncond: float
-    s_noise: float
-    s_tmax: Optional[Any]
-    s_tmin: float
-    sampler_name: str
-    scheduler: str
-    script_args: List[Any]
-    script_name: Optional[Any]
-    seed: int
-    seed_enable_extras: bool
-    seed_resize_from_h: int
-    seed_resize_from_w: int
-    steps: int
-    styles: List[Any]
-    subseed: int
-    subseed_strength: float
-    tiling: bool
-    width: int
+    alwayson_scripts: Optional[AlwaysOnScripts] = None
+    batch_size: Optional[int] = None
+    cfg_scale: Optional[int] = None
+    comments: Optional[Dict[str, Any]] = None
+    denoising_strength: Optional[float] = None
+    disable_extra_networks: Optional[bool] = None
+    do_not_save_grid: Optional[bool] = None
+    do_not_save_samples: Optional[bool] = None
+    enable_hr: Optional[bool] = None
+    height: Optional[int] = None
+    hr_negative_prompt: Optional[str] = None
+    hr_prompt: Optional[str] = None
+    hr_resize_x: Optional[int] = None
+    hr_resize_y: Optional[int] = None
+    hr_scale: Optional[int] = None
+    hr_scheduler: Optional[str] = None
+    hr_second_pass_steps: Optional[int] = None
+    hr_upscaler: Optional[str] = None
+    n_iter: Optional[int] = None
+    negative_prompt: Optional[str] = None
+    override_settings: Optional[Dict[str, int]] = None
+    override_settings_restore_afterwards: Optional[bool] = None
+    prompt: Optional[str] = None
+    restore_faces: Optional[bool] = None
+    s_churn: Optional[float] = None
+    s_min_uncond: Optional[float] = None
+    s_noise: Optional[float] = None
+    s_tmax: Optional[Any] = None
+    s_tmin: Optional[float] = None
+    sampler_name: Optional[str] = None
+    scheduler: Optional[str] = None
+    script_args: Optional[List[Any]] = None
+    script_name: Optional[Any] = None
+    seed: Optional[int] = None
+    seed_enable_extras: Optional[bool] = None
+    seed_resize_from_h: Optional[int] = None
+    seed_resize_from_w: Optional[int] = None
+    steps: Optional[int] = None
+    styles: Optional[List[Any]] = None
+    subseed: Optional[int] = None
+    subseed_strength: Optional[float] = None
+    tiling: Optional[bool] = None
+    width: Optional[int] = None
 
     def generate_payload_json(self) -> Dict[str, Any]:
         return dataclasses.asdict(self)
@@ -227,7 +227,7 @@ tokenizer = AutoTokenizer.from_pretrained("openai-community/openai-gpt")
 
 @dataclasses.dataclass
 class InputParameters:
-    max_new_tokens: int = 256
+    max_new_tokens: Optional[int] = 256
 
     @classmethod
     def from_json_msg(cls, json_msg: Dict[str, Any]) -> "InputParameters":
