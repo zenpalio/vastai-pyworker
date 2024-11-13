@@ -210,12 +210,6 @@ class InputData:
 
     @classmethod
     def from_json_msg(cls, json_msg: Dict[str, Any]) -> "InputData":
-        errors = {}
-        for param in inspect.signature(cls).parameters:
-            if param not in json_msg:
-                errors[param] = "missing parameter"
-        if errors:
-            raise JsonDataException(errors)
         return cls(
             **{
                 k: v
