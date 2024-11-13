@@ -171,6 +171,7 @@ class Backend:
             return done.pop().result()
         except Exception as e:
             log.debug(f"Exception in main handler loop {e}")
+            log.debug(e)
             return web.Response(status=500)
 
     async def _start_tracking(self) -> None:
