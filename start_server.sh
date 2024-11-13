@@ -12,6 +12,8 @@ PYWORKER_LOG="$WORKSPACE_DIR/pyworker.log"
 REPORT_ADDR="${REPORT_ADDR:-https://8024-2a00-102a-4019-cdc7-f097-7b89-887e-223c.ngrok-free.app}"
 USE_SSL="${USE_SSL:-true}"
 WORKER_PORT="${WORKER_PORT:-3000}"
+rm -rf /workspace/vast-pyworker/
+rm -rf /workspace/worker-env/
 
 mkdir -p "$WORKSPACE_DIR"
 cd "$WORKSPACE_DIR"
@@ -48,8 +50,7 @@ if [ ! -d "$ENV_PATH" ]
 then
     apt install -y python3.10-venv
     echo "setting up venv"
-    rm -rf /workspace/vast-pyworker/
-    rm -rf /workspace/worker-env/
+
     git clone https://github.com/zenpalio/vastai-pyworker "$SERVER_DIR"
 
     python3 -m venv "$WORKSPACE_DIR/worker-env"
