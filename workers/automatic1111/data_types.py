@@ -1,5 +1,4 @@
 import dataclasses
-import random
 import inspect
 
 from transformers import AutoTokenizer
@@ -13,64 +12,66 @@ from typing import List, Optional, Union, Dict, Any
 
 @dataclass
 class ADetailerArgs:
-    ad_cfg_scale: Optional[int] = None
-    ad_checkpoint: Optional[str] = None
-    ad_clip_skip: Optional[int] = None
-    ad_confidence: Optional[float] = None
-    ad_controlnet_guidance_end: Optional[int] = None
-    ad_controlnet_guidance_start: Optional[int] = None
-    ad_controlnet_model: Optional[str] = None
-    ad_controlnet_module: Optional[str] = None
-    ad_controlnet_weight: Optional[int] = None
-    ad_denoising_strength: Optional[float] = None
-    ad_dilate_erode: Optional[int] = None
-    ad_inpaint_height: Optional[int] = None
-    ad_inpaint_only_masked: Optional[bool] = None
-    ad_inpaint_only_masked_padding: Optional[int] = None
-    ad_inpaint_width: Optional[int] = None
-    ad_mask_blur: Optional[int] = None
-    ad_mask_k_largest: Optional[int] = None
-    ad_mask_max_ratio: Optional[int] = None
-    ad_mask_merge_invert: Optional[str] = None
-    ad_mask_min_ratio: Optional[int] = None
-    ad_model: Optional[str] = None
-    ad_model_classes: Optional[str] = None
-    ad_negative_prompt: Optional[str] = None
-    ad_noise_multiplier: Optional[int] = None
-    ad_prompt: Optional[str] = None
-    ad_restore_face: Optional[bool] = None
-    ad_sampler: Optional[str] = None
-    ad_scheduler: Optional[str] = None
-    ad_steps: Optional[int] = None
-    ad_tab_enable: Optional[bool] = None
-    ad_use_cfg_scale: Optional[bool] = None
-    ad_use_checkpoint: Optional[bool] = None
-    ad_use_clip_skip: Optional[bool] = None
-    ad_use_inpaint_width_height: Optional[bool] = None
-    ad_use_noise_multiplier: Optional[bool] = None
-    ad_use_sampler: Optional[bool] = None
-    ad_use_steps: Optional[bool] = None
-    ad_use_vae: Optional[bool] = None
-    ad_vae: Optional[str] = None
-    ad_x_offset: Optional[int] = None
-    ad_y_offset: Optional[int] = None
-    is_api: Optional[List[Any]] = None
+    ad_cfg_scale: Optional[int] = 7
+    ad_checkpoint: Optional[str] = "Use same checkpoint"
+    ad_clip_skip: Optional[int] = 1
+    ad_confidence: Optional[float] = 0.3
+    ad_controlnet_guidance_end: Optional[int] = 1
+    ad_controlnet_guidance_start: Optional[int] = 0
+    ad_controlnet_model: Optional[str] = "None"
+    ad_controlnet_module: Optional[str] = "None"
+    ad_controlnet_weight: Optional[int] = 1
+    ad_denoising_strength: Optional[float] = 0.4
+    ad_dilate_erode: Optional[int] = 4
+    ad_inpaint_height: Optional[int] = 512
+    ad_inpaint_only_masked: Optional[bool] = True
+    ad_inpaint_only_masked_padding: Optional[int] = 32
+    ad_inpaint_width: Optional[int] = 512
+    ad_mask_blur: Optional[int] = 4
+    ad_mask_k_largest: Optional[int] = 0
+    ad_mask_max_ratio: Optional[int] = 1
+    ad_mask_merge_invert: Optional[str] = "None"
+    ad_mask_min_ratio: Optional[int] = 0
+    ad_model: Optional[str] = "face_yolov8n.pt"
+    ad_model_classes: Optional[str] = ""
+    ad_negative_prompt: Optional[str] = ""
+    ad_noise_multiplier: Optional[int] = 1
+    ad_prompt: Optional[str] = ""
+    ad_restore_face: Optional[bool] = False
+    ad_sampler: Optional[str] = "DPM++ 2M"
+    ad_scheduler: Optional[str] = "Use same scheduler"
+    ad_steps: Optional[int] = 28
+    ad_tab_enable: Optional[bool] = True
+    ad_use_cfg_scale: Optional[bool] = False
+    ad_use_checkpoint: Optional[bool] = False
+    ad_use_clip_skip: Optional[bool] = False
+    ad_use_inpaint_width_height: Optional[bool] = False
+    ad_use_noise_multiplier: Optional[bool] = False
+    ad_use_sampler: Optional[bool] = False
+    ad_use_steps: Optional[bool] = False
+    ad_use_vae: Optional[bool] = False
+    ad_vae: Optional[str] = "Use same VAE"
+    ad_x_offset: Optional[int] = 0
+    ad_y_offset: Optional[int] = 0
+    is_api: Optional[List[Any]] = dataclasses.field(default_factory=list)
 
 
 @dataclass
 class ADetailer:
-    args: Optional[List[Union[bool, ADetailerArgs]]] = None
+    args: Optional[List[Union[bool, ADetailerArgs]]] = dataclasses.field(
+        default_factory=list
+    )
 
 
 @dataclass
 class ControlNetArgs:
     advanced_weighting: Optional[Any] = None
     animatediff_batch: Optional[bool] = None
-    batch_image_files: Optional[List[str]] = None
+    batch_image_files: Optional[List[str]] = dataclasses.field(default_factory=list)
     batch_images: Optional[str] = None
     batch_keyframe_idx: Optional[Any] = None
     batch_mask_dir: Optional[Any] = None
-    batch_modifiers: Optional[List[str]] = None
+    batch_modifiers: Optional[List[str]] = dataclasses.field(default_factory=list)
     control_mode: Optional[str] = None
     effective_region_mask: Optional[Any] = None
     enabled: Optional[bool] = None
@@ -101,42 +102,54 @@ class ControlNetArgs:
 
 @dataclass
 class ControlNet:
-    args: Optional[List[ControlNetArgs]] = None
+    args: Optional[List[ControlNetArgs]] = dataclasses.field(default_factory=list)
 
 
 @dataclass
 class DynamicPrompts:
-    args: Optional[List[Union[bool, int, float, str, List[bool]]]] = None
+    args: Optional[List[Union[bool, int, float, str, List[bool]]]] = dataclasses.field(
+        default_factory=list
+    )
 
 
 @dataclass
 class FaceEditorEX:
-    args: Optional[List[Union[bool, float, int, str, List[str], Dict[str, Any]]]] = None
+    args: Optional[List[Union[bool, float, int, str, List[str], Dict[str, Any]]]] = (
+        dataclasses.field(default_factory=list)
+    )
 
 
 @dataclass
 class ReActor:
-    args: Optional[List[Union[None, bool, str, float, int, Dict[str, Any]]]] = None
+    args: Optional[List[Union[None, bool, str, float, int, Dict[str, Any]]]] = (
+        dataclasses.field(default_factory=list)
+    )
 
 
 @dataclass
 class Refiner:
-    args: Optional[List[Union[bool, str, float]]] = None
+    args: Optional[List[Union[bool, str, float]]] = dataclasses.field(
+        default_factory=list
+    )
 
 
 @dataclass
 class RegionalPrompter:
-    args: Optional[List[Union[bool, str, List[bool], float, None]]] = None
+    args: Optional[List[Union[bool, str, List[bool], float, None]]] = dataclasses.field(
+        default_factory=list
+    )
 
 
 @dataclass
 class Sampler:
-    args: Optional[List[Union[int, str]]] = None
+    args: Optional[List[Union[int, str]]] = dataclasses.field(default_factory=list)
 
 
 @dataclass
 class Seed:
-    args: Optional[List[Union[int, bool, float]]] = None
+    args: Optional[List[Union[int, bool, float]]] = dataclasses.field(
+        default_factory=list
+    )
 
 
 @dataclass
@@ -196,7 +209,7 @@ class InputData:
     seed_resize_from_h: Optional[int] = None
     seed_resize_from_w: Optional[int] = None
     steps: Optional[int] = None
-    styles: Optional[List[Any]] = None
+    styles: Optional[List[Any]] = dataclasses.field(default_factory=list)
     subseed: Optional[int] = None
     subseed_strength: Optional[float] = None
     tiling: Optional[bool] = None
