@@ -203,7 +203,7 @@ class InputData:
     s_tmin: Optional[float] = None
     sampler_name: Optional[str] = None
     scheduler: Optional[str] = None
-    script_args: Optional[List[Any]] = None
+    script_args: Optional[List[Any]] = dataclasses.field(default_factory=list)
     script_name: Optional[Any] = None
     seed: Optional[int] = None
     seed_enable_extras: Optional[bool] = None
