@@ -1867,7 +1867,7 @@
         "kind": 6,
         "importPath": "workers.automatic1111.server",
         "description": "workers.automatic1111.server",
-        "peekOfCode": "class GenerateHandler(EndpointHandler[InputData]):\n    @property\n    def endpoint(self) -> str:\n        return \"/sdapi/v1/txt2img\"\n    @classmethod\n    def payload_cls(cls) -> Type[InputData]:\n        return InputData\n    def make_benchmark_payload(self) -> InputData:\n        return InputData.for_test()\n    async def generate_client_response(",
+        "peekOfCode": "class GenerateHandler(EndpointHandler[InputData]):\n    @property\n    def endpoint(self) -> str:\n        return f\"{MODEL_SERVER_URL}/sdapi/v1/txt2img\"\n    @classmethod\n    def payload_cls(cls) -> Type[InputData]:\n        return InputData\n    def make_benchmark_payload(self) -> InputData:\n        return InputData.for_test()\n    async def generate_client_response(",
         "detail": "workers.automatic1111.server",
         "documentation": {}
     },
@@ -1903,7 +1903,7 @@
         "kind": 5,
         "importPath": "workers.automatic1111.server",
         "description": "workers.automatic1111.server",
-        "peekOfCode": "log = logging.getLogger(__file__)\n@dataclasses.dataclass\nclass GenerateHandler(EndpointHandler[InputData]):\n    @property\n    def endpoint(self) -> str:\n        return \"/sdapi/v1/txt2img\"\n    @classmethod\n    def payload_cls(cls) -> Type[InputData]:\n        return InputData\n    def make_benchmark_payload(self) -> InputData:",
+        "peekOfCode": "log = logging.getLogger(__file__)\n@dataclasses.dataclass\nclass GenerateHandler(EndpointHandler[InputData]):\n    @property\n    def endpoint(self) -> str:\n        return f\"{MODEL_SERVER_URL}/sdapi/v1/txt2img\"\n    @classmethod\n    def payload_cls(cls) -> Type[InputData]:\n        return InputData\n    def make_benchmark_payload(self) -> InputData:",
         "detail": "workers.automatic1111.server",
         "documentation": {}
     },
