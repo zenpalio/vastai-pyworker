@@ -32,7 +32,7 @@ class GenerateHandler(EndpointHandler[InputData]):
 
     @property
     def endpoint(self) -> str:
-        return f"{MODEL_SERVER_URL}/sdapi/v1/txt2img"
+        return "/sdapi/v1/txt2img"
 
     @classmethod
     def payload_cls(cls) -> Type[InputData]:
