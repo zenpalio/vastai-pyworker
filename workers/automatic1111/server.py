@@ -50,7 +50,7 @@ class GenerateHandler(EndpointHandler[InputData]):
         match model_response.status:
             case 200:
                 log.debug("SUCCESS")
-                data = await model_response.read()
+                data = await model_response.json()
                 return web.json_response(data=data)
             case code:
                 log.debug("SENDING RESPONSE: ERROR: unknown code")
