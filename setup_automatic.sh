@@ -1,6 +1,7 @@
 #!/bin/bash
-# wget -O /workspace/stable-diffusion-webui/models/Stable-diffusion/lustify40.safetensors "https://civitai.com/api/download/models/926965?type=Model&format=SafeTensor&size=pruned&fp=fp16&token=9cbb5054c4234bacc32bdcc1c19dfff7"
-# git clone https://github.com/Bing-su/adetailer /workspace/stable-diffusion-webui/extensions/adetailer
+echo "downloading model"
+ wget -O /workspace/stable-diffusion-webui/models/Stable-diffusion/lustify40.safetensors "https://civitai.com/api/download/models/926965?type=Model&format=SafeTensor&size=pruned&fp=fp16&token=9cbb5054c4234bacc32bdcc1c19dfff7"
+ git clone https://github.com/Bing-su/adetailer /workspace/stable-diffusion-webui/extensions/adetailer
 # Wait for /internal/ping to return 200 with a timeout of 10 minutes
 timeout=600  # Total timeout in seconds
 interval=5   # Interval between checks in seconds
@@ -8,6 +9,7 @@ elapsed=0
 
 while [ $elapsed -lt $timeout ]; do
     status=$(curl -s -o /dev/null -w "%{http_code}" http://127.0.0.1:7860/internal/ping)
+    echo "Status: $status"
     if [ "$status" -eq 200 ]; then
         break
     fi
