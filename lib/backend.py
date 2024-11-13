@@ -187,7 +187,7 @@ class Backend:
     ) -> ClientResponse:
         api_payload = payload.generate_payload_json()
         log.debug(f"posting to endpoint: '{handler.endpoint}', payload: {api_payload}")
-        return await self.session.post(url=handler.endpoint, data=api_payload, headers=dict(content_type="application/json"))
+        return await self.session.post(url=handler.endpoint, data=api_payload, headers=dict(Content_Type="application/json"))
 
     def __check_signature(self, auth_data: AuthData) -> bool:
         def verify_signature(message, signature):
