@@ -1723,7 +1723,7 @@
         "kind": 6,
         "importPath": "workers.automatic1111.data_types",
         "description": "workers.automatic1111.data_types",
-        "peekOfCode": "class ADetailerArgs:\n    ad_cfg_scale: Optional[int] = 7\n    ad_checkpoint: Optional[str] = \"Use same checkpoint\"\n    ad_clip_skip: Optional[int] = 1\n    ad_confidence: Optional[float] = 0.3\n    ad_controlnet_guidance_end: Optional[int] = 1\n    ad_controlnet_guidance_start: Optional[int] = 0\n    ad_controlnet_model: Optional[str] = \"None\"\n    ad_controlnet_module: Optional[str] = \"None\"\n    ad_controlnet_weight: Optional[int] = 1",
+        "peekOfCode": "class ADetailerArgs:\n    ad_cfg_scale: Optional[int] = 0\n    ad_checkpoint: Optional[str] = \"\"\n    ad_clip_skip: Optional[int] = 0\n    ad_confidence: Optional[float] = 0.0\n    ad_controlnet_guidance_end: Optional[int] = 0\n    ad_controlnet_guidance_start: Optional[int] = 0\n    ad_controlnet_model: Optional[str] = \"\"\n    ad_controlnet_module: Optional[str] = \"\"\n    ad_controlnet_weight: Optional[int] = 0",
         "detail": "workers.automatic1111.data_types",
         "documentation": {}
     },
@@ -1732,7 +1732,7 @@
         "kind": 6,
         "importPath": "workers.automatic1111.data_types",
         "description": "workers.automatic1111.data_types",
-        "peekOfCode": "class ADetailer:\n    args: Optional[List[Union[bool, ADetailerArgs]]] = dataclasses.field(\n        default_factory=list\n    )\n@dataclass\nclass ControlNetArgs:\n    advanced_weighting: Optional[Any] = None\n    animatediff_batch: Optional[bool] = None\n    batch_image_files: Optional[List[str]] = dataclasses.field(default_factory=list)\n    batch_images: Optional[str] = None",
+        "peekOfCode": "class ADetailer:\n    args: Optional[List[Union[bool, ADetailerArgs]]] = dataclasses.field(\n        default_factory=list\n    )\n@dataclass\nclass ControlNetArgs:\n    advanced_weighting: Optional[Any] = None\n    animatediff_batch: Optional[bool] = False\n    batch_image_files: Optional[List[str]] = dataclasses.field(default_factory=list)\n    batch_images: Optional[str] = \"\"",
         "detail": "workers.automatic1111.data_types",
         "documentation": {}
     },
@@ -1741,7 +1741,7 @@
         "kind": 6,
         "importPath": "workers.automatic1111.data_types",
         "description": "workers.automatic1111.data_types",
-        "peekOfCode": "class ControlNetArgs:\n    advanced_weighting: Optional[Any] = None\n    animatediff_batch: Optional[bool] = None\n    batch_image_files: Optional[List[str]] = dataclasses.field(default_factory=list)\n    batch_images: Optional[str] = None\n    batch_keyframe_idx: Optional[Any] = None\n    batch_mask_dir: Optional[Any] = None\n    batch_modifiers: Optional[List[str]] = dataclasses.field(default_factory=list)\n    control_mode: Optional[str] = None\n    effective_region_mask: Optional[Any] = None",
+        "peekOfCode": "class ControlNetArgs:\n    advanced_weighting: Optional[Any] = None\n    animatediff_batch: Optional[bool] = False\n    batch_image_files: Optional[List[str]] = dataclasses.field(default_factory=list)\n    batch_images: Optional[str] = \"\"\n    batch_keyframe_idx: Optional[Any] = None\n    batch_mask_dir: Optional[Any] = None\n    batch_modifiers: Optional[List[str]] = dataclasses.field(default_factory=list)\n    control_mode: Optional[str] = \"\"\n    effective_region_mask: Optional[Any] = None",
         "detail": "workers.automatic1111.data_types",
         "documentation": {}
     },
@@ -1831,7 +1831,7 @@
         "kind": 6,
         "importPath": "workers.automatic1111.data_types",
         "description": "workers.automatic1111.data_types",
-        "peekOfCode": "class InputData:\n    alwayson_scripts: Optional[AlwaysOnScripts] = None\n    batch_size: Optional[int] = None\n    cfg_scale: Optional[int] = None\n    comments: Optional[Dict[str, Any]] = None\n    denoising_strength: Optional[float] = None\n    disable_extra_networks: Optional[bool] = None\n    do_not_save_grid: Optional[bool] = None\n    do_not_save_samples: Optional[bool] = None\n    enable_hr: Optional[bool] = None",
+        "peekOfCode": "class InputData:\n    alwayson_scripts: Optional[AlwaysOnScripts] = None\n    batch_size: Optional[int] = 0\n    cfg_scale: Optional[int] = 0\n    comments: Optional[Dict[str, Any]] = None\n    denoising_strength: Optional[float] = 0.0\n    disable_extra_networks: Optional[bool] = False\n    do_not_save_grid: Optional[bool] = False\n    do_not_save_samples: Optional[bool] = False\n    enable_hr: Optional[bool] = False",
         "detail": "workers.automatic1111.data_types",
         "documentation": {}
     },
