@@ -1,3 +1,4 @@
+import json
 import os
 import logging
 from typing import Union, Type
@@ -52,6 +53,7 @@ class GenerateHandler(EndpointHandler[InputData]):
                 return web.json_response(data=data)
             case code:
                 log.debug("SENDING RESPONSE: ERROR: unknown code")
+                log.debug(json.dumps(model_response))
                 return web.Response(status=code)
 
 
