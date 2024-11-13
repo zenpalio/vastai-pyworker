@@ -129,6 +129,7 @@ class Backend:
             try:
                 start_time = time.time()
                 response = await self.__call_api(handler=handler, payload=payload)
+                log.debug(response)
                 status_code = response.status
                 log.debug(
                     " ".join(
@@ -139,6 +140,7 @@ class Backend:
                     )
                 )
                 res = await handler.generate_client_response(request, response)
+                
                 self.metrics._request_end(
                     workload=workload,
                     req_response_time=time.time() - start_time,

@@ -46,14 +46,15 @@ class GenerateHandler(EndpointHandler[InputData]):
         self, client_request: web.Request, model_response: ClientResponse
     ) -> Union[web.Response, web.StreamResponse]:
         _ = client_request
+        log.debug(model_response)
         match model_response.status:
             case 200:
                 log.debug("SUCCESS")
-                data = await model_response.json()
+                data = await model_response.read()
                 return web.json_response(data=data)
             case code:
                 log.debug("SENDING RESPONSE: ERROR: unknown code")
-                log.debug(json.dumps(model_response))
+                
                 return web.Response(status=code)
 
 
