@@ -1,6 +1,7 @@
 import dataclasses
 import inspect
 
+import json
 from transformers import AutoTokenizer
 import nltk
 
@@ -216,7 +217,7 @@ class InputData:
     width: Optional[int] = None
 
     def generate_payload_json(self) -> Dict[str, Any]:
-        return dataclasses.asdict(self)
+        return json.dumps(dataclasses.asdict(self)).encode("utf-8")
 
     def count_workload(self) -> int:
         return self.batch_size
