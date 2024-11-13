@@ -26,12 +26,6 @@ class JsonDataException(Exception):
 @dataclass
 class ApiPayload(ABC):
 
-    @classmethod
-    @abstractmethod
-    def for_test(cls) -> "ApiPayload":
-        """defines how create a payload for load testing"""
-        pass
-
     @abstractmethod
     def generate_payload_json(self) -> Dict[str, Any]:
         """defines how to convert an ApiPayload to JSON that will be sent to model API"""

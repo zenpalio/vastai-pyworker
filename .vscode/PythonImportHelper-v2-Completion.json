@@ -126,6 +126,14 @@
         "documentation": {}
     },
     {
+        "label": "dataclass",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
         "label": "logging",
         "kind": 6,
         "isExtraImport": true,
@@ -408,6 +416,30 @@
     },
     {
         "label": "Type",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Union",
         "importPath": "typing",
         "description": "typing",
         "isExtraImport": true,
@@ -1385,7 +1417,7 @@
         "kind": 6,
         "importPath": "lib.data_types",
         "description": "lib.data_types",
-        "peekOfCode": "class JsonDataException(Exception):\n    def __init__(self, json_msg: Dict[str, Any]):\n        self.message = json_msg\n@dataclass\nclass ApiPayload(ABC):\n    @classmethod\n    @abstractmethod\n    def for_test(cls) -> \"ApiPayload\":\n        \"\"\"defines how create a payload for load testing\"\"\"\n        pass",
+        "peekOfCode": "class JsonDataException(Exception):\n    def __init__(self, json_msg: Dict[str, Any]):\n        self.message = json_msg\n@dataclass\nclass ApiPayload(ABC):\n    @abstractmethod\n    def generate_payload_json(self) -> Dict[str, Any]:\n        \"\"\"defines how to convert an ApiPayload to JSON that will be sent to model API\"\"\"\n        pass\n    @abstractmethod",
         "detail": "lib.data_types",
         "documentation": {}
     },
@@ -1394,7 +1426,7 @@
         "kind": 6,
         "importPath": "lib.data_types",
         "description": "lib.data_types",
-        "peekOfCode": "class ApiPayload(ABC):\n    @classmethod\n    @abstractmethod\n    def for_test(cls) -> \"ApiPayload\":\n        \"\"\"defines how create a payload for load testing\"\"\"\n        pass\n    @abstractmethod\n    def generate_payload_json(self) -> Dict[str, Any]:\n        \"\"\"defines how to convert an ApiPayload to JSON that will be sent to model API\"\"\"\n        pass",
+        "peekOfCode": "class ApiPayload(ABC):\n    @abstractmethod\n    def generate_payload_json(self) -> Dict[str, Any]:\n        \"\"\"defines how to convert an ApiPayload to JSON that will be sent to model API\"\"\"\n        pass\n    @abstractmethod\n    def count_workload(self) -> float:\n        \"\"\"defines how to calculate workload for a payload\"\"\"\n        pass\n    @classmethod",
         "detail": "lib.data_types",
         "documentation": {}
     },
@@ -1457,7 +1489,7 @@
         "kind": 5,
         "importPath": "lib.data_types",
         "description": "lib.data_types",
-        "peekOfCode": "log = logging.getLogger(__file__)\nclass JsonDataException(Exception):\n    def __init__(self, json_msg: Dict[str, Any]):\n        self.message = json_msg\n@dataclass\nclass ApiPayload(ABC):\n    @classmethod\n    @abstractmethod\n    def for_test(cls) -> \"ApiPayload\":\n        \"\"\"defines how create a payload for load testing\"\"\"",
+        "peekOfCode": "log = logging.getLogger(__file__)\nclass JsonDataException(Exception):\n    def __init__(self, json_msg: Dict[str, Any]):\n        self.message = json_msg\n@dataclass\nclass ApiPayload(ABC):\n    @abstractmethod\n    def generate_payload_json(self) -> Dict[str, Any]:\n        \"\"\"defines how to convert an ApiPayload to JSON that will be sent to model API\"\"\"\n        pass",
         "detail": "lib.data_types",
         "documentation": {}
     },
@@ -1687,11 +1719,110 @@
         "documentation": {}
     },
     {
-        "label": "InputParameters",
+        "label": "ADetailerArgs",
         "kind": 6,
         "importPath": "workers.automatic1111.data_types",
         "description": "workers.automatic1111.data_types",
-        "peekOfCode": "class InputParameters:\n    max_new_tokens: int = 256\n    @classmethod\n    def from_json_msg(cls, json_msg: Dict[str, Any]) -> \"InputParameters\":\n        errors = {}\n        for param in inspect.signature(cls).parameters:\n            if param not in json_msg:\n                errors[param] = \"missing parameter\"\n        if errors:\n            raise JsonDataException(errors)",
+        "peekOfCode": "class ADetailerArgs:\n    ad_cfg_scale: int\n    ad_checkpoint: str\n    ad_clip_skip: int\n    ad_confidence: float\n    ad_controlnet_guidance_end: int\n    ad_controlnet_guidance_start: int\n    ad_controlnet_model: str\n    ad_controlnet_module: str\n    ad_controlnet_weight: int",
+        "detail": "workers.automatic1111.data_types",
+        "documentation": {}
+    },
+    {
+        "label": "ADetailer",
+        "kind": 6,
+        "importPath": "workers.automatic1111.data_types",
+        "description": "workers.automatic1111.data_types",
+        "peekOfCode": "class ADetailer:\n    args: List[Union[bool, ADetailerArgs]]\n@dataclass\nclass ControlNetArgs:\n    advanced_weighting: Optional[Any]\n    animatediff_batch: bool\n    batch_image_files: List[str]\n    batch_images: str\n    batch_keyframe_idx: Optional[Any]\n    batch_mask_dir: Optional[Any]",
+        "detail": "workers.automatic1111.data_types",
+        "documentation": {}
+    },
+    {
+        "label": "ControlNetArgs",
+        "kind": 6,
+        "importPath": "workers.automatic1111.data_types",
+        "description": "workers.automatic1111.data_types",
+        "peekOfCode": "class ControlNetArgs:\n    advanced_weighting: Optional[Any]\n    animatediff_batch: bool\n    batch_image_files: List[str]\n    batch_images: str\n    batch_keyframe_idx: Optional[Any]\n    batch_mask_dir: Optional[Any]\n    batch_modifiers: List[str]\n    control_mode: str\n    effective_region_mask: Optional[Any]",
+        "detail": "workers.automatic1111.data_types",
+        "documentation": {}
+    },
+    {
+        "label": "ControlNet",
+        "kind": 6,
+        "importPath": "workers.automatic1111.data_types",
+        "description": "workers.automatic1111.data_types",
+        "peekOfCode": "class ControlNet:\n    args: List[ControlNetArgs]\n@dataclass\nclass DynamicPrompts:\n    args: List[Union[bool, int, float, str, List[bool]]]\n@dataclass\nclass FaceEditorEX:\n    args: List[Union[bool, float, int, str, List[str], Dict[str, Any]]]\n@dataclass\nclass ReActor:",
+        "detail": "workers.automatic1111.data_types",
+        "documentation": {}
+    },
+    {
+        "label": "DynamicPrompts",
+        "kind": 6,
+        "importPath": "workers.automatic1111.data_types",
+        "description": "workers.automatic1111.data_types",
+        "peekOfCode": "class DynamicPrompts:\n    args: List[Union[bool, int, float, str, List[bool]]]\n@dataclass\nclass FaceEditorEX:\n    args: List[Union[bool, float, int, str, List[str], Dict[str, Any]]]\n@dataclass\nclass ReActor:\n    args: List[Union[None, bool, str, float, int, Dict[str, Any]]]\n@dataclass\nclass Refiner:",
+        "detail": "workers.automatic1111.data_types",
+        "documentation": {}
+    },
+    {
+        "label": "FaceEditorEX",
+        "kind": 6,
+        "importPath": "workers.automatic1111.data_types",
+        "description": "workers.automatic1111.data_types",
+        "peekOfCode": "class FaceEditorEX:\n    args: List[Union[bool, float, int, str, List[str], Dict[str, Any]]]\n@dataclass\nclass ReActor:\n    args: List[Union[None, bool, str, float, int, Dict[str, Any]]]\n@dataclass\nclass Refiner:\n    args: List[Union[bool, str, float]]\n@dataclass\nclass RegionalPrompter:",
+        "detail": "workers.automatic1111.data_types",
+        "documentation": {}
+    },
+    {
+        "label": "ReActor",
+        "kind": 6,
+        "importPath": "workers.automatic1111.data_types",
+        "description": "workers.automatic1111.data_types",
+        "peekOfCode": "class ReActor:\n    args: List[Union[None, bool, str, float, int, Dict[str, Any]]]\n@dataclass\nclass Refiner:\n    args: List[Union[bool, str, float]]\n@dataclass\nclass RegionalPrompter:\n    args: List[Union[bool, str, List[bool], float, None]]\n@dataclass\nclass Sampler:",
+        "detail": "workers.automatic1111.data_types",
+        "documentation": {}
+    },
+    {
+        "label": "Refiner",
+        "kind": 6,
+        "importPath": "workers.automatic1111.data_types",
+        "description": "workers.automatic1111.data_types",
+        "peekOfCode": "class Refiner:\n    args: List[Union[bool, str, float]]\n@dataclass\nclass RegionalPrompter:\n    args: List[Union[bool, str, List[bool], float, None]]\n@dataclass\nclass Sampler:\n    args: List[Union[int, str]]\n@dataclass\nclass Seed:",
+        "detail": "workers.automatic1111.data_types",
+        "documentation": {}
+    },
+    {
+        "label": "RegionalPrompter",
+        "kind": 6,
+        "importPath": "workers.automatic1111.data_types",
+        "description": "workers.automatic1111.data_types",
+        "peekOfCode": "class RegionalPrompter:\n    args: List[Union[bool, str, List[bool], float, None]]\n@dataclass\nclass Sampler:\n    args: List[Union[int, str]]\n@dataclass\nclass Seed:\n    args: List[Union[int, bool, float]]\n@dataclass\nclass AlwaysOnScripts:",
+        "detail": "workers.automatic1111.data_types",
+        "documentation": {}
+    },
+    {
+        "label": "Sampler",
+        "kind": 6,
+        "importPath": "workers.automatic1111.data_types",
+        "description": "workers.automatic1111.data_types",
+        "peekOfCode": "class Sampler:\n    args: List[Union[int, str]]\n@dataclass\nclass Seed:\n    args: List[Union[int, bool, float]]\n@dataclass\nclass AlwaysOnScripts:\n    ADetailer: ADetailer\n    API_payload: Dict[str, List[Any]]\n    Comments: Dict[str, List[Any]]",
+        "detail": "workers.automatic1111.data_types",
+        "documentation": {}
+    },
+    {
+        "label": "Seed",
+        "kind": 6,
+        "importPath": "workers.automatic1111.data_types",
+        "description": "workers.automatic1111.data_types",
+        "peekOfCode": "class Seed:\n    args: List[Union[int, bool, float]]\n@dataclass\nclass AlwaysOnScripts:\n    ADetailer: ADetailer\n    API_payload: Dict[str, List[Any]]\n    Comments: Dict[str, List[Any]]\n    ControlNet: ControlNet\n    Dynamic_Prompts_v2_17_1: DynamicPrompts\n    Extra_options: Dict[str, List[Any]]",
+        "detail": "workers.automatic1111.data_types",
+        "documentation": {}
+    },
+    {
+        "label": "AlwaysOnScripts",
+        "kind": 6,
+        "importPath": "workers.automatic1111.data_types",
+        "description": "workers.automatic1111.data_types",
+        "peekOfCode": "class AlwaysOnScripts:\n    ADetailer: ADetailer\n    API_payload: Dict[str, List[Any]]\n    Comments: Dict[str, List[Any]]\n    ControlNet: ControlNet\n    Dynamic_Prompts_v2_17_1: DynamicPrompts\n    Extra_options: Dict[str, List[Any]]\n    Face_Editor_EX: FaceEditorEX\n    Hypertile: Dict[str, List[Any]]\n    ReActor: ReActor",
         "detail": "workers.automatic1111.data_types",
         "documentation": {}
     },
@@ -1700,7 +1831,16 @@
         "kind": 6,
         "importPath": "workers.automatic1111.data_types",
         "description": "workers.automatic1111.data_types",
-        "peekOfCode": "class InputData(ApiPayload):\n    inputs: str\n    parameters: InputParameters\n    @classmethod\n    def from_dict(cls, data: Dict[str, Any]) -> \"InputData\":\n        return cls(\n            inputs=data[\"inputs\"], parameters=InputParameters(**data[\"parameters\"])\n        )\n    @classmethod\n    def for_test(cls) -> \"InputData\":",
+        "peekOfCode": "class InputData:\n    alwayson_scripts: AlwaysOnScripts\n    batch_size: int\n    cfg_scale: int\n    comments: Dict[str, Any]\n    denoising_strength: float\n    disable_extra_networks: bool\n    do_not_save_grid: bool\n    do_not_save_samples: bool\n    enable_hr: bool",
+        "detail": "workers.automatic1111.data_types",
+        "documentation": {}
+    },
+    {
+        "label": "InputParameters",
+        "kind": 6,
+        "importPath": "workers.automatic1111.data_types",
+        "description": "workers.automatic1111.data_types",
+        "peekOfCode": "class InputParameters:\n    max_new_tokens: int = 256\n    @classmethod\n    def from_json_msg(cls, json_msg: Dict[str, Any]) -> \"InputParameters\":\n        errors = {}\n        for param in inspect.signature(cls).parameters:\n            if param not in json_msg:\n                errors[param] = \"missing parameter\"\n        if errors:\n            raise JsonDataException(errors)",
         "detail": "workers.automatic1111.data_types",
         "documentation": {}
     },
