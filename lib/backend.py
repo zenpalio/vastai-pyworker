@@ -159,7 +159,7 @@ class Backend:
                 self.sem.release()
 
         def post(endpoint: str, dct: dict = None):
-            url = f"https://127.0.0.1{endpoint}"
+            url = f"http://127.0.0.1:7860{endpoint}"
             log.debug(f"url: {url}")
             resp = requests.post(url, json=dct, timeout=300, verify=False)
             print(resp.status_code)
