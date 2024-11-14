@@ -161,6 +161,7 @@ class Backend:
         def post(endpoint: str, dct: dict = None):
             url = f"http://127.0.0.1:7860{endpoint}"
             log.debug(f"url: {url}")
+            log.debug(dct)
             resp = requests.post(url, json=dct, timeout=300, verify=False)
             print(resp.status_code)
             if resp.status_code != 200:
@@ -178,7 +179,7 @@ class Backend:
         #    return web.Response(status=401)
 
         try:
-            response = post(handler.endpoint, data.payload)
+            response = post(handler.endpoint, payload)
             return web.json_response(response)
         except Exception as e:
             log.debug(f"Exception in main handler loop {e}")
