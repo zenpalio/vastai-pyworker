@@ -13,6 +13,7 @@ PYWORKER_LOG="$WORKSPACE_DIR/pyworker.log"
 REPORT_ADDR="${REPORT_ADDR:-https://8024-2a00-102a-4019-cdc7-f097-7b89-887e-223c.ngrok-free.app}"
 USE_SSL="${USE_SSL:-true}"
 WORKER_PORT="${WORKER_PORT:-3000}"
+BACKEND="${BACKEND:-automatic1111}"
 rm -rf /workspace/vast-pyworker/
 rm -rf /workspace/worker-env/
 
@@ -168,6 +169,11 @@ requests.post(
     json=opt_json,
     verify=False,  # Disable SSL verification
 )
+requests.post(
+    url=f"{url}/sdapi/v1/reload-checkpoint",
+    verify=False,  # Disable SSL verification
+)
+
 # Send POST request to REPORT_ADDR
 report_addr = os.environ["REPORT_ADDR"]
 container_id = os.environ["CONTAINER_ID"]
