@@ -23,8 +23,9 @@ PARAMETER num_gpu 99
 EOF
 
 # Create and run the model using ollama
-#ollama create llama3-uncensored -f llama3-uncensored.modelfile 
-#ollama run llama3-uncensored
+echo "Creating and running the model"
+ollama create llama3-uncensored -f llama3-uncensored.modelfile 
+ollama run llama3-uncensored
 
 # Export BACKEND variable and download/start the server script
 # export BACKEND=tgi
