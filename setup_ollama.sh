@@ -1,7 +1,7 @@
 #!/bin/bash
 # wget https://huggingface.co/Orenguteng/Llama-3.1-8B-Lexi-Uncensored-GGUF/resolve/main/Llama-3.1-8B-Lexi-Uncensored_F16.gguf
 # Define the template content
-echo "Creating the model file"
+echo "Creating the model file2"
 cat << 'EOF' > llama3-uncensored.modelfile
 {{ .System }}<|eot_id|>{{ end }}<|start_header_id|>user<|end_header_id|>
 
