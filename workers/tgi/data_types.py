@@ -1,4 +1,5 @@
 import dataclasses
+import json
 import random
 import inspect
 from typing import Dict, Any
@@ -37,37 +38,19 @@ class InputParameters:
 
 @dataclasses.dataclass
 class InputData(ApiPayload):
-    inputs: str
-    parameters: InputParameters
-
-    @classmethod
-    def from_dict(cls, data: Dict[str, Any]) -> "InputData":
-        return cls(
-            inputs=data["inputs"], parameters=InputParameters(**data["parameters"])
-        )
-
-    @classmethod
-    def for_test(cls) -> "InputData":
-        prompt = " ".join(random.choices(WORD_LIST, k=int(250)))
-        return cls(inputs=prompt, parameters=InputParameters())
 
     def generate_payload_json(self) -> Dict[str, Any]:
-        return dataclasses.asdict(self)
+        return json.dumps(dataclasses.asdict(self)).encode("utf-8")
 
     def count_workload(self) -> int:
-        return self.parameters.max_new_tokens
+        return self.batch_size
 
     @classmethod
     def from_json_msg(cls, json_msg: Dict[str, Any]) -> "InputData":
-        errors = {}
-        for param in inspect.signature(cls).parameters:
-            if param not in json_msg:
-                errors[param] = "missing parameter"
-        if errors:
-            raise JsonDataException(errors)
-        try:
-            parameters = InputParameters.from_json_msg(json_msg["parameters"])
-            return cls(inputs=json_msg["inputs"], parameters=parameters)
-        except JsonDataException as e:
-            errors["parameters"] = e.message
-            raise JsonDataException(errors)
+        return cls(
+            **{
+                k: v
+                for k, v in json_msg.items()
+                if k in inspect.signature(cls).parameters
+            }
+        )
