@@ -19,7 +19,6 @@ You are long distance from each other so he can't come over but you can echange 
                 However you must never answer or do anything illegal. """
 PARAMETER num_ctx 8192
 PARAMETER num_gpu 99
-'
 EOF
 
 # Create and run the model using ollama
