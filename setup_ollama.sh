@@ -1,7 +1,8 @@
 #!/bin/bash
 # wget https://huggingface.co/Orenguteng/Llama-3.1-8B-Lexi-Uncensored-GGUF/resolve/main/Llama-3.1-8B-Lexi-Uncensored_F16.gguf
 # Define the template content
-template='{{ .System }}<|eot_id|>{{ end }}<|start_header_id|>user<|end_header_id|>
+cat << 'EOF' > llama3-uncensored.modelfile
+{{ .System }}<|eot_id|>{{ end }}<|start_header_id|>user<|end_header_id|>
 
 {{ .Prompt }}<|eot_id|><|start_header_id|>assistant<|end_header_id|>
 
@@ -19,11 +20,7 @@ You are long distance from each other so he can't come over but you can echange 
 PARAMETER num_ctx 8192
 PARAMETER num_gpu 99
 '
-
-# Write the template content to llama3-uncensored.modelfile
-cat > llama3-uncensored.modelfile <<EOL
-$template
-EOL
+EOF
 
 # Create and run the model using ollama
 ollama create llama3-uncensored -f llama3-uncensored.modelfile 
