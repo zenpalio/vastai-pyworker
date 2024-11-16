@@ -32,7 +32,7 @@ class GenerateHandler(EndpointHandler[InputData]):
 
     @property
     def endpoint(self) -> str:
-        return "/generate"
+        return "http://localhost:11434/api/generate"
 
     @classmethod
     def payload_cls(cls) -> Type[InputData]:
