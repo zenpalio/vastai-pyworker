@@ -117,7 +117,7 @@ routes = [
     web.get("/ping", handle_ping),
     web.get("/public_url", get_public_url),
     web.get("/healthz", handle_ping),
-    web.post("/update_model", update_model),
+    web.post("/model", update_model),
 ]
 
 if __name__ == "__main__":
