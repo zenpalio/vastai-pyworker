@@ -1,10 +1,12 @@
 import json
 import os
 import logging
+import re
 from typing import Union, Type
 import dataclasses
 
 from aiohttp import web, ClientResponse
+import requests
 
 from lib.backend import Backend, LogAction
 from lib.data_types import EndpointHandler
@@ -54,7 +56,7 @@ class GenerateHandler(EndpointHandler[InputData]):
                 return web.json_response(data=data)
             case code:
                 log.debug("SENDING RESPONSE: ERROR: unknown code")
-                
+
                 return web.Response(status=code)
 
 
@@ -81,11 +83,41 @@ async def handle_ping(_):
 async def get_public_url(_):
     return web.Response(body=get_url())
 
+
+async def update_model(request: web.Request):
+    data = await request.json()
+    if "model" not in data:
+        return web.Response(body="Model missing in body", status=422)
+    model = data["model"]
+    url = "http://127.0.0.1:7860"
+    requests.post(
+        url=f"{url}/sdapi/v1/refresh-checkpoints",
+        verify=False,  # Disable SSL verification
+    )
+    opt = requests.get(
+        url=f"{url}/sdapi/v1/options",
+        verify=False,  # Disable SSL verification
+    )
+    opt_json = opt.json()
+    opt_json["sd_model_checkpoint"] = model
+    requests.post(
+        url=f"{url}/sdapi/v1/options",
+        json=opt_json,
+        verify=False,  # Disable SSL verification
+    )
+    requests.post(
+        url=f"{url}/sdapi/v1/reload-checkpoint",
+        verify=False,  # Disable SSL verification
+    )
+    return web.Response(body="Model updated to " + model)
+
+
 routes = [
     web.post("/txt2img", backend.create_handler(GenerateHandler())),
     web.get("/ping", handle_ping),
     web.get("/public_url", get_public_url),
     web.get("/healthz", handle_ping),
+    web.post("/update_model", update_model),
 ]
 
 if __name__ == "__main__":
