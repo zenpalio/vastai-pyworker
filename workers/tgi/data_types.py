@@ -43,7 +43,7 @@ class InputData(ApiPayload):
         return json.dumps(dataclasses.asdict(self)).encode("utf-8")
 
     def count_workload(self) -> int:
-        return self.batch_size
+        return 1
 
     @classmethod
     def from_json_msg(cls, json_msg: Dict[str, Any]) -> "InputData":
