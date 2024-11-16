@@ -158,8 +158,7 @@ class Backend:
             finally:
                 self.sem.release()
 
-        def post(endpoint: str, dct: dict = None):
-            url = {endpoint}
+        def post(url: str, dct: dict = None):
             log.debug(f"url: {url}")
             log.debug(dct)
             #TODO: blocking call to async
