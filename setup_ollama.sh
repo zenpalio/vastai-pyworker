@@ -30,7 +30,7 @@ EOF
 # Create and run the model using ollama
 echo "Creating and running the model"
 ollama serve &
-sleep 20
+sleep 10
 ollama create llama3-uncensored -f llama3-uncensored.modelfile 
 ollama run llama3-uncensored
 
