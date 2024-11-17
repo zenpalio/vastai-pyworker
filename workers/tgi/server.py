@@ -1,6 +1,6 @@
 import os
 import logging
-from typing import Union, Type
+from typing import Literal, Union, Type
 import dataclasses
 
 from aiohttp import web, ClientResponse
@@ -29,10 +29,11 @@ log = logging.getLogger(__file__)
 
 @dataclasses.dataclass
 class GenerateHandler(EndpointHandler[InputData]):
+    method: Literal["chat", "generate"]
 
     @property
     def endpoint(self) -> str:
-        return "http://localhost:11434/api/generate"
+        return f"http://localhost:11434/api/{self.method}"
 
     @classmethod
     def payload_cls(cls) -> Type[InputData]:
@@ -109,9 +110,12 @@ async def handle_ping(_):
 async def get_public_url(_):
     return web.Response(body=get_url())
 
+
 routes = [
-    web.post("/api/generate", backend.create_handler(GenerateHandler())),
-    web.post("/api/chat", backend.create_handler(GenerateHandler())),
+    web.post(
+        "/api/generate", backend.create_handler(GenerateHandler(method="generate"))
+    ),
+    web.post("/api/chat", backend.create_handler(GenerateHandler(method="chat"))),
     web.post("/generate_stream", backend.create_handler(GenerateStreamHandler())),
     web.get("/ping", handle_ping),
     web.get("/public_url", get_public_url),
