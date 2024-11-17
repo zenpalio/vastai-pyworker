@@ -29,7 +29,7 @@ log = logging.getLogger(__file__)
 
 @dataclasses.dataclass
 class GenerateHandler(EndpointHandler[InputData]):
-    method: Literal["chat", "generate"]
+    method: Literal["chat", "generate"] = "generate"
 
     @property
     def endpoint(self) -> str:
