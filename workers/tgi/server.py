@@ -111,6 +111,7 @@ async def get_public_url(_):
 
 routes = [
     web.post("/api/generate", backend.create_handler(GenerateHandler())),
+    web.post("/api/chat", backend.create_handler(GenerateHandler())),
     web.post("/generate_stream", backend.create_handler(GenerateStreamHandler())),
     web.get("/ping", handle_ping),
     web.get("/public_url", get_public_url),
