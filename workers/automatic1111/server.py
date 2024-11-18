@@ -29,6 +29,8 @@ logging.basicConfig(
 )
 log = logging.getLogger(__file__)
 
+URL = "http://127.0.0.1:7860"
+
 
 @dataclasses.dataclass
 class GenerateHandler(EndpointHandler[InputData]):
@@ -90,32 +92,43 @@ async def update_model(request: web.Request):
     if "model" not in data:
         return web.Response(body="Model missing in body", status=422)
     model = data["model"]
-    url = "http://127.0.0.1:7860"
-    requests.post(
-        url=f"{url}/sdapi/v1/refresh-checkpoints",
-        verify=False,  # Disable SSL verification
-    )
-    opt = requests.get(
-        url=f"{url}/sdapi/v1/options",
-        verify=False,  # Disable SSL verification
-    )
-    opt_json = opt.json()
+
+    opt_json = get_options()
     opt_json["sd_model_checkpoint"] = model
     requests.post(
-        url=f"{url}/sdapi/v1/options",
+        url=f"{URL}/sdapi/v1/options",
         json=opt_json,
         verify=False,  # Disable SSL verification
     )
     requests.post(
-        url=f"{url}/sdapi/v1/reload-checkpoint",
+        url=f"{URL}/sdapi/v1/reload-checkpoint",
         verify=False,  # Disable SSL verification
     )
     return web.Response(body="Model updated to " + model)
 
 
+async def get_active_model():
+    opt_json = get_options()
+    model_name = opt_json["sd_model_checkpoint"]
+    return web.Response(body={"model": model_name})
+
+
+def get_options():
+    requests.post(
+        url=f"{URL}/sdapi/v1/refresh-checkpoints",
+        verify=False,  # Disable SSL verification
+    )
+    opt = requests.get(
+        url=f"{URL}/sdapi/v1/options",
+        verify=False,  # Disable SSL verification
+    )
+    opt_json = opt.json()
+    return opt_json
+
+
 routes = [
     web.post("/txt2img", backend.create_handler(GenerateHandler("sdapi/v1/txt2img"))),
-    web.post("/options", backend.create_handler(GenerateHandler("/sdapi/v1/options"))),
+    web.post("/options", get_active_model),
     web.get("/ping", handle_ping),
     web.get("/public_url", get_public_url),
     web.get("/healthz", handle_ping),
