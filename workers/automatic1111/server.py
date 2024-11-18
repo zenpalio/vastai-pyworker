@@ -107,7 +107,7 @@ async def update_model(request: web.Request):
     return web.Response(body="Model updated to " + model)
 
 
-async def get_active_model():
+async def get_active_model(_):
     opt_json = get_options()
     model_name = opt_json["sd_model_checkpoint"]
     return web.Response(body={"model": model_name})
