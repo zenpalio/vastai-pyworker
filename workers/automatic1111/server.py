@@ -2,7 +2,7 @@ import json
 import os
 import logging
 import re
-from typing import Union, Type
+from typing import Literal, Union, Type
 import dataclasses
 
 from aiohttp import web, ClientResponse
@@ -32,10 +32,11 @@ log = logging.getLogger(__file__)
 
 @dataclasses.dataclass
 class GenerateHandler(EndpointHandler[InputData]):
+    method: Literal["sdapi/v1/txt2img", "/sdapi/v1/options"] = "sdapi/v1/txt2img"
 
     @property
     def endpoint(self) -> str:
-        return "http://127.0.0.1:7860/sdapi/v1/txt2img"
+        return f"http://127.0.0.1:7860/{self.method}"
 
     @classmethod
     def payload_cls(cls) -> Type[InputData]:
@@ -113,7 +114,8 @@ async def update_model(request: web.Request):
 
 
 routes = [
-    web.post("/txt2img", backend.create_handler(GenerateHandler())),
+    web.post("/txt2img", backend.create_handler(GenerateHandler("sdapi/v1/txt2img"))),
+    web.post("/options", backend.create_handler(GenerateHandler("/sdapi/v1/options"))),
     web.get("/ping", handle_ping),
     web.get("/public_url", get_public_url),
     web.get("/healthz", handle_ping),
