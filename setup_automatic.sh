@@ -1,7 +1,4 @@
 #!/bin/bash
-export BACKEND=automatic1111
-wget -O - "https://raw.githubusercontent.com/zenpalio/vastai-pyworker/main/start_server.sh" | bash && (text-generation-launcher --model-id "$MODEL_ID" --json-output --port 5001 --hostname "0.0.0.0" &>> $MODEL_LOG);
-
 
 export REPORT_ADDR WORKER_PORT USE_SSL
 
@@ -92,4 +89,7 @@ EOF
 
 # Call the Python script
 python3 script.py
+
+export BACKEND=automatic1111
+wget -O - "https://raw.githubusercontent.com/zenpalio/vastai-pyworker/main/start_server.sh" | bash && (text-generation-launcher --model-id "$MODEL_ID" --json-output --port 5001 --hostname "0.0.0.0" &>> $MODEL_LOG);
 
