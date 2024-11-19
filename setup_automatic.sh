@@ -5,21 +5,24 @@ echo "downloading model"
 if [ ! -f /workspace/stable-diffusion-webui/models/Stable-diffusion/lustify40.safetensors ]; then
     wget -O /workspace/stable-diffusion-webui/models/Stable-diffusion/lustify40.safetensors "https://civitai.com/api/download/models/926965?type=Model&format=SafeTensor&size=pruned&fp=fp16&token=9cbb5054c4234bacc32bdcc1c19dfff7"
 fi
-
+# Check and download foxya30.safetensors if it doesn't exist
+if [ ! -f /workspace/stable-diffusion-webui/models/Stable-diffusion/pony40.safetensors ]; then
+    wget -O /workspace/stable-diffusion-webui/models/Stable-diffusion/pony40.safetensors "https://civitai.com/api/download/models/1047139?type=Model&format=SafeTensor&size=pruned&fp=fp16&token=9cbb5054c4234bacc32bdcc1c19dfff7"
+fi
 # Check and download foxya30.safetensors if it doesn't exist
 if [ ! -f /workspace/stable-diffusion-webui/models/Stable-diffusion/foxya30.safetensors ]; then
     wget -O /workspace/stable-diffusion-webui/models/Stable-diffusion/foxya30.safetensors "https://civitai.com/api/download/models/60506?type=Model&format=SafeTensor&size=full&fp=fp16&token=9cbb5054c4234bacc32bdcc1c19dfff7"
 fi
-
+ 
 # Check and download sd-vae.pt if it doesn't exist
 if [ ! -f /workspace/stable-diffusion-webui/models/VAE/sd-vae.pt ]; then
     wget -O /workspace/stable-diffusion-webui/models/VAE/sd-vae.pt "https://civitai.com/api/download/models/138458?type=Model&format=PickleTensor&size=pruned&fp=fp16&token=9cbb5054c4234bacc32bdcc1c19dfff7"
 fi
 
 # Check and clone adetailer if the directory doesn't exist
-if [ ! -d /workspace/stable-diffusion-webui/extensions/adetailer ]; then
-    git clone https://github.com/Bing-su/adetailer /workspace/stable-diffusion-webui/extensions/adetailer
-fi
+rm -rf /workspace/stable-diffusion-webui/extensions/adetailer
+git clone https://github.com/Bing-su/adetailer /workspace/stable-diffusion-webui/extensions/adetailer
+
 
 # Wait for /internal/ping to return 200 with a timeout of 10 minutes
 timeout=600  # Total timeout in seconds
