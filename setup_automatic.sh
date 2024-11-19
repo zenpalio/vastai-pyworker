@@ -9,10 +9,7 @@ fi
 if [ ! -f /workspace/stable-diffusion-webui/models/Stable-diffusion/pony40.safetensors ]; then
     wget -O /workspace/stable-diffusion-webui/models/Stable-diffusion/pony40.safetensors "https://civitai.com/api/download/models/1047139?type=Model&format=SafeTensor&size=pruned&fp=fp16&token=9cbb5054c4234bacc32bdcc1c19dfff7"
 fi
-# Check and download foxya30.safetensors if it doesn't exist
-if [ ! -f /workspace/stable-diffusion-webui/models/Stable-diffusion/foxya30.safetensors ]; then
-    wget -O /workspace/stable-diffusion-webui/models/Stable-diffusion/foxya30.safetensors "https://civitai.com/api/download/models/60506?type=Model&format=SafeTensor&size=full&fp=fp16&token=9cbb5054c4234bacc32bdcc1c19dfff7"
-fi
+
  
 # Check and download sd-vae.pt if it doesn't exist
 if [ ! -f /workspace/stable-diffusion-webui/models/VAE/sd-vae.pt ]; then
