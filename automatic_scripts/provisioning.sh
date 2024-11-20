@@ -34,22 +34,21 @@ EXTENSIONS=(
 CHECKPOINT_MODELS=(
     #"https://civitai.com/api/download/models/929239?type=Model&format=SafeTensor&size=full&fp=fp16" #big lust15
     #"https://civitai.com/api/download/models/926965?type=Model&format=SafeTensor&size=pruned&fp=fp16" #lustify40
-    #"https://civitai.com/api/download/models/1047139?type=Model&format=SafeTensor&size=pruned&fp=fp16" #pony40
-    "https://civitai.com/api/download/models/176425?type=Model&format=SafeTensor&size=pruned&fp=fp16" #test small model
+    "https://civitai.com/api/download/models/1047139?type=Model&format=SafeTensor&size=pruned&fp=fp16" #pony40
+    #"https://civitai.com/api/download/models/176425?type=Model&format=SafeTensor&size=pruned&fp=fp16" #test small model
 )
 
 LORA_MODELS=(
-    #"https://civitai.com/api/download/models/558984?type=Model&format=SafeTensor" #cartoon style
-    #"https://civitai.com/api/download/models/382152?type=Model&format=SafeTensor" #expresive
-    #"https://civitai.com/api/download/models/507741?type=Model&format=SafeTensor" #3d blender style
-    #"https://civitai.com/api/download/models/467356?type=Model&format=SafeTensor" #3d disney style 
-    #"https://civitai.com/api/download/models/839103?type=Model&format=SafeTensor" #https://civitai.com/models/11161/cutesexyrobutts-style?modelVersionId=839103
+    "https://civitai.com/api/download/models/558984?type=Model&format=SafeTensor" #cartoon style
+    "https://civitai.com/api/download/models/382152?type=Model&format=SafeTensor" #expresive
+    "https://civitai.com/api/download/models/507741?type=Model&format=SafeTensor" #3d blender style
+    "https://civitai.com/api/download/models/467356?type=Model&format=SafeTensor" #3d disney style 
+    "https://civitai.com/api/download/models/839103?type=Model&format=SafeTensor" #https://civitai.com/models/11161/cutesexyrobutts-style?modelVersionId=839103
 
 )
 
 VAE_MODELS=(
     "https://huggingface.co/stabilityai/sdxl-vae/resolve/main/sdxl_vae.safetensors"
-    "https://civitai.com/api/download/models/138458?type=Model&format=PickleTensor&size=pruned&fp=fp16"
 )
 
 ESRGAN_MODELS=(
