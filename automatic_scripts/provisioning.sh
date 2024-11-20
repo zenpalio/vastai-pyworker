@@ -34,7 +34,7 @@ EXTENSIONS=(
 CHECKPOINT_MODELS=(
     #"https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned-emaonly.ckpt"
     #"https://huggingface.co/stabilityai/stable-diffusion-2-1/resolve/main/v2-1_768-ema-pruned.ckpt"
-    "https://civitai.com/api/download/models/926965?type=Model&format=SafeTensor&size=pruned"
+    "https://civitai.com/api/download/models/926965?type=Model&format=SafeTensor&size=pruned&fp=fp16"
     "https://civitai.com/api/download/models/1047139?type=Model&format=SafeTensor&size=pruned&fp=fp16"
 )
 
@@ -205,13 +205,16 @@ function provisioning_print_end() {
 function provisioning_download() {
     if 
         [[ -n $CIVITAI_TOKEN && $1 =~ ^https://([a-zA-Z0-9_-]+\.)?civitai\.com(/|$|\?) ]]; then
+        printf "Downloading from CivitAI\n"
         civit_auth_token="$CIVITAI_TOKEN"
     fi
     elif [[ -n $HF_TOKEN && $1 =~ ^https://([a-zA-Z0-9_-]+\.)?huggingface\.co(/|$|\?) ]]; then
+        printf "Downloading from Hugging Face\n"
         auth_token="$HF_TOKEN"
     if
     if [[ -n $civit_auth_token ]];then
         url="${1}?token=${civit_auth_token}"
+        printf "url from civitai: %s\n" "${url}"
         wget -qnc --content-disposition --show-progress -e dotbytes="${3:-4M}" -P "$2" "$url"
     if [[ -n $auth_token ]];then
         wget --header="Authorization: Bearer $auth_token" -qnc --content-disposition --show-progress -e dotbytes="${3:-4M}" -P "$2" "$1"
