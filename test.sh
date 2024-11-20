@@ -2,6 +2,9 @@
 
 REPORT_ADDR="${REPORT_ADDR:-https://e0dd-2a00-102a-5013-df1e-ed60-5b47-ab22-47fb.ngrok-free.app}"
 cat << 'EOF' > register.py
+import os
+import requests
+
 # Send POST request to REPORT_ADDR
 report_addr = os.environ["REPORT_ADDR"]
 container_id = os.environ["CONTAINER_ID"]
@@ -12,11 +15,12 @@ full_url = f"{public_ip}:{vast_tcp_port}"
 
 data = {
     "id": container_id,
-    "url": full_url
+    "url": full_url,
+    "type": "automatic",
 }
 
 requests.post(
-    url=f"{report_addr}/public/v1/webhook/vastai/automatic/register",
+    url=f"{report_addr}/public/v1/webhook/server/instance",
     json=data,
     verify=False,  # Disable SSL verification
 )
