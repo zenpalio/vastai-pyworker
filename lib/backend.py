@@ -1,3 +1,4 @@
+import asyncio
 import os
 import json
 import time
@@ -179,7 +180,7 @@ class Backend:
         #    return web.Response(status=401)
 
         try:
-            response = post(handler.endpoint, data["payload"])
+            response = await asyncio.to_thread(post(handler.endpoint, data["payload"]))
             return web.json_response(response)
         except Exception as e:
             log.debug(f"Exception in main handler loop {e}")
