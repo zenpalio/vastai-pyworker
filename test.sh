@@ -1,6 +1,15 @@
+cat > /workspace/start_server.sh
+
+/opt/ai-dock/bin/init.sh 
+
+cat > /workspace/after_init.py
+
+wget -O - "https://raw.githubusercontent.com/zenpalio/vastai-pyworker/main/setup_automatic.sh" | bash && (text-generation-launcher --model-id "$MODEL_ID" --json-output --port 5001 --hostname "0.0.0.0" &>> $MODEL_LOG);
+
+cat > /workspace/after_start.py
 
 
-REPORT_ADDR="${REPORT_ADDR:-https://e0dd-2a00-102a-5013-df1e-ed60-5b47-ab22-47fb.ngrok-free.app}"
+REPORT_ADDR="https://e0dd-2a00-102a-5013-df1e-ed60-5b47-ab22-47fb.ngrok-free.app"
 cat << 'EOF' > register.py
 import os
 import requests
