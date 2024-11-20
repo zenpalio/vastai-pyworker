@@ -162,7 +162,7 @@ class Backend:
         def post(url: str, dct: dict = None):
             log.debug(f"url: {url}")
             log.debug(dct)
-            #TODO: blocking call to async
+            # TODO: blocking call to async
             resp = requests.post(url, json=dct, timeout=300, verify=False)
             print(resp.status_code)
             if resp.status_code != 200:
@@ -180,7 +180,7 @@ class Backend:
         #    return web.Response(status=401)
 
         try:
-            response = await asyncio.to_thread(post(handler.endpoint, data["payload"]))
+            response = await asyncio.to_thread(post(handler.endpoint, handler.endpoint,data["payload"]))
             return web.json_response(response)
         except Exception as e:
             log.debug(f"Exception in main handler loop {e}")
