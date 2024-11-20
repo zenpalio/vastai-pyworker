@@ -32,8 +32,6 @@ EXTENSIONS=(
 )
 
 CHECKPOINT_MODELS=(
-    #"https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned-emaonly.ckpt"
-    #"https://huggingface.co/stabilityai/stable-diffusion-2-1/resolve/main/v2-1_768-ema-pruned.ckpt"
     "https://civitai.com/api/download/models/926965?type=Model&format=SafeTensor&size=pruned&fp=fp16"
     "https://civitai.com/api/download/models/1047139?type=Model&format=SafeTensor&size=pruned&fp=fp16"
 )
@@ -82,6 +80,8 @@ CONTROLNET_MODELS=(
 
 function provisioning_start() {
     # We need to apply some workarounds to make old builds work with the new default
+    printf "Starting provisioning...\n"
+    printf "custom provisioning\n"
     if [[ ! -d /opt/environments/python ]]; then 
         export MAMBA_BASE=true
     fi
