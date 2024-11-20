@@ -32,10 +32,10 @@ EXTENSIONS=(
 )
 
 CHECKPOINT_MODELS=(
-    "https://civitai.com/api/download/models/138458?type=Model&format=PickleTensor&size=pruned&fp=fp16"
-    "https://civitai.com/api/download/models/929239?type=Model&format=SafeTensor&size=full&fp=fp16"
-    "https://civitai.com/api/download/models/1047139?type=Model&format=SafeTensor&size=pruned&fp=fp16"
-    "https://civitai.com/api/download/models/926965?type=Model&format=SafeTensor&size=pruned&fp=fp16"
+    "https://civitai.com/api/download/models/929239?type=Model&format=SafeTensor&size=full&fp=fp16" #big lust15
+    "https://civitai.com/api/download/models/926965?type=Model&format=SafeTensor&size=pruned&fp=fp16" #lustify40
+    "https://civitai.com/api/download/models/991916?type=Model&format=SafeTensor&size=pruned&fp=fp16" #bigASP20
+    "https://civitai.com/api/download/models/1047139?type=Model&format=SafeTensor&size=pruned&fp=fp16" #pony40
 )
 
 LORA_MODELS=(
