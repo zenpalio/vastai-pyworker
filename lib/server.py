@@ -21,6 +21,8 @@ def register_public_ip():
     report_addr = os.environ["REPORT_ADDR"]
     full_path = urljoin(report_addr, "/public/v1/webhook/server/instance/")
     data = {"url": get_url(), "id": int(os.environ["CONTAINER_ID"]), "type": os.environ["BACKEND"]}
+    log.debug("register payload")
+    print(data)
     try:
         requests.post(full_path, json=json.dumps(data), timeout=1)
     except Exception as e:
