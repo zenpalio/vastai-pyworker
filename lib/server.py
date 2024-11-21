@@ -19,7 +19,7 @@ log = logging.getLogger(__file__)
 
 def register_public_ip():
     report_addr = os.environ["REPORT_ADDR"]
-    full_path = urljoin(report_addr, "/public/v1/webhook//server/instance/")
+    full_path = urljoin(report_addr, "/public/v1/webhook/server/instance/")
     data = {"url": get_url(), "id": int(os.environ["CONTAINER_ID"]), "type": os.environ["BACKEND"]}
     try:
         requests.post(full_path, json=json.dumps(data), timeout=1)
