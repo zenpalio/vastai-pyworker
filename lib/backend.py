@@ -64,13 +64,13 @@ class Backend:
             log.debug("public key:")
             log.debug(result)
             key = None
-            for _ in range(5):
+            for _ in range(2):
                 try:
                     key = RSA.import_key(result)
                     break
                 except ValueError as e:
                     log.debug(f"Error downloading key: {e}")
-                    time.sleep(15)
+                    time.sleep(2)
             return key
 
         ###########
