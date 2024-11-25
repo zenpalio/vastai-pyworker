@@ -24,7 +24,9 @@ def get_url() -> str:
     public_ip = os.environ["PUBLIC_IPADDR"]
     return f"http{'s' if use_ssl else ''}://{public_ip}:{worker_port}"
 
-
+@cache
+def get_type() -> str:
+    return os.environ["BACKEND"]
 @dataclass
 class Metrics:
     last_metric_update: float = 0.0

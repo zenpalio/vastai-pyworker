@@ -6,7 +6,7 @@ import base64
 import subprocess
 import dataclasses
 import logging
-from asyncio import wait, sleep, gather, Semaphore, FIRST_COMPLETED, create_task
+from asyncio import sleep, gather, Semaphore
 from typing import Tuple, Awaitable, NoReturn, List, Union, Callable
 from functools import cached_property
 
@@ -18,7 +18,7 @@ from Crypto.Signature import pkcs1_15
 from Crypto.Hash import SHA256
 from Crypto.PublicKey import RSA
 
-from lib.metrics import Metrics
+from lib.metrics import Metrics, get_type
 from lib.data_types import (
     AuthData,
     EndpointHandler,
@@ -200,10 +200,14 @@ class Backend:
     ) -> ClientResponse:
         api_payload = payload.generate_payload_json()
         log.debug(f"posting to endpoint: '{handler.endpoint}', payload: {api_payload}")
+        timeout  = 600
+        if get_type() == "tgi":
+            timeout = 30 
         return await self.session.post(
             url=handler.endpoint,
             data=api_payload,
             headers={"Content-Type": "application/json"},
+            timeout=timeout,
         )
 
     def __check_signature(self, auth_data: AuthData) -> bool:
