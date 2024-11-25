@@ -115,6 +115,7 @@ class Metrics:
                 cur_capacity=0,
                 max_capacity=0,
                 url=self.url,
+                type=os.environ["BACKEND"],
             )
 
         def send_data(report_addr: str) -> None:
