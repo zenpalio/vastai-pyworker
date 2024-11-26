@@ -7,8 +7,10 @@ bash start_server.sh && (text-generation-launcher --model-id "$MODEL_ID" --json-
 
 # Download the model file only if it doesn't exist
 if [ ! -f "Llama-3.1-8B-Lexi-Uncensored_F16.gguf" ]; then
-    wget https://huggingface.co/Orenguteng/Llama-3.1-8B-Lexi-Uncensored-GGUF/resolve/main/Llama-3.1-8B-Lexi-Uncensored_F16.gguf 2>&1 | tee model_download.log
+    wget --progress=bar:force https://huggingface.co/Orenguteng/Llama-3.1-8B-Lexi-Uncensored-GGUF/resolve/main/Llama-3.1-8B-Lexi-Uncensored_F16.gguf 2>&1
 fi
+
+cat > download_finished.txt
 
 # Create the model file only if it doesn't exist
 if [ ! -f "llama3-uncensored.modelfile" ]; then
