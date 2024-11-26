@@ -40,7 +40,7 @@ class InputParameters:
 class InputData(ApiPayload):
 
     def generate_payload_json(self) -> Dict[str, Any]:
-        return json.dumps(dataclasses.asdict(self)).encode("utf-8")
+        return dataclasses.asdict(self)
 
     def count_workload(self) -> int:
         return 1

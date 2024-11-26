@@ -122,6 +122,7 @@ class EndpointHandler(ABC, Generic[ApiPayload_T]):
     ) -> Tuple[AuthData, ApiPayload_T]:
         errors = {}
         auth_data = payload = None
+        log.debug(f"req_data: {req_data}")
         try:
             if "auth_data" in req_data:
                 auth_data = AuthData.from_json_msg(req_data["auth_data"])
