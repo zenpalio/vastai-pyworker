@@ -181,7 +181,7 @@ class Backend:
 
         try:
             response = await asyncio.to_thread(
-                post, handler.endpoint, data["payload"]
+                post, handler.endpoint, payload
             )
             return web.json_response(response)
         except Exception as e:
