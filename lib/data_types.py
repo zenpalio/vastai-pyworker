@@ -54,11 +54,11 @@ class ApiPayload(ABC):
 class AuthData:
     """data used to authenticate requester"""
 
-    #signature: str
-    #cost: str
-    #endpoint: str
+    # signature: str
+    # cost: str
+    # endpoint: str
     reqnum: int
-    #url: str
+    # url: str
 
     @classmethod
     def from_json_msg(cls, json_msg: Dict[str, Any]):
@@ -126,14 +126,14 @@ class EndpointHandler(ABC, Generic[ApiPayload_T]):
             if "auth_data" in req_data:
                 auth_data = AuthData.from_json_msg(req_data["auth_data"])
             else:
-                errors["auth_data"] = "field missing"
+                auth_data = AuthData(reqnum=0)
         except JsonDataException as e:
             errors["auth_data"] = e.message
         try:
             if "payload" in req_data:
                 payload = cls.payload_cls().from_json_msg(req_data["payload"])
             else:
-                errors["payload"] = "field missing"
+                payload = cls.payload_cls().from_json_msg(req_data)
         except JsonDataException as e:
             errors["payload"] = e.message
         if errors:
@@ -241,7 +241,7 @@ class AutoScalaerData:
     num_requests_recieved: int
     additional_disk_usage: float
     url: str
-    type:str
+    type: str
 
 
 class LogAction(Enum):
