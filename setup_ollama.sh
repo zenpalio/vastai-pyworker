@@ -1,10 +1,9 @@
 #!/bin/bash
 
-# Download and run start_server.sh only if it doesn't exist
-if [ ! -f "start_server.sh" ]; then
-    wget -O start_server.sh "https://raw.githubusercontent.com/zenpalio/vastai-pyworker/main/start_server.sh"
-    bash start_server.sh && (text-generation-launcher --model-id "$MODEL_ID" --json-output --port 5001 --hostname "0.0.0.0" &>> $MODEL_LOG)
-fi
+
+wget -O start_server.sh "https://raw.githubusercontent.com/zenpalio/vastai-pyworker/main/start_server.sh"
+bash start_server.sh && (text-generation-launcher --model-id "$MODEL_ID" --json-output --port 5001 --hostname "0.0.0.0" &>> $MODEL_LOG)
+
 
 # Download the model file only if it doesn't exist
 if [ ! -f "Llama-3.1-8B-Lexi-Uncensored_F16.gguf" ]; then
