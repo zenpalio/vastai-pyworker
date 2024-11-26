@@ -31,11 +31,10 @@ log = logging.getLogger(__file__)
 @dataclasses.dataclass
 class GenerateHandler(EndpointHandler[InputData]):
     method: str
-    base_url = "http://localhost:2242"
 
     @property
     def endpoint(self) -> str:
-        return urljoin(self.base_url, self.method)
+        return urljoin("http://localhost:2242", self.method)
 
     @classmethod
     def payload_cls(cls) -> Type[InputData]:
