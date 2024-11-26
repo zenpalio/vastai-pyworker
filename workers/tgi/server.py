@@ -33,7 +33,7 @@ class GenerateHandler(EndpointHandler[InputData]):
 
     @property
     def endpoint(self) -> str:
-        return f"http://localhost:11434/api/{self.method}"
+        return "http://localhost:22750/v1/chat/completions"
 
     @classmethod
     def payload_cls(cls) -> Type[InputData]:
