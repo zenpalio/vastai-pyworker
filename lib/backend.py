@@ -112,9 +112,9 @@ class Backend:
         def post(url: str, dct: dict = None):
             log.debug(f"url: {url}")
             log.debug(dct)
-            log.debug("sending as dict")
+            log.debug("sending as json")
             # TODO: blocking call to async
-            resp = requests.post(url, dict=dct, timeout=300, verify=False)
+            resp = requests.post(url, json=dct, timeout=300, verify=False)
             print(resp.status_code)
             if resp.status_code != 200:
                 return {
