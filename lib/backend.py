@@ -80,12 +80,12 @@ class Backend:
 
     @cached_property
     def session(self):
-        log.debug(f"starting session with {self.model_server_url}")
+        log.debug(f"starting new session with {self.model_server_url}")
         return ClientSession(self.model_server_url)
 
     def create_handler(
         self,
-        handler: EndpointHandler[ApiPayload_T],
+        handler: EndpointHandler[dict],
     ) -> Callable[[web.Request], Awaitable[Union[web.Response, web.StreamResponse]]]:
         async def handler_fn(
             request: web.Request,
@@ -102,6 +102,7 @@ class Backend:
     ) -> Union[web.Response, web.StreamResponse]:
         """use this function to forward requests to the model endpoint"""
         try:
+
             data = await request.json()
         except JsonDataException as e:
             return web.json_response(data=e.message, status=422)
@@ -125,9 +126,7 @@ class Backend:
 
         try:
 
-            response = await asyncio.to_thread(
-                    post, handler.endpoint, data
-                )
+            response = await asyncio.to_thread(post, handler.endpoint, data)
             return web.json_response(response)
         except Exception as e:
             log.debug(f"Exception in main handler loop {e}")
@@ -145,9 +144,9 @@ class Backend:
     ) -> ClientResponse:
         api_payload = payload.generate_payload_json()
         log.debug(f"posting to endpoint: '{handler.endpoint}', payload: {api_payload}")
-        timeout  = 600
+        timeout = 600
         if get_type() == "tgi":
-            timeout = 30 
+            timeout = 30
         return await self.session.post(
             url=handler.endpoint,
             data=api_payload,
