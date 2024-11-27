@@ -34,7 +34,7 @@ URL = "http://127.0.0.1:7860"
 
 
 @dataclasses.dataclass
-class GenerateHandler(EndpointHandler[InputData]):
+class GenerateHandler(EndpointHandler[dict]):
     method: Literal["sdapi/v1/txt2img", "/sdapi/v1/options"] = "sdapi/v1/txt2img"
 
     @property
@@ -42,11 +42,11 @@ class GenerateHandler(EndpointHandler[InputData]):
         return f"http://127.0.0.1:7860/{self.method}"
 
     @classmethod
-    def payload_cls(cls) -> Type[InputData]:
-        return InputData
+    def payload_cls(cls) -> Type[dict]:
+        pass
 
     def make_benchmark_payload(self) -> InputData:
-        return InputData.for_test()
+        pass
 
     async def generate_client_response(
         self, client_request: web.Request, model_response: ClientResponse
