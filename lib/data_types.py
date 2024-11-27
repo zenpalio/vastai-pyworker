@@ -119,22 +119,11 @@ class EndpointHandler(ABC, Generic[ApiPayload_T]):
     @classmethod
     def get_data_from_request(
         cls, req_data: Dict[str, Any]
-    ) -> Tuple[AuthData, ApiPayload_T]:
+    ) -> Tuple[AuthData, dict]:
         errors = {}
-        auth_data = payload = None
-        log.debug(f"req_data: {req_data}")
         try:
-            if "auth_data" in req_data:
-                auth_data = AuthData.from_json_msg(req_data["auth_data"])
-            else:
-                auth_data = AuthData(reqnum=0)
-        except JsonDataException as e:
-            errors["auth_data"] = e.message
-        try:
-            if "payload" in req_data:
-                payload = cls.payload_cls().from_json_msg(req_data["payload"])
-            else:
-                payload = cls.payload_cls().from_json_msg(req_data)
+            auth_data = AuthData(reqnum=0)
+            payload  = req_data
         except JsonDataException as e:
             errors["payload"] = e.message
         if errors:

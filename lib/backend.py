@@ -103,61 +103,10 @@ class Backend:
         """use this function to forward requests to the model endpoint"""
         try:
             data = await request.json()
-            auth_data, payload = handler.get_data_from_request(data)
         except JsonDataException as e:
             return web.json_response(data=e.message, status=422)
         except json.JSONDecodeError:
             return web.json_response(dict(error="invalid JSON"), status=422)
-        workload = payload.count_workload()
-
-        async def cancel_api_call_if_disconnected() -> web.Response:
-            await request.wait_for_disconnection()
-            log.debug(f"request with reqnum: {auth_data.reqnum} was canceled")
-            self.metrics._request_canceled(workload=workload, reqnum=auth_data.reqnum)
-            return web.Response(status=500)
-
-        async def make_request() -> Union[web.Response, web.StreamResponse]:
-            log.debug(f"got request, {auth_data.reqnum}")
-            self.metrics._request_start(workload=workload, reqnum=auth_data.reqnum)
-            if self.allow_parallel_requests is False:
-                log.debug(f"Waiting to aquire Sem for reqnum:{auth_data.reqnum}")
-                await self.sem.acquire()
-                log.debug(
-                    f"Sem acquired for reqnum:{auth_data.reqnum}, starting request..."
-                )
-            else:
-                log.debug(f"Starting request for reqnum:{auth_data.reqnum}")
-            try:
-                start_time = time.time()
-                response = await self.__call_api(handler=handler, payload=payload)
-                log.debug(response)
-                json = await response.json()
-                log.debug(json)
-                status_code = response.status
-                log.debug(
-                    " ".join(
-                        [
-                            f"request with reqnum:{auth_data.reqnum}",
-                            f"returned status code: {status_code},",
-                        ]
-                    )
-                )
-                res = await handler.generate_client_response(request, response)
-
-                self.metrics._request_end(
-                    workload=workload,
-                    req_response_time=time.time() - start_time,
-                    reqnum=auth_data.reqnum,
-                )
-                return res
-            except requests.exceptions.RequestException as e:
-                log.debug(f"[backend] Request error: {e}")
-                self.metrics._request_errored(
-                    workload=workload, reqnum=auth_data.reqnum
-                )
-                return web.Response(status=500)
-            finally:
-                self.sem.release()
 
         def post(url: str, dct: dict = None):
             log.debug(f"url: {url}")
@@ -174,15 +123,11 @@ class Backend:
             else:
                 return resp.json()
 
-        ###########
-
-        # if self.__check_signature(auth_data) is False:
-        #    return web.Response(status=401)
-
         try:
+
             response = await asyncio.to_thread(
-                post, handler.endpoint, dataclasses.asdict(payload)
-            )
+                    post, handler.endpoint, data
+                )
             return web.json_response(response)
         except Exception as e:
             log.debug(f"Exception in main handler loop {e}")
