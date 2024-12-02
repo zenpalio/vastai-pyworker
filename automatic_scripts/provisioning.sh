@@ -52,12 +52,12 @@ LORA_MODELS=(
     "https://civitai.com/api/download/models/807075?type=Model&format=SafeTensor" #facesitting POV      https://civitai.com/models/721793/face-sit-pov-or-goofy-ai?modelVersionId=807075
     "https://civitai.com/api/download/models/725112?type=Model&format=SafeTensor" #Pillory BDSM         https://civitai.com/models/648133/pillory-or-goofy-ai?modelVersionId=725112
     "https://civitai.com/api/download/models/578868?type=Model&format=SafeTensor" #Sexy Clothing XL     https://civitai.com/models/244864/realisticandanimesexy-clothing-collection-oror-and?modelVersionId=578868
-    "https://civitai.com/api/download/models/471781?type=Model&format=SafeTensor" #Feet XL              https://civitai.com/api/download/models/471781?type=Model&format=SafeTensor
+    "https://civitai.com/api/download/models/471781?type=Model&format=SafeTensor" #Feet XL              https://civitai.com/models/200251/feet-xl-sd-15-flux1-dev?modelVersionId=471781
     "https://civitai.com/api/download/models/972475?type=Model&format=SafeTensor" #Spread Pussy XL      https://civitai.com/models/149904/real-pussy-spreading?modelVersionId=972475
     "https://civitai.com/api/download/models/722906?type=Model&format=SafeTensor" #Toys XL              https://civitai.com/models/132350/kinkytoys-balls?modelVersionId=722906
     "https://civitai.com/api/download/models/280241?type=Model&format=SafeTensor" #Fingering XL         https://civitai.com/models/248361/fingering-sdxl?modelVersionId=280241
-    "https://civitai.com/api/download/models/303053?type=Model&format=SafeTensor" #Shibari XL           https://civitai.com/models/268796/sdxl-shibari-japanese-bondage?modelVersionId=303053
-
+    "https://civitai.com/api/download/models/626812?type=Model&format=SafeTensor" #Bondage              https://civitai.com/models/528877/fluxsdxlpony-device-bondage?modelVersionId=626812
+    "https://civitai.com/api/download/models/136277?type=Model&format=SafeTensor" #sexy underwear       https://civitai.com/models/124782/sdxlsexy-underwear?modelVersionId=136277
 )
 
 VAE_MODELS=(
