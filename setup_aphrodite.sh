@@ -11,9 +11,11 @@ uv pip install aphrodite-engine
 uv pip install setuptools
 uv pip install ray
 
-echo "starting server"
-wget -O - "https://raw.githubusercontent.com/zenpalio/vastai-pyworker/main/start_server.sh" | bash && (text-generation-launcher --model-id "$MODEL_ID" --json-output --port 5001 --hostname "0.0.0.0" &>> $MODEL_LOG) &
 echo "starting aphrodite"
-aphrodite run Orenguteng/Llama-3-8B-Lexi-Uncensored
+aphrodite run Orenguteng/Llama-3-8B-Lexi-Uncensored &
+
+echo "starting server"
+wget -O - "https://raw.githubusercontent.com/zenpalio/vastai-pyworker/main/start_server.sh" | bash && (text-generation-launcher --model-id "$MODEL_ID" --json-output --port 5001 --hostname "0.0.0.0" &>> $MODEL_LOG)
+
 
 
