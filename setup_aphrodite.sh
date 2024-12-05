@@ -12,7 +12,7 @@ uv pip install setuptools
 uv pip install ray
 
 echo "starting aphrodite"
-aphrodite run Orenguteng/Llama-3-8B-Lexi-Uncensored &
+aphrodite run Orenguteng/Llama-3.1-8B-Lexi-Uncensored-V2 &
 
 sleep 60
 echo "starting server"
