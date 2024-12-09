@@ -9,7 +9,7 @@ ENV_PATH="$WORKSPACE_DIR/worker-env"
 DEBUG_LOG="$WORKSPACE_DIR/debug.log"
 PYWORKER_LOG="$WORKSPACE_DIR/pyworker.log"
 
-REPORT_ADDR="${REPORT_ADDR:-https://aibabe-api-ca-aibabe-dev-gwc.wittyglacier-f0fa1512.germanywestcentral.azurecontainerapps.io}"
+REPORT_ADDR="${REPORT_ADDR:-https://api.dev.mybabes.ai,https://api.qa.mybabes.ai,https://api.mybabes.ai}"
 USE_SSL="${USE_SSL:-true}"
 WORKER_PORT="${WORKER_PORT:-3000}"
 BACKEND="${BACKEND:-automatic1111}"
