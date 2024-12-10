@@ -19,8 +19,12 @@ log = logging.getLogger(__file__)
 
 @cache
 def get_url() -> str:
+    internal_worker_port = os.environ['WORKER_PORT']
+    if os.environ.get("provider", None) == "runpod":
+        runpod_id = os.environ["RUNPOD_POD_ID"]
+        return f"https://{runpod_id}-{internal_worker_port}.proxy.runpod.net"
     use_ssl = os.environ.get("USE_SSL", "false") == "true"
-    worker_port = os.environ[f"VAST_TCP_PORT_{os.environ['WORKER_PORT']}"]
+    worker_port = os.environ[f"VAST_TCP_PORT_{internal_worker_port}"]
     public_ip = os.environ["PUBLIC_IPADDR"]
     return f"http{'s' if use_ssl else ''}://{public_ip}:{worker_port}"
 
@@ -31,7 +35,7 @@ def get_type() -> str:
 class Metrics:
     last_metric_update: float = 0.0
     update_pending: bool = False
-    id: int = field(default_factory=lambda: int(os.environ["CONTAINER_ID"]))
+    id: str = field(default_factory=lambda: os.environ.get("CONTAINER_ID", None) or os.environ.get("RUNPOD_POD_ID", "unknown"))
     report_addr: List[str] = field(
         default_factory=lambda: os.environ["REPORT_ADDR"].split(",")
     )
