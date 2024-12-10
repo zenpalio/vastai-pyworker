@@ -16,7 +16,9 @@ BACKEND="${BACKEND:-automatic1111}"
 rm -rf /workspace/vast-pyworker/
 rm -rf /workspace/worker-env/
 
-mkdir -p "$WORKSPACE_DIR"
+if [ ! -d "$WORKSPACE_DIR" ]; then
+    mkdir -p "$WORKSPACE_DIR"
+fi
 cd "$WORKSPACE_DIR"
 
 # make all output go to $DEBUG_LOG and stdout without having to add `... | tee -a $DEBUG_LOG` to every command
