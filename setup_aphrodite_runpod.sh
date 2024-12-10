@@ -7,14 +7,14 @@ export provider=runpod
 apt update;
 apt install python3-pip -y;
 apt install git -y;
+apt install curl -y;
 # Install necessary packages
 pip install uv
 uv venv
 source .venv/bin/activate
-uv pip install aphrodite-engine
-uv pip install setuptools
-uv pip install ray
-
+#uv pip install aphrodite-engine
+#uv pip install setuptools
+#uv pip install ray
 #echo "starting aphrodite"
 #aphrodite run Orenguteng/Llama-3.1-8B-Lexi-Uncensored-V2 -tp 2 &
 

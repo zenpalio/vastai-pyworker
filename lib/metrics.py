@@ -18,8 +18,15 @@ log = logging.getLogger(__file__)
 
 
 @cache
+def get_container_id() -> str:
+    return os.environ.get("CONTAINER_ID", None) or os.environ.get(
+        "RUNPOD_POD_ID", "unknown"
+    )
+
+
+@cache
 def get_url() -> str:
-    internal_worker_port = os.environ['WORKER_PORT']
+    internal_worker_port = os.environ["WORKER_PORT"]
     if os.environ.get("provider", None) == "runpod":
         runpod_id = os.environ["RUNPOD_POD_ID"]
         return f"https://{runpod_id}-{internal_worker_port}.proxy.runpod.net"
@@ -28,14 +35,17 @@ def get_url() -> str:
     public_ip = os.environ["PUBLIC_IPADDR"]
     return f"http{'s' if use_ssl else ''}://{public_ip}:{worker_port}"
 
+
 @cache
 def get_type() -> str:
     return os.environ["BACKEND"]
+
+
 @dataclass
 class Metrics:
     last_metric_update: float = 0.0
     update_pending: bool = False
-    id: str = field(default_factory=lambda: os.environ.get("CONTAINER_ID", None) or os.environ.get("RUNPOD_POD_ID", "unknown"))
+    id: str = field(default_factory=lambda: get_container_id())
     report_addr: List[str] = field(
         default_factory=lambda: os.environ["REPORT_ADDR"].split(",")
     )
