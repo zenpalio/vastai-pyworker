@@ -1,7 +1,7 @@
 #!/bin/bash
 export BACKEND=tgi
 export USE_SSL=false
-export provider=runpod
+export PROVIDER=runpod
 
 apt update;
 apt install python3-pip -y;
