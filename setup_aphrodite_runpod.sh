@@ -1,6 +1,5 @@
 #!/bin/bash
 export BACKEND=tgi
-export REPORT_ADDR=https://ede7-2a00-102a-400c-a8f1-a2-30ed-cd71-a9f6.ngrok-free.app 
 export USE_SSL=false
 export provider=runpod
 
