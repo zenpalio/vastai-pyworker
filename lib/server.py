@@ -19,18 +19,19 @@ log = logging.getLogger(__file__)
 
 def register_public_ip():
     report_addr = os.environ["REPORT_ADDR"]
-    full_path = urljoin(report_addr, "/public/v1/webhook/server/instance/")
-    data = {
-        "url": get_url(),
-        "id": get_container_id(),
-        "type": os.environ["BACKEND"],
-    }
-    log.debug("register payload")
-    print(data)
-    try:
-        requests.post(full_path, json=data, timeout=1)
-    except Exception as e:
-        log.debug(f"autoscaler status update failed with error: {e}")
+    for addr in report_addr.split(","):
+        full_path = urljoin(addr, "/public/v1/webhook/server/instance/")
+        data = {
+            "url": get_url(),
+            "id": get_container_id(),
+            "type": os.environ["BACKEND"],
+        }
+        log.debug("register payload")
+        print(data)
+        try:
+            requests.post(full_path, json=data, timeout=1)
+        except Exception as e:
+            log.debug(f"autoscaler status update failed with error: {e}")
 
 
 def start_server(backend: Backend, routes: List[web.RouteDef], **kwargs):
