@@ -22,12 +22,16 @@ def get_container_id() -> str:
     return os.environ.get("CONTAINER_ID", None) or os.environ.get(
         "RUNPOD_POD_ID", "unknown"
     )
+    
+@cache
+def is_runpod_provider() -> bool:
+    return os.environ.get("PROVIDER", None) == "runpod"
 
 
 @cache
 def get_url() -> str:
     internal_worker_port = os.environ["WORKER_PORT"]
-    if os.environ.get("PROVIDER", None) == "runpod":
+    if is_runpod_provider():
         runpod_id = os.environ["RUNPOD_POD_ID"]
         return f"https://{runpod_id}-{internal_worker_port}.proxy.runpod.net"
     use_ssl = os.environ.get("USE_SSL", "false") == "true"

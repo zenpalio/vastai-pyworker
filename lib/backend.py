@@ -18,7 +18,7 @@ from Crypto.Signature import pkcs1_15
 from Crypto.Hash import SHA256
 from Crypto.PublicKey import RSA
 
-from lib.metrics import Metrics, get_type
+from lib.metrics import Metrics, get_type, is_runpod_provider
 from lib.data_types import (
     AuthData,
     EndpointHandler,
@@ -75,7 +75,7 @@ class Backend:
 
         ###########
 
-        self.PUBLIC_KEY = fetch_public_key()
+        self.PUBLIC_KEY =  None if is_runpod_provider() else fetch_public_key()
         self.metrics = Metrics()
 
     @cached_property
