@@ -75,7 +75,7 @@ class Backend:
 
         ###########
 
-        self.PUBLIC_KEY =  None if is_runpod_provider() else fetch_public_key()
+        self.PUBLIC_KEY = None if is_runpod_provider() else fetch_public_key()
         self.metrics = Metrics()
 
     @cached_property
