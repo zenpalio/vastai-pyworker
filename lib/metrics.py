@@ -1,3 +1,4 @@
+from enum import Enum
 import os
 import time
 import logging
@@ -11,6 +12,10 @@ import requests
 
 from lib.data_types import AutoScalaerData, SystemMetrics, ModelMetrics
 from typing import Awaitable, NoReturn, List
+
+class InstanceProvider(Enum):
+    RUNPOD = "runpod"
+    VASTAI = "vastai"
 
 METRICS_UPDATE_INTERVAL = 1
 
@@ -27,6 +32,11 @@ def get_container_id() -> str:
 def is_runpod_provider() -> bool:
     return os.environ.get("PROVIDER", None) == "runpod"
 
+@cache
+def get_provider() -> str:
+    if is_runpod_provider():
+        return InstanceProvider.RUNPOD.value
+    return InstanceProvider.VASTAI.value
 
 @cache
 def get_url() -> str:
@@ -136,11 +146,12 @@ class Metrics:
                 max_capacity=0,
                 url=self.url,
                 type=os.environ["BACKEND"],
+                provider=get_provider(),
             )
 
         def send_data(report_addr: str) -> None:
             data = compute_autoscaler_data()
-            full_path = urljoin(report_addr, "/public/v1/webhook/vastai/status")
+            full_path = urljoin(report_addr, "/public/v1/webhook/instance/status")
             log.debug(
                 "\n".join(
                     [

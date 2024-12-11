@@ -232,6 +232,7 @@ class AutoScalaerData:
     additional_disk_usage: float
     url: str
     type: str
+    provider: str
 
 
 class LogAction(Enum):

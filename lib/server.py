@@ -12,7 +12,7 @@ import requests
 from lib.backend import Backend
 from aiohttp import web
 
-from lib.metrics import get_container_id, get_url
+from lib.metrics import get_container_id, get_provider, get_url
 
 log = logging.getLogger(__file__)
 
@@ -20,11 +20,12 @@ log = logging.getLogger(__file__)
 def register_public_ip():
     report_addr = os.environ["REPORT_ADDR"]
     for addr in report_addr.split(","):
-        full_path = urljoin(addr, "/public/v1/webhook/server/instance/")
+        full_path = urljoin(addr, "/public/v1/webhook/instance/register/")
         data = {
             "url": get_url(),
             "id": get_container_id(),
             "type": os.environ["BACKEND"],
+            "provider": get_provider(),
         }
         log.debug("register payload")
         print(data)
