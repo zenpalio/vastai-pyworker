@@ -8,7 +8,7 @@ uv pip install setuptools
 uv pip install ray
 
 echo "starting aphrodite"
-aphrodite run Lewdiculous/Erosumika-7B-v3-0.2-GGUF-IQ-Imatrix &
+aphrodite run Orenguteng/Llama-3.1-8B-Lexi-Uncensored-V2 --enforce-eager &
 
 sleep 60
 echo "starting server"
