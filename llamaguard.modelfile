@@ -1,0 +1,67 @@
+FROM llama-guard3
+
+TEMPLATE """{{- $lastIndex := (len (slice .Messages 1)) }}
+{{- $last := index .Messages $lastIndex }}
+{{- $role := ""}}
+{{- if eq $last.Role "user" }}
+  {{- $role = "User" }}
+{{- else }}
+  {{- $role = "Agent" }}
+{{- end }}<|start_header_id|>user<|end_header_id|>
+
+Task: Check if there is unsafe content in '{{ $role }}' messages in conversations according our safety policy with the below categories.
+
+<BEGIN UNSAFE CONTENT CATEGORIES>
+S1: Violence and Gore.
+AI models should not create content that includes, enables, or encourages graphic violence, gore, or detailed depictions of bodily harm. This applies to all contexts, including roleplay scenarios. Examples include, but are not limited to:
+            - Graphic depictions of violent acts (ex: decapitation, dismemberment)
+            - Excessive descriptions of blood, injuries, or mutilation
+            - Torture or brutal assault scenes
+- Asking for a blood pictures, blood in general
+S2: Animal Roleplay
+AI models should not create content that that involves animals or animal roleplay. This restriction applies to all scenarios, including roleplay or fictional contexts where animals are involved. Examples include, but are not limited to:
+            - Descriptions or depictions of humans engaging in sexual activity with animals
+            - Scenarios implying romantic or sexual attraction toward animals
+            - Roleplaying animals
+            - Desciprion of animal parts, such as fur, 
+            - acting as animal, writing animal sounds, implying being animal, asking to roleplay animal
+            - Implying being an animal
+            - making animal sounds
+
+S3: Child Exploitation.
+AI models should not create content that depicts or encourages the sexualization or abuse of minors. This applies to any context, including roleplay, fictional stories, or hypothetical scenarios. Examples include, but are not limited to:
+            - Descriptions involving child nudity or sexual acts
+            - Scenarios portraying romantic or sexual relationships involving minors
+
+S4: Necrophilia.
+AI models should not create content that enables, encourages, or depicts sexual acts involving corpses. This applies to all contexts, including roleplay or fictional narratives. Examples include, but are not limited to:
+            - Descriptions or depictions of sexual acts with deceased individuals
+            - Scenarios implying romantic or sexual attraction toward the dead
+
+S5: Hate.
+AI models should not create content that promotes hate toward people based on their protected characteristics (race, ethnicity, disability, religion, sexual orientation, gender identity, etc.). This includes roleplay or fictional contexts. Examples include, but are not limited to:
+            - Content promoting violence or discrimination
+            - Scenarios that perpetuate harmful stereotypes
+
+S6: Self-Harm.
+AI models should not create content that enables, encourages, or excuses acts of self-harm or suicide, even in roleplay scenarios. Examples include, but are not limited to:
+            - Depictions of cutting, disordered eating, or suicidal ideation
+
+<END UNSAFE CONTENT CATEGORIES>
+
+<BEGIN CONVERSATION>
+
+{{ range .Messages }}
+{{- if eq .Role "user" }}User: {{ .Content }}
+
+{{ else }}Agent: {{ .Content }}
+
+{{ end }}
+{{- end }}<END CONVERSATION>
+
+Provide your safety assessment for ONLY THE LAST User message in the above conversation:
+ - First line must read 'safe' or 'unsafe'.
+ - If unsafe, a second line must include a comma-separated list of violated categories.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+ """
+ PARAMETER temperature 0
+ LICENSE "LLAMA 3.1 COMMUNITY LICENSE AGREEMENT"
