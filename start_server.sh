@@ -13,8 +13,6 @@ REPORT_ADDR="${REPORT_ADDR:-https://api.dev.mybabes.ai,https://api.qa.mybabes.ai
 USE_SSL="${USE_SSL:-true}"
 WORKER_PORT="${WORKER_PORT:-3000}"
 BACKEND="${BACKEND:-automatic1111}"
-rm -rf /workspace/vast-pyworker/
-rm -rf /workspace/worker-env/
 
 if [ ! -d "$WORKSPACE_DIR" ]; then
     mkdir -p "$WORKSPACE_DIR"
@@ -49,8 +47,7 @@ echo_var MODEL_LOG
 #env | grep _ >> /etc/environment;
 
 
-if [ ! -d "$ENV_PATH" ]
-then
+if [ ! -d "$ENV_PATH" ]; then
     apt install -y python3.10-venv
     echo "setting up venv"
 

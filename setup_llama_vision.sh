@@ -1,5 +1,7 @@
 #!/bin/bash
 # Install necessary packages
+WORKSPACE_DIR="${WORKSPACE_DIR:-/workspace}"
+cd "$WORKSPACE_DIR"
 pip install uv
 uv venv
 source .venv/bin/activate
