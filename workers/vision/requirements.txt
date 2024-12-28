@@ -1,0 +1,6 @@
+transformers 
+torch==4.45.0
+peft
+bitsandbytes
+aiohttp
+pillow

@@ -59,6 +59,12 @@ if [ ! -d "$ENV_PATH" ]; then
 
     uv pip install -r vast-pyworker/requirements.txt
 
+    if [ ! -f "$SERVER_DIR/workers/$BACKEND/requirements.txt" ]; then
+        echo "No requirements.txt found for $BACKEND"
+    else
+        uv pip install -r "$SERVER_DIR/workers/$BACKEND/requirements.txt"
+    fi
+
     touch ~/.no_auto_tmux
 else
     source "$WORKSPACE_DIR/worker-env/bin/activate"
