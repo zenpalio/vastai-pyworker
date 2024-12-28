@@ -10,8 +10,8 @@ import io
 
 class Vision:
     def __init__(self):
-        self.model
-        self.processor
+        self.model = None
+        self.processor = None
 
     def load_vision_model(self) -> None:
         bnb_config = BitsAndBytesConfig(
