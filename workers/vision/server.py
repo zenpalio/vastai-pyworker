@@ -10,7 +10,7 @@ from lib.backend import Backend, LogAction
 from lib.data_types import EndpointHandler
 from lib.metrics import get_url
 from lib.server import start_server
-from workers.vision.vision import Vision, load_vision_model
+from workers.vision.vision import Vision
 from .data_types import InputData
 
 

@@ -3,9 +3,8 @@
 WORKSPACE_DIR="${WORKSPACE_DIR:-/workspace}"
 cd "$WORKSPACE_DIR"
 pip install uv
-uv venv
-source .venv/bin/activate
-uv pip install transformers
+uv pip install transformers 
+uv pip install torch
 uv pip install peft
 uv pip install bitsandbytes
 uv pip install aiohttp
