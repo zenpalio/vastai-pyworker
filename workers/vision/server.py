@@ -31,7 +31,6 @@ log = logging.getLogger(__file__)
 vision = None
 
 
-
 class GenerateStreamHandler(EndpointHandler[InputData]):
     @property
     def endpoint(self) -> str:
@@ -91,9 +90,14 @@ async def generate_tags(request: web.Request):
     data = await request.json()
 
     image_url = data.get("image_url")
+    system_prompt = data.get("system_prompt")
     if not image_url:
         return web.json_response({"error": "image_url is required"}, status=400)
-    return web.json_response(body=str(await vision.generate_tags_for_image(image_url)))
+    if not system_prompt:
+        return web.json_response({"error": "system_prompt is required"}, status=400)
+    return web.json_response(
+        body=str(await vision.generate_tags_for_image(image_url, system_prompt))
+    )
 
 
 routes = [
