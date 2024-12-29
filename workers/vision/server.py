@@ -93,7 +93,7 @@ async def generate_tags(request: web.Request):
     image_url = data.get("image_url")
     if not image_url:
         return web.json_response({"error": "image_url is required"}, status=400)
-    return web.json_response({"tags": vision.generate_tags_for_image(image_url)})
+    return web.json_response(body=str(await vision.generate_tags_for_image(image_url)))
 
 
 routes = [

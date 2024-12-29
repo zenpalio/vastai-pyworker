@@ -67,4 +67,4 @@ class Vision:
         )
 
         output = self.model.generate(**inputs, max_new_tokens=100)
-        return output[0]
+        return self.processor.decode(output[0])
