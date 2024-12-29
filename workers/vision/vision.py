@@ -34,7 +34,9 @@ class Vision:
             model, "Guilherme34/Llama-3.2-11b-vision-uncensored"
         )
 
-    async def generate_tags_for_image(self, image_url: str, system_prompt: str) -> Any:
+    async def generate_tags_for_image(
+        self, image_url: str, system_prompt: str, prompt: str
+    ) -> Any:
 
         async with aiohttp.ClientSession() as session:
             async with session.get(image_url) as response:
@@ -56,7 +58,7 @@ class Vision:
             },
             {
                 "role": "user",
-                "content": [{"type": "image"}, {"type": "text", "text": "Output tags"}],
+                "content": [{"type": "image"}, {"type": "text", "text": prompt}],
             },
         ]
         input_text = self.processor.apply_chat_template(

@@ -91,12 +91,15 @@ async def generate_tags(request: web.Request):
 
     image_url = data.get("image_url")
     system_prompt = data.get("system_prompt")
+    prompt = data.get("prompt", None)
     if not image_url:
         return web.json_response({"error": "image_url is required"}, status=400)
     if not system_prompt:
         return web.json_response({"error": "system_prompt is required"}, status=400)
+    if not prompt:
+        return web.json_response({"error": "prompt is required"}, status=400)
     return web.json_response(
-        body=str(await vision.generate_tags_for_image(image_url, system_prompt))
+        body=str(await vision.generate_tags_for_image(image_url, system_prompt, prompt))
     )
 
 
