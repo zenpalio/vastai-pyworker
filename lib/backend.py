@@ -115,7 +115,6 @@ class Backend:
             log.debug("sending as json")
             # TODO: blocking call to async
             resp = requests.post(url, json=dct, timeout=300, verify=False)
-            print(resp.status_code)
             if resp.status_code != 200:
                 return {
                     "error": resp.status_code,

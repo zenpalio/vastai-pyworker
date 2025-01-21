@@ -13,9 +13,11 @@ import requests
 from lib.data_types import AutoScalaerData, SystemMetrics, ModelMetrics
 from typing import Awaitable, NoReturn, List
 
+
 class InstanceProvider(Enum):
     RUNPOD = "runpod"
     VASTAI = "vastai"
+
 
 METRICS_UPDATE_INTERVAL = 1
 
@@ -27,16 +29,19 @@ def get_container_id() -> str:
     return os.environ.get("CONTAINER_ID", None) or os.environ.get(
         "RUNPOD_POD_ID", "unknown"
     )
-    
+
+
 @cache
 def is_runpod_provider() -> bool:
     return os.environ.get("PROVIDER", None) == "runpod"
+
 
 @cache
 def get_provider() -> str:
     if is_runpod_provider():
         return InstanceProvider.RUNPOD.value
     return InstanceProvider.VASTAI.value
+
 
 @cache
 def get_url() -> str:
@@ -152,16 +157,6 @@ class Metrics:
         def send_data(report_addr: str) -> None:
             data = compute_autoscaler_data()
             full_path = urljoin(report_addr, "/public/v1/webhook/instance/status")
-            log.debug(
-                "\n".join(
-                    [
-                        "#" * 60,
-                        f"sending data to autoscaler",
-                        f"{json.dumps((asdict(data)), indent=2)}",
-                        "#" * 60,
-                    ]
-                )
-            )
             for attempt in range(1, 4):
                 try:
                     requests.post(full_path, json=asdict(data), timeout=1)
