@@ -42,22 +42,22 @@ CHECKPOINT_MODELS=(
 LORA_MODELS=(
     "https://civitai.com/api/download/models/558984?type=Model&format=SafeTensor" #cartoon style        https://civitai.com/models/45521?modelVersionId=558984
     "https://civitai.com/api/download/models/382152?type=Model&format=SafeTensor" #expresive            https://civitai.com/models/341353/expressiveh-hentai-lora-style
-    "https://civitai.com/api/download/models/507741?type=Model&format=SafeTensor" #3d blender style     https://civitai.com/models/456102/blender-3d-porn-pony
+    #"https://civitai.com/api/download/models/507741?type=Model&format=SafeTensor" #3d blender style     https://civitai.com/models/456102/blender-3d-porn-pony
     "https://civitai.com/api/download/models/467356?type=Model&format=SafeTensor" #3d disney style      https://civitai.com/models/405143?modelVersionId=467356
-    "https://civitai.com/api/download/models/839103?type=Model&format=SafeTensor" #sexy buts style      https://civitai.com/models/11161/cutesexyrobutts-style?modelVersionId=839103
-    "https://civitai.com/api/download/models/471570?type=Model&format=SafeTensor" #Ahegao               https://civitai.com/models/401685/ahegao?modelVersionId=471570
-    "https://civitai.com/api/download/models/410706?type=Model&format=SafeTensor" #butt plug            https://civitai.com/models/136438/butt-plug-pony15-or-goofy-ai?modelVersionId=410706
-    "https://civitai.com/api/download/models/691629?type=Model&format=SafeTensor" #mating press         https://civitai.com/api/download/models/691629?type=Model&format=SafeTensor
-    "https://civitai.com/api/download/models/598315?type=Model&format=SafeTensor" #double penetration   https://civitai.com/models/136438/butt-plug-pony15-or-goofy-ai?modelVersionId=410706   
-    "https://civitai.com/api/download/models/807075?type=Model&format=SafeTensor" #facesitting POV      https://civitai.com/models/721793/face-sit-pov-or-goofy-ai?modelVersionId=807075
-    "https://civitai.com/api/download/models/725112?type=Model&format=SafeTensor" #Pillory BDSM         https://civitai.com/models/648133/pillory-or-goofy-ai?modelVersionId=725112
-    "https://civitai.com/api/download/models/578868?type=Model&format=SafeTensor" #Sexy Clothing XL     https://civitai.com/models/244864/realisticandanimesexy-clothing-collection-oror-and?modelVersionId=578868
-    "https://civitai.com/api/download/models/471781?type=Model&format=SafeTensor" #Feet XL              https://civitai.com/models/200251/feet-xl-sd-15-flux1-dev?modelVersionId=471781
-    "https://civitai.com/api/download/models/972475?type=Model&format=SafeTensor" #Spread Pussy XL      https://civitai.com/models/149904/real-pussy-spreading?modelVersionId=972475
-    "https://civitai.com/api/download/models/722906?type=Model&format=SafeTensor" #Toys XL              https://civitai.com/models/132350/kinkytoys-balls?modelVersionId=722906
-    "https://civitai.com/api/download/models/280241?type=Model&format=SafeTensor" #Fingering XL         https://civitai.com/models/248361/fingering-sdxl?modelVersionId=280241
-    "https://civitai.com/api/download/models/626812?type=Model&format=SafeTensor" #Bondage              https://civitai.com/models/528877/fluxsdxlpony-device-bondage?modelVersionId=626812
-    "https://civitai.com/api/download/models/136277?type=Model&format=SafeTensor" #sexy underwear       https://civitai.com/models/124782/sdxlsexy-underwear?modelVersionId=136277
+    #"https://civitai.com/api/download/models/839103?type=Model&format=SafeTensor" #sexy buts style      https://civitai.com/models/11161/cutesexyrobutts-style?modelVersionId=839103
+    #"https://civitai.com/api/download/models/471570?type=Model&format=SafeTensor" #Ahegao               https://civitai.com/models/401685/ahegao?modelVersionId=471570
+    #"https://civitai.com/api/download/models/410706?type=Model&format=SafeTensor" #butt plug            https://civitai.com/models/136438/butt-plug-pony15-or-goofy-ai?modelVersionId=410706
+    #"https://civitai.com/api/download/models/691629?type=Model&format=SafeTensor" #mating press         https://civitai.com/api/download/models/691629?type=Model&format=SafeTensor
+    #"https://civitai.com/api/download/models/598315?type=Model&format=SafeTensor" #double penetration   https://civitai.com/models/136438/butt-plug-pony15-or-goofy-ai?modelVersionId=410706   
+    #"https://civitai.com/api/download/models/807075?type=Model&format=SafeTensor" #facesitting POV      https://civitai.com/models/721793/face-sit-pov-or-goofy-ai?modelVersionId=807075
+    #"https://civitai.com/api/download/models/725112?type=Model&format=SafeTensor" #Pillory BDSM         https://civitai.com/models/648133/pillory-or-goofy-ai?modelVersionId=725112
+    #"https://civitai.com/api/download/models/578868?type=Model&format=SafeTensor" #Sexy Clothing XL     https://civitai.com/models/244864/realisticandanimesexy-clothing-collection-oror-and?modelVersionId=578868
+    #"https://civitai.com/api/download/models/471781?type=Model&format=SafeTensor" #Feet XL              https://civitai.com/models/200251/feet-xl-sd-15-flux1-dev?modelVersionId=471781
+    #"https://civitai.com/api/download/models/972475?type=Model&format=SafeTensor" #Spread Pussy XL      https://civitai.com/models/149904/real-pussy-spreading?modelVersionId=972475
+    #"https://civitai.com/api/download/models/722906?type=Model&format=SafeTensor" #Toys XL              https://civitai.com/models/132350/kinkytoys-balls?modelVersionId=722906
+    #"https://civitai.com/api/download/models/280241?type=Model&format=SafeTensor" #Fingering XL         https://civitai.com/models/248361/fingering-sdxl?modelVersionId=280241
+    #"https://civitai.com/api/download/models/626812?type=Model&format=SafeTensor" #Bondage              https://civitai.com/models/528877/fluxsdxlpony-device-bondage?modelVersionId=626812
+    #"https://civitai.com/api/download/models/136277?type=Model&format=SafeTensor" #sexy underwear       https://civitai.com/models/124782/sdxlsexy-underwear?modelVersionId=136277
 )
 
 VAE_MODELS=(
@@ -129,9 +129,6 @@ function provisioning_start() {
         "${ESRGAN_MODELS[@]}"
      
     PLATFORM_ARGS=""
-    if [[ $XPU_TARGET = "CPU" ]]; then
-        PLATFORM_ARGS="--use-cpu all --skip-torch-cuda-test --no-half"
-    fi
     PROVISIONING_ARGS="--skip-python-version-check --no-download-sd-model --do-not-download-clip --port 11404 --exit"
     ARGS_COMBINED="${PLATFORM_ARGS} $(cat /etc/a1111_webui_flags.conf) ${PROVISIONING_ARGS}"
     

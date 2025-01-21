@@ -44,9 +44,7 @@ function start() {
     printf "Starting $SERVICE_NAME...\n"
     
     PLATFORM_ARGS=
-    if [[ $XPU_TARGET = "CPU" ]]; then
-        PLATFORM_ARGS="--use-cpu all --skip-torch-cuda-test --no-half"
-    fi
+
     # No longer skipping prepare-environment
     BASE_ARGS=""
     
