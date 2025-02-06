@@ -36,7 +36,6 @@ CHECKPOINT_MODELS=(
     #"https://civitai.com/api/download/models/926965?type=Model&format=SafeTensor&size=pruned&fp=fp16" #lustify40
     "https://storage.googleapis.com/aibabe-models/prefectPonyXL_v40.safetensors" #pony40
     "https://storage.googleapis.com/aibabe-models/lustifySDXLNSFW_endgame.safetensors" #lustify50
-    "https://storage.googleapis.com/aibabe-models/lustifySDXLNSFW_endgameDMD2.safetensors"
     #"https://civitai.com/api/download/models/176425?type=Model&format=SafeTensor&size=pruned&fp=fp16" #test small model
 )
 

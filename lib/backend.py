@@ -12,8 +12,7 @@ from functools import cached_property
 
 from anyio import open_file
 from aiohttp import web, ClientResponse, ClientSession, ClientConnectorError
-
-import requests
+import aiohttp
 from Crypto.Signature import pkcs1_15
 from Crypto.Hash import SHA256
 from Crypto.PublicKey import RSA
@@ -109,24 +108,37 @@ class Backend:
         except json.JSONDecodeError:
             return web.json_response(dict(error="invalid JSON"), status=422)
 
-        def post(url: str, dct: dict = None):
-            log.debug(f"url: {url}")
-            log.debug(dct)
-            log.debug("sending as json")
-            # TODO: blocking call to async
-            resp = requests.post(url, json=dct, timeout=300, verify=False)
-            if resp.status_code != 200:
-                return {
-                    "error": resp.status_code,
-                    "reason": resp.reason,
-                    "url": resp.url,
-                }
-            else:
-                return resp.json()
-
+        async def post(url: str, dct: dict = None):
+            timeout = aiohttp.ClientTimeout(total=300)  # 5 minutes timeout
+            async with aiohttp.ClientSession(timeout=timeout) as session:
+                try:
+                    async with session.post(url, json=dct, ssl=False) as resp:
+                        log.debug(f"Received response with status code: {resp.status}")
+                        if resp.status != 200:
+                            return {
+                                "error": resp.status,
+                                "reason": resp.reason,
+                                "url": str(resp.url),
+                            }
+                        else:
+                            return await resp.json()
+                except asyncio.TimeoutError:
+                    log.error(f"Request to {url} timed out.")
+                    return {
+                        "error": "timeout",
+                        "reason": "The request timed out.",
+                        "url": url,
+                    }
+                except aiohttp.ClientError as e:
+                    log.error(f"Client error occurred: {e}")
+                    return {
+                        "error": "client_error",
+                        "reason": str(e),
+                        "url": url,
+                    }
         try:
 
-            response = await asyncio.to_thread(post, handler.endpoint, data)
+            response = await post(handler.endpoint, data)
             return web.json_response(response)
         except Exception as e:
             log.debug(f"Exception in main handler loop {e}")

@@ -3,12 +3,12 @@
 pip install uv
 uv venv
 source .venv/bin/activate
-uv pip install aphrodite-engine
 uv pip install setuptools
 uv pip install ray
+uv pip install vllm
 
 echo "starting aphrodite"
-aphrodite run tachyphylaxis/Meta-Llama-3.1-Chat-Uncensored --enforce-eager --max-model-len 8192 &
+vllm serve  ./workspace/Llama-3.3-70B-Instruct-abliterated-IQ3_M.gguff --tokenizer huihui-ai/Llama-3.3-70B-Instruct-abliterated -port 2242 --enforce-eager --max-model-len 8192 &
 
 # Wait for the curl request to return a successful response with a timeout of 10 minutes
 timeout=600  # Total timeout in seconds
@@ -16,24 +16,8 @@ interval=5   # Interval between checks in seconds
 elapsed=0
 
 while [ $elapsed -lt $timeout ]; do
-    status=$(curl -s -o /dev/null -w "%{http_code}" -k http://localhost:2242/v1/chat/completions \
-      -H "Content-Type: application/json" \
-      -d '{
-        "model": "Orenguteng/Llama-3.1-8B-Lexi-Uncensored-V2",
-        "messages": [
-          {
-            "role": "system",
-            "content":  "You are helpful assistant."
-          },
-          {
-            "role": "user",
-            "content": "Hi."
-          }
-        ],
-        "max_tokens": 512,
-        "temperature": 0.8,
-        "min_p": 0.1
-      }')
+    status=$(curl -s -o /dev/null -w "%{http_code}" -k http://localhost:2242/v1/models \
+      -H "Content-Type: application/json")
     echo "Status: $status"
     if [ "$status" -eq 200 ]; then
         break

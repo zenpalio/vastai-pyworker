@@ -13,11 +13,9 @@ REPORT_ADDR="${REPORT_ADDR:-https://api.dev.mybabes.ai,https://api.qa.mybabes.ai
 USE_SSL="${USE_SSL:-true}"
 WORKER_PORT="${WORKER_PORT:-3000}"
 BACKEND="${BACKEND:-automatic1111}"
-
 if [ ! -d "$WORKSPACE_DIR" ]; then
     mkdir -p "$WORKSPACE_DIR"
 fi
-cd "$WORKSPACE_DIR"
 
 # make all output go to $DEBUG_LOG and stdout without having to add `... | tee -a $DEBUG_LOG` to every command
 exec &> >(tee -a "$DEBUG_LOG")
