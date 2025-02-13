@@ -156,9 +156,10 @@ class Metrics:
 
         def send_data(report_addr: str) -> None:
             data = compute_autoscaler_data()
-            full_path = urljoin(report_addr, "/public/v1/webhook/instance/status")
+            full_path = urljoin(report_addr, "/v1/webhook/instance/status")
             for attempt in range(1, 4):
                 try:
+                    
                     requests.post(full_path, json=asdict(data), timeout=1)
                     break
                 except requests.Timeout:
