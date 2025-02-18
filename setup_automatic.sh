@@ -1,5 +1,6 @@
 function setup_gsutils() {
     echo "Setting up gsutils..."
+    export DEBIAN_FRONTEND=noninteractive
     sudo apt-get update -y
     sudo apt-get install apt-transport-https ca-certificates gnupg curl -y
 

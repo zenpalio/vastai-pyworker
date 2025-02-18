@@ -34,17 +34,17 @@ EXTENSIONS=(
 CHECKPOINT_MODELS=(
     #"https://civitai.com/api/download/models/929239?type=Model&format=SafeTensor&size=full&fp=fp16" #big lust15
     #"https://civitai.com/api/download/models/926965?type=Model&format=SafeTensor&size=pruned&fp=fp16" #lustify40
-    #"https://storage.googleapis.com/aibabe-models/prefectPonyXL_v40.safetensors" #pony40
-    #"https://storage.googleapis.com/aibabe-models/lustifySDXLNSFW_endgame.safetensors" #lustify50
+    "gs://aibabe-models/prefectPonyXL_v40.safetensors" #pony40
+    "gs://aibabe-models/lustifySDXLNSFW_endgame.safetensors" #lustify50
     "gs://aibabe-models/lustifySDXLNSFW_endgameDMD2.safetensors"
     #"https://civitai.com/api/download/models/176425?type=Model&format=SafeTensor&size=pruned&fp=fp16" #test small model
 )
 
 LORA_MODELS=(
-    #"https://civitai.com/api/download/models/558984?type=Model&format=SafeTensor" #cartoon style        https://civitai.com/models/45521?modelVersionId=558984
-    #"https://civitai.com/api/download/models/382152?type=Model&format=SafeTensor" #expresive            https://civitai.com/models/341353/expressiveh-hentai-lora-style
+    "gs://aibabe-models/tendertroupe_v0.1-pony.safetensors" #cartoon style                               https://civitai.com/models/45521?modelVersionId=558984
+    "gs://aibabe-models/Expressive_H-000001.safetensors" #expresive                                       https://civitai.com/models/341353/expressiveh-hentai-lora-style
     #"https://civitai.com/api/download/models/507741?type=Model&format=SafeTensor" #3d blender style     https://civitai.com/models/456102/blender-3d-porn-pony
-    #"https://civitai.com/api/download/models/467356?type=Model&format=SafeTensor" #3d disney style      https://civitai.com/models/405143?modelVersionId=467356
+    "gs://aibabe-models/aibabe-models/3Danimation_Disney_1.0.safetensors" #3d disney style               https://civitai.com/models/405143?modelVersionId=467356
     #"https://civitai.com/api/download/models/839103?type=Model&format=SafeTensor" #sexy buts style      https://civitai.com/models/11161/cutesexyrobutts-style?modelVersionId=839103
     #"https://civitai.com/api/download/models/471570?type=Model&format=SafeTensor" #Ahegao               https://civitai.com/models/401685/ahegao?modelVersionId=471570
     #"https://civitai.com/api/download/models/410706?type=Model&format=SafeTensor" #butt plug            https://civitai.com/models/136438/butt-plug-pony15-or-goofy-ai?modelVersionId=410706
