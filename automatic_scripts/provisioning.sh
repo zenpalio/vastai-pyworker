@@ -138,7 +138,7 @@ function provisioning_start() {
     if [[ -z $MAMBA_BASE ]]; then
         source "$WEBUI_VENV/bin/activate"
         LD_PRELOAD=libtcmalloc.so python launch.py \
-            ${ARGS_COMBINED}
+            ${ARGS_COMBINED} 
         deactivate
     else 
         micromamba run -n webui -e LD_PRELOAD=libtcmalloc.so python launch.py \
