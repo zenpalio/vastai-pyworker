@@ -153,10 +153,14 @@ function setup_gsutils() {
     retry_apt_get() {
         local retries=5
         local count=0
+        local lock_file="/var/lib/dpkg/lock-frontend"
         until sudo apt-get "$@"; do
             exit_code=$?
             count=$((count + 1))
-            if [ $count -lt $retries ]; then
+            if [ $exit_code -eq 100 ] && [ -f $lock_file ]; then
+                echo "Lock file $lock_file is held by another process. Waiting..."
+                sleep 5
+            elif [ $count -lt $retries ]; then
                 echo "Retrying apt-get command ($count/$retries)..."
                 sleep 5
             else
