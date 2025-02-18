@@ -34,16 +34,17 @@ EXTENSIONS=(
 CHECKPOINT_MODELS=(
     #"https://civitai.com/api/download/models/929239?type=Model&format=SafeTensor&size=full&fp=fp16" #big lust15
     #"https://civitai.com/api/download/models/926965?type=Model&format=SafeTensor&size=pruned&fp=fp16" #lustify40
-    "https://storage.googleapis.com/aibabe-models/prefectPonyXL_v40.safetensors" #pony40
-    "https://storage.googleapis.com/aibabe-models/lustifySDXLNSFW_endgame.safetensors" #lustify50
+    #"https://storage.googleapis.com/aibabe-models/prefectPonyXL_v40.safetensors" #pony40
+    #"https://storage.googleapis.com/aibabe-models/lustifySDXLNSFW_endgame.safetensors" #lustify50
+    "gs://aibabe-models/lustifySDXLNSFW_endgameDMD2.safetensors"
     #"https://civitai.com/api/download/models/176425?type=Model&format=SafeTensor&size=pruned&fp=fp16" #test small model
 )
 
 LORA_MODELS=(
-    "https://civitai.com/api/download/models/558984?type=Model&format=SafeTensor" #cartoon style        https://civitai.com/models/45521?modelVersionId=558984
-    "https://civitai.com/api/download/models/382152?type=Model&format=SafeTensor" #expresive            https://civitai.com/models/341353/expressiveh-hentai-lora-style
+    #"https://civitai.com/api/download/models/558984?type=Model&format=SafeTensor" #cartoon style        https://civitai.com/models/45521?modelVersionId=558984
+    #"https://civitai.com/api/download/models/382152?type=Model&format=SafeTensor" #expresive            https://civitai.com/models/341353/expressiveh-hentai-lora-style
     #"https://civitai.com/api/download/models/507741?type=Model&format=SafeTensor" #3d blender style     https://civitai.com/models/456102/blender-3d-porn-pony
-    "https://civitai.com/api/download/models/467356?type=Model&format=SafeTensor" #3d disney style      https://civitai.com/models/405143?modelVersionId=467356
+    #"https://civitai.com/api/download/models/467356?type=Model&format=SafeTensor" #3d disney style      https://civitai.com/models/405143?modelVersionId=467356
     #"https://civitai.com/api/download/models/839103?type=Model&format=SafeTensor" #sexy buts style      https://civitai.com/models/11161/cutesexyrobutts-style?modelVersionId=839103
     #"https://civitai.com/api/download/models/471570?type=Model&format=SafeTensor" #Ahegao               https://civitai.com/models/401685/ahegao?modelVersionId=471570
     #"https://civitai.com/api/download/models/410706?type=Model&format=SafeTensor" #butt plug            https://civitai.com/models/136438/butt-plug-pony15-or-goofy-ai?modelVersionId=410706
@@ -99,6 +100,7 @@ function provisioning_start() {
     # We need to apply some workarounds to make old builds work with the new default
     printf "Starting provisioning...\n"
     printf "custom provisioning\n"
+    setup_gsutils
     if [[ ! -d /opt/environments/python ]]; then 
         export MAMBA_BASE=true
     fi
@@ -144,6 +146,19 @@ function provisioning_start() {
             ${ARGS_COMBINED}
     fi
     provisioning_print_end
+}
+
+function setup_gsutils() {
+    apt-get update -y
+    apt-get install apt-transport-https ca-certificates gnupg curl -y
+    curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo gpg --dearmor -o /usr/share/keyrings/cloud.google.gpg
+    echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
+    apt-get update && apt-get install google-cloud-cli -y
+
+    echo "$SERVICE_ACCOUNT_JSON" > ./zenpalio-f0ec2f137303.json
+
+    gcloud auth activate-service-account --key-file=./zenpalio-f0ec2f137303.json
+    gcloud config set project zenpalio
 }
 
 function pip_install() {
@@ -223,7 +238,9 @@ elif [[ -n $HF_TOKEN && $1 =~ ^https://([a-zA-Z0-9_-]+\.)?huggingface\.co(/|$|\?
     auth_token="$HF_TOKEN"
 fi
 
-if [[ -n $civit_auth_token ]]; then
+if [[ $1 =~ ^gs:// ]]; then
+    gsutil cp "$1" "$2"
+elif [[ -n $civit_auth_token ]]; then
     url="${1}&token=${civit_auth_token}"
     printf "Downloading civitai %s\n" "$url"
     wget -qnc --content-disposition --show-progress -e dotbytes="${3:-4M}" -P "$2" "$url"
