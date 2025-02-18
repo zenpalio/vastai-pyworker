@@ -120,7 +120,6 @@ function provisioning_start() {
     # We need to apply some workarounds to make old builds work with the new default
     printf "Starting provisioning...\n"
     printf "custom provisioning\n"
-    setup_gsutils
     if [[ ! -d /opt/environments/python ]]; then 
         export MAMBA_BASE=true
     fi
@@ -130,6 +129,7 @@ function provisioning_start() {
     DISK_GB_AVAILABLE=$(($(df --output=avail -m "${WORKSPACE}" | tail -n1) / 1000))
     DISK_GB_USED=$(($(df --output=used -m "${WORKSPACE}" | tail -n1) / 1000))
     DISK_GB_ALLOCATED=$(($DISK_GB_AVAILABLE + $DISK_GB_USED))
+    setup_gsutils
     provisioning_print_header
     provisioning_get_apt_packages
     provisioning_get_pip_packages
