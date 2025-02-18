@@ -149,11 +149,29 @@ function provisioning_start() {
 }
 
 function setup_gsutils() {
-    sudo apt-get update -y
-    sudo apt-get install apt-transport-https ca-certificates gnupg curl -y
+    # Retry mechanism for apt-get commands
+    retry_apt_get() {
+        local retries=5
+        local count=0
+        until sudo apt-get "$@"; do
+            exit_code=$?
+            count=$((count + 1))
+            if [ $count -lt $retries ]; then
+                echo "Retrying apt-get command ($count/$retries)..."
+                sleep 5
+            else
+                echo "Failed to execute apt-get command after $retries attempts."
+                return $exit_code
+            fi
+        done
+        return 0
+    }
+
+    retry_apt_get update -y
+    retry_apt_get install apt-transport-https ca-certificates gnupg curl -y
     curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo gpg --dearmor -o /usr/share/keyrings/cloud.google.gpg
     echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
-    sudo apt-get install google-cloud-cli -y
+    retry_apt_get install google-cloud-cli -y
 
     echo "$SERVICE_ACCOUNT_JSON" > ./zenpalio-f0ec2f137303.json
 
