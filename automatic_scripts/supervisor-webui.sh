@@ -19,7 +19,6 @@ function start() {
     source /opt/ai-dock/etc/environment.sh
     source /opt/ai-dock/bin/venv-set.sh serviceportal
     source /opt/ai-dock/bin/venv-set.sh webui
-    wget -O - "https://raw.githubusercontent.com/zenpalio/vastai-pyworker/main/start_server.sh" | bash && (text-generation-launcher --model-id "$MODEL_ID" --json-output --port 5001 --hostname "0.0.0.0" &>> $MODEL_LOG) &
 
     
     if [[ ! -v WEBUI_PORT || -z $WEBUI_PORT ]]; then
