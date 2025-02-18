@@ -1,9 +1,3 @@
-export BACKEND=automatic1111
-setup_gsutils
-wget -O - "/vastai-pyworker/start_server.sh" | bash && (text-generation-launcher --model-id "$MODEL_ID" --json-output --port 5001 --hostname "0.0.0.0" &>> $MODEL_LOG);
-/opt/ai-dock/bin/init.sh &
-
-
 function setup_gsutils() {
     echo "Setting up gsutils..."
     sudo apt-get update -y
@@ -18,4 +12,14 @@ function setup_gsutils() {
     gcloud config set project zenpalio
     echo "finished setting up gsutils"
 }
+
+
+
+
+export BACKEND=automatic1111
+setup_gsutils
+wget -O - "/vastai-pyworker/start_server.sh" | bash && (text-generation-launcher --model-id "$MODEL_ID" --json-output --port 5001 --hostname "0.0.0.0" &>> $MODEL_LOG);
+#/opt/ai-dock/bin/init.sh &
+
+
 
