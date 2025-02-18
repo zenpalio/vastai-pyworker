@@ -50,12 +50,13 @@ if [ ! -d "$ENV_PATH" ]; then
     echo "setting up venv"
 
     git clone https://github.com/zenpalio/vastai-pyworker "$SERVER_DIR"
+    
 
     python3 -m venv "$WORKSPACE_DIR/worker-env"
     source "$WORKSPACE_DIR/worker-env/bin/activate"
     pip install uv
 
-    uv pip install -r vast-pyworker/requirements.txt
+    uv pip install -r $WORKSPACE_DIR/vast-pyworker/requirements.txt
 
     if [ ! -f "$SERVER_DIR/workers/$BACKEND/requirements.txt" ]; then
         echo "No requirements.txt found for $BACKEND"
@@ -69,6 +70,7 @@ else
     echo "environment activated"
     echo "venv: $VIRTUAL_ENV"
 fi
+
 
 [ ! -d "$SERVER_DIR/workers/$BACKEND" ] && echo "$BACKEND not supported!" && exit 1
 
