@@ -2,10 +2,8 @@ import dataclasses
 import inspect
 
 import json
-from transformers import AutoTokenizer
-import nltk
 
-from lib.data_types import ApiPayload, JsonDataException
+from lib.data_types import JsonDataException
 
 from dataclasses import dataclass
 from typing import List, Optional, Union, Dict, Any
@@ -231,12 +229,6 @@ class InputData:
                 if k in inspect.signature(cls).parameters
             }
         )
-
-
-nltk.download("words")
-WORD_LIST = nltk.corpus.words.words()
-
-tokenizer = AutoTokenizer.from_pretrained("openai-community/openai-gpt")
 
 
 @dataclasses.dataclass
