@@ -8,5 +8,4 @@ echo "$SERVICE_ACCOUNT_JSON" > ./zenpalio-f0ec2f137303.json
 
 gcloud auth activate-service-account --key-file=./zenpalio-f0ec2f137303.json
 gcloud config set project zenpalio
-gsutil cp gs://aibabe-models/lustifySDXLNSFW_endgameDMD2.safetensors lustifySDXLNSFW_endgameDMD2.safetensors
 
