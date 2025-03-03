@@ -98,27 +98,6 @@ CONTROLNET_MODELS=(
     #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/t2iadapter_style-fp16.safetensors"
 )
 
-function setup_gsutils() {
-    echo "Setting up gsutils..."
-    export DEBIAN_FRONTEND=noninteractive
-    sudo apt-get update -y
-    sudo apt-get install apt-transport-https ca-certificates gnupg curl -y
-
-    if [ -f /usr/share/keyrings/cloud.google.gpg ]; then
-        sudo rm /usr/share/keyrings/cloud.google.gpg
-    fi
-
-    curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo gpg --dearmor -o /usr/share/keyrings/cloud.google.gpg
-    echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
-    sudo apt-get update -y
-    sudo apt-get install google-cloud-cli -y
-
-    echo "$SERVICE_ACCOUNT_JSON" > ./zenpalio-f0ec2f137303.json
-
-    gcloud auth activate-service-account --key-file=./zenpalio-f0ec2f137303.json
-    gcloud config set project zenpalio
-    echo "finished setting up gsutils"
-}
 ### DO NOT EDIT BELOW HERE UNLESS YOU KNOW WHAT YOU ARE DOING ###
 
 function provisioning_start() {
@@ -134,7 +113,6 @@ function provisioning_start() {
     DISK_GB_AVAILABLE=$(($(df --output=avail -m "${WORKSPACE}" | tail -n1) / 1000))
     DISK_GB_USED=$(($(df --output=used -m "${WORKSPACE}" | tail -n1) / 1000))
     DISK_GB_ALLOCATED=$(($DISK_GB_AVAILABLE + $DISK_GB_USED))
-    setup_gsutils
     provisioning_print_header
     provisioning_get_apt_packages
     provisioning_get_pip_packages
