@@ -6,8 +6,12 @@ apt-get upgrade -y
 apt install git-all -y
 wget https://huggingface.co/bartowski/Llama-3.3-70B-Instruct-abliterated-GGUF/resolve/main/Llama-3.3-70B-Instruct-abliterated-IQ4_XS.gguf
 
+wget https://huggingface.co/bartowski/Llama-3.3-70B-Instruct-abliterated-GGUF/resolve/main/Llama-3.3-70B-Instruct-abliterated-IQ3_XXS.gguf
+
 
 /workspace/llama.cpp/build/bin/llama-server -m ./Llama-3.3-70B-Instruct-abliterated-IQ4_XS.gguf -c 2048 --port 2242 --n-gpu-layers 999
+/workspace/llama.cpp/build/bin/llama-server -m ./Llama-3.3-70B-Instruct-abliterated-IQ3_XXS.gguf -c 2048 --port 2242 --n-gpu-layers 999
+
 
 
 vllm serve ./Llama-3.3-70B-Instruct-abliterated-IQ4_XS.gguf \

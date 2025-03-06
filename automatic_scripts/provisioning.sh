@@ -34,9 +34,9 @@ EXTENSIONS=(
 CHECKPOINT_MODELS=(
     #"https://civitai.com/api/download/models/929239?type=Model&format=SafeTensor&size=full&fp=fp16" #big lust15
     #"https://civitai.com/api/download/models/926965?type=Model&format=SafeTensor&size=pruned&fp=fp16" #lustify40
-    "gs://aibabe-models/prefectPonyXL_v40.safetensors" #pony40
-    "gs://aibabe-models/lustifySDXLNSFW_endgame.safetensors" #lustify50
-    "gs://aibabe-models/lustifySDXLNSFW_endgameDMD2.safetensors"
+    #"gs://aibabe-models/prefectPonyXL_v40.safetensors" #pony40
+    #"gs://aibabe-models/lustifySDXLNSFW_endgame.safetensors" #lustify50
+    #"gs://aibabe-models/lustifySDXLNSFW_endgameDMD2.safetensors"
     "https://civitai.com/api/download/models/290640?type=Model&format=SafeTensor&size=pruned&fp=fp16" #pony
     #"https://civitai.com/api/download/models/176425?type=Model&format=SafeTensor&size=pruned&fp=fp16" #test small model
 )
