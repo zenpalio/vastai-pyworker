@@ -34,18 +34,19 @@ EXTENSIONS=(
 CHECKPOINT_MODELS=(
     #"https://civitai.com/api/download/models/929239?type=Model&format=SafeTensor&size=full&fp=fp16" #big lust15
     #"https://civitai.com/api/download/models/926965?type=Model&format=SafeTensor&size=pruned&fp=fp16" #lustify40
-    #"gs://aibabe-models/prefectPonyXL_v40.safetensors" #pony40
-    #"gs://aibabe-models/lustifySDXLNSFW_endgame.safetensors" #lustify50
-    #"gs://aibabe-models/lustifySDXLNSFW_endgameDMD2.safetensors"
+    "https://civitai.com/api/download/models/926965?type=Model&format=SafeTensor&size=pruned&fp=fp16" #lustify40
+    "https://civitai.com/api/download/models/1047139?type=Model&format=SafeTensor&size=pruned&fp=fp16" #pony40
+    "https://civitai.com/api/download/models/1099200?type=Model&format=SafeTensor&size=pruned&fp=fp16" #lustifyDMD
     "https://civitai.com/api/download/models/290640?type=Model&format=SafeTensor&size=pruned&fp=fp16" #pony
     #"https://civitai.com/api/download/models/176425?type=Model&format=SafeTensor&size=pruned&fp=fp16" #test small model
 )
 
 LORA_MODELS=(
-    "gs://aibabe-models/tendertroupe_v0.1-pony.safetensors" #cartoon style                               https://civitai.com/models/45521?modelVersionId=558984
-    "gs://aibabe-models/Expressive_H-000001.safetensors" #expresive                                       https://civitai.com/models/341353/expressiveh-hentai-lora-style
+    "https://civitai.com/api/download/models/558984?type=Model&format=SafeTensor" #cartoon style         https://civitai.com/models/45521?modelVersionId=558984
+    "https://civitai.com/api/download/models/382152?type=Model&format=SafeTensor" #expresive             https://civitai.com/models/341353/expressiveh-hentai-lora-style
+    "https://civitai.com/api/download/models/87153?type=Model&format=SafeTensor" #add detail             https://civitai.com/models/82098?modelVersionId=87153
     #"https://civitai.com/api/download/models/507741?type=Model&format=SafeTensor" #3d blender style     https://civitai.com/models/456102/blender-3d-porn-pony
-    "gs://aibabe-models/3Danimation_Disney_1.0.safetensors" #3d disney style                               https://civitai.com/models/405143?modelVersionId=467356
+    "https://civitai.com/api/download/models/467356?type=Model&format=SafeTensor" #3d disney style                               https://civitai.com/models/405143?modelVersionId=467356
     "https://civitai.com/api/download/models/436219?type=Model&format=SafeTensor"  #Incase Style         https://civitai.com/models/300005?modelVersionId=436219
     "https://civitai.com/api/download/models/398847?type=Model&format=SafeTensor" #gothic style           
     "https://civitai.com/api/download/models/436219?type=Model&format=SafeTensor" #Incase Style         
