@@ -37,7 +37,7 @@ CHECKPOINT_MODELS=(
     "https://civitai.com/api/download/models/926965?type=Model&format=SafeTensor&size=pruned&fp=fp16" #lustify40
     "https://civitai.com/api/download/models/1047139?type=Model&format=SafeTensor&size=pruned&fp=fp16" #pony40
     "https://civitai.com/api/download/models/1099200?type=Model&format=SafeTensor&size=pruned&fp=fp16" #lustifyDMD
-    "https://civitai.com/api/download/models/290640?type=Model&format=SafeTensor&size=pruned&fp=fp16" #pony
+    "https://civitai.com/api/download/models/373176?type=Model&format=SafeTensor&size=full&fp=fp16" #wildcardxXLPONY_wildcardxXLPONYV1
     #"https://civitai.com/api/download/models/176425?type=Model&format=SafeTensor&size=pruned&fp=fp16" #test small model
 )
 
@@ -68,7 +68,8 @@ LORA_MODELS=(
 
 VAE_MODELS=(
     "https://huggingface.co/stabilityai/sdxl-vae/resolve/main/sdxl_vae.safetensors",
-    "https://civitai.com/api/download/models/290640?type=VAE&format=SafeTensor"
+    "https://civitai.com/api/download/models/290640?type=VAE&format=SafeTensor",
+    "https://civitai.com/api/download/models/373176?type=VAE&format=SafeTensor"
 )
 
 ESRGAN_MODELS=(
