@@ -30,7 +30,7 @@ logging.basicConfig(
 )
 log = logging.getLogger(__file__)
 
-URL = "http://127.0.0.1:7860"
+URL = "http://0.0.0.1:7860"
 
 
 @dataclasses.dataclass
@@ -39,7 +39,7 @@ class GenerateHandler(EndpointHandler[dict]):
 
     @property
     def endpoint(self) -> str:
-        return f"http://127.0.0.1:7860/{self.method}"
+        return f"http://0.0.0.1:7860/{self.method}"
 
     @classmethod
     def payload_cls(cls) -> Type[dict]:
