@@ -35,8 +35,7 @@ CHECKPOINT_MODELS=(
     #"https://civitai.com/api/download/models/929239?type=Model&format=SafeTensor&size=full&fp=fp16" #big lust15
     #"https://civitai.com/api/download/models/926965?type=Model&format=SafeTensor&size=pruned&fp=fp16" #lustify40
     "https://civitai.com/api/download/models/926965?type=Model&format=SafeTensor&size=pruned&fp=fp16" #lustify40
-    "https://civitai.com/api/download/models/1047139?type=Model&format=SafeTensor&size=pruned&fp=fp16" #pony40
-    "https://civitai.com/api/download/models/1099200?type=Model&format=SafeTensor&size=pruned&fp=fp16" #lustifyDMD
+    #"https://civitai.com/api/download/models/1047139?type=Model&format=SafeTensor&size=pruned&fp=fp16" #pony40
     "https://civitai.com/api/download/models/373176?type=Model&format=SafeTensor&size=full&fp=fp16" #wildcardxXLPONY_wildcardxXLPONYV1
     #"https://civitai.com/api/download/models/176425?type=Model&format=SafeTensor&size=pruned&fp=fp16" #test small model
 )
@@ -47,7 +46,7 @@ LORA_MODELS=(
     "https://civitai.com/api/download/models/87153?type=Model&format=SafeTensor" #add detail             https://civitai.com/models/82098?modelVersionId=87153
     #"https://civitai.com/api/download/models/507741?type=Model&format=SafeTensor" #3d blender style     https://civitai.com/models/456102/blender-3d-porn-pony
     "https://civitai.com/api/download/models/467356?type=Model&format=SafeTensor" #3d disney style                               https://civitai.com/models/405143?modelVersionId=467356
-    "https://civitai.com/api/download/models/436219?type=Model&format=SafeTensor"  #Incase Style         https://civitai.com/models/300005?modelVersionId=436219
+    "https://civitai.com/api/download/models/436219?type=Model&format=SafeTensor" #Incase Style         https://civitai.com/models/300005?modelVersionId=436219
     "https://civitai.com/api/download/models/398847?type=Model&format=SafeTensor" #gothic style           
     "https://civitai.com/api/download/models/436219?type=Model&format=SafeTensor" #Incase Style         
     #"https://civitai.com/api/download/models/839103?type=Model&format=SafeTensor" #sexy buts style      https://civitai.com/models/11161/cutesexyrobutts-style?modelVersionId=839103
