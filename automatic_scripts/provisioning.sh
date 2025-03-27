@@ -38,7 +38,8 @@ CHECKPOINT_MODELS=(
     #"https://civitai.com/api/download/models/1047139?type=Model&format=SafeTensor&size=pruned&fp=fp16" #pony40
     #"https://civitai.com/api/download/models/373176?type=Model&format=SafeTensor&size=full&fp=fp16" #wildcardxXLPONY_wildcardxXLPONYV1
     #"https://civitai.com/api/download/models/176425?type=Model&format=SafeTensor&size=pruned&fp=fp16" #test small model
-    "https://civitai.com/api/download/models/992946?type=Model&format=SafeTensor&size=full&fp=fp16"
+    "https://civitai.com/api/download/models/992946?type=Model&format=SafeTensor&size=full&fp=fp16" #babes-realisticv3
+    "https://civitai.com/api/download/models/984905?type=Model&format=SafeTensor&size=full&fp=fp16" #babes-v3
 
 )
 
